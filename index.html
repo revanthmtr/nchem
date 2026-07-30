@@ -24,27 +24,36 @@
   </aside>
 
   <!-- ==========================================================================
-       Chrome 2: Soft Linen Utility Bar
+       Chrome 2: Soft Linen Utility Bar with Innovative Portal Toggle & Live Badges
        ========================================================================== -->
   <div class="utility-bar-v3">
     <div class="container utility-inner">
-      <div class="utility-links">
-        <div class="utility-item">
-          <select class="utility-select-v3" aria-label="Corporate Directory">
-            <option>Corporate</option>
-            <option>Board of Directors</option>
-            <option>Financial Reports</option>
-            <option>Annual Statements</option>
-          </select>
+      <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+        <!-- Innovative Toggle Switch: Farmer Portal vs Corporate -->
+        <div class="portal-toggle-switch" id="portalToggle">
+          <button class="toggle-segment active" data-portal="farmer" aria-label="Switch to Farmer Portal">
+            <span class="toggle-icon">&#127806;</span> Farmer Portal
+          </button>
+          <button class="toggle-segment" data-portal="corporate" aria-label="Switch to Corporate View">
+            <span class="toggle-icon">&#127970;</span> Corporate
+          </button>
         </div>
-        <span style="opacity: 0.4;">|</span>
-        <a href="#" class="utility-item">
-          <span class="pulse-dot-terracotta"></span> Recruitment Notice 2026
-        </a>
-        <span style="opacity: 0.4;">|</span>
-        <a href="#" class="utility-item">
-          <span class="pulse-dot-terracotta"></span> Nano Bio-Fertiliser Trial Results
-        </a>
+
+        <!-- Modern Live Ticker Badges -->
+        <div class="ticker-badges-group">
+          <a href="#" class="ticker-item-badge">
+            <span class="pulse-dot-terracotta"></span>
+            <span>&#128293; Bio-Yield Guarantee Scheme 2026</span>
+          </a>
+          <a href="#" class="ticker-item-badge">
+            <span class="pulse-dot-terracotta"></span>
+            <span>&#127806; Free Soil Health Test Camps (Districts Open)</span>
+          </a>
+          <a href="#" class="ticker-item-badge">
+            <span style="color: var(--color-terracotta); font-weight: 700;">&bull;</span>
+            <span>&#128202; FY26 Bio-Fertiliser R&amp;D Report</span>
+          </a>
+        </div>
       </div>
 
       <div class="utility-links">

@@ -3,6 +3,25 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Innovative Portal Toggle Switch (Farmer vs Corporate)
+  const portalToggle = document.getElementById('portalToggle');
+  if (portalToggle) {
+    const toggleSegments = portalToggle.querySelectorAll('.toggle-segment');
+    toggleSegments.forEach(segment => {
+      segment.addEventListener('click', () => {
+        toggleSegments.forEach(s => s.classList.remove('active'));
+        segment.classList.add('active');
+
+        const portalType = segment.getAttribute('data-portal');
+        if (portalType === 'corporate') {
+          console.log('Switched to Corporate Governance & Investor View');
+        } else {
+          console.log('Switched to Farmer & Agronomy Advisory View');
+        }
+      });
+    });
+  }
+
   // Mega Menu Overlay Toggle
   const menuTriggerPill = document.getElementById('menuTriggerPill');
   const megaMenuOverlayV3 = document.getElementById('megaMenuOverlayV3');
