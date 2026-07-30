@@ -29,17 +29,15 @@
   <div class="utility-bar-v3">
     <div class="container utility-inner">
       <div style="display: flex; align-items: center; gap: 16px;">
-        <!-- Innovative Toggle Switch: Farmer Portal vs Corporate -->
         <div class="portal-toggle-switch" id="portalToggle">
-          <button class="toggle-segment active" data-portal="farmer" aria-label="Switch to Farmer Portal">
+          <button class="toggle-segment" data-portal="farmer" aria-label="Switch to Farmer Portal">
             <span class="toggle-icon">&#127806;</span> Farmer Portal
           </button>
-          <button class="toggle-segment" data-portal="corporate" aria-label="Switch to Corporate View">
+          <button class="toggle-segment active" data-portal="corporate" aria-label="Switch to Corporate View">
             <span class="toggle-icon">&#127970;</span> Corporate
           </button>
         </div>
       </div>
-
       <div class="utility-links">
         <select class="utility-select-v3" aria-label="Language Selector">
           <option value="en">English</option>
@@ -68,13 +66,11 @@
         </a>
       </div>
 
-      <!-- Centered Search Bar with Voice Mic Icon -->
       <div class="header-search-wrap">
         <input type="text" class="header-search-input" placeholder="Search Nchem bio-fertilisers, crops, dealer network..." aria-label="Search Nchem formulations">
         <button class="mic-btn-terracotta" aria-label="Voice Search">&micro;</button>
       </div>
 
-      <!-- Deep Moss Pill Menu Button -->
       <button id="menuTriggerPill" class="menu-trigger-pill">
         <span>Menu</span>
         <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,10 +93,8 @@
         <button id="megaCloseBtnV3" class="btn btn-primary-moss" style="border-radius: 50%; width: 44px; height: 44px; padding: 0; font-size: 20px;">&times;</button>
       </div>
     </div>
-
     <div class="mega-menu-body">
       <div class="container mega-grid">
-        <!-- Column 1: Primary Navigation -->
         <div>
           <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 16px;">Primary Sections</div>
           <ul style="list-style: none; display: flex; flex-direction: column; gap: 6px;">
@@ -113,28 +107,24 @@
             <li class="mega-nav-item-v3">Career Opportunities &rarr;</li>
           </ul>
         </div>
-
-        <!-- Column 2: Sub-category list -->
         <div>
           <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 16px;">Product Categories</div>
           <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
-            <li><a href="#product-grid-anchor" onclick="document.getElementById('megaMenuOverlayV3').classList.remove('active')" class="mega-sub-link-v3">Primary Bio-Nutrients</a></li>
-            <li><a href="#product-grid-anchor" onclick="document.getElementById('megaMenuOverlayV3').classList.remove('active')" class="mega-sub-link-v3">Liquid Bio-Inoculants</a></li>
-            <li><a href="#product-grid-anchor" onclick="document.getElementById('megaMenuOverlayV3').classList.remove('active')" class="mega-sub-link-v3">Phosphate Solubilizing Bacteria (PSB)</a></li>
-            <li><a href="#product-grid-anchor" onclick="document.getElementById('megaMenuOverlayV3').classList.remove('active')" class="mega-sub-link-v3">Potash Mobilizing Bio-Fertilisers</a></li>
-            <li><a href="#product-grid-anchor" onclick="document.getElementById('megaMenuOverlayV3').classList.remove('active')" class="mega-sub-link-v3">Humic &amp; Fulvic Soil Conditioners</a></li>
-            <li><a href="#product-grid-anchor" onclick="document.getElementById('megaMenuOverlayV3').classList.remove('active')" class="mega-sub-link-v3">Chelated Micronutrient Sprays</a></li>
+            <li><a href="#" class="mega-sub-link-v3">Primary Bio-Nutrients</a></li>
+            <li><a href="#" class="mega-sub-link-v3">Liquid Bio-Inoculants</a></li>
+            <li><a href="#" class="mega-sub-link-v3">Phosphate Solubilizing Bacteria (PSB)</a></li>
+            <li><a href="#" class="mega-sub-link-v3">Potash Mobilizing Bio-Fertilisers</a></li>
+            <li><a href="#" class="mega-sub-link-v3">Humic &amp; Fulvic Soil Conditioners</a></li>
+            <li><a href="#" class="mega-sub-link-v3">Chelated Micronutrient Sprays</a></li>
           </ul>
         </div>
-
-        <!-- Column 3: Photo + Caption Spotlight -->
         <div>
           <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 16px;">Spotlight</div>
           <div class="mega-feature-card-v3">
             <img src="assets/v2_csr.png" alt="Nchem Agronomy Field Support">
             <div class="mega-feature-overlay-v3">
               <div style="font-size: 14px; margin-bottom: 8px;">Nchem's range of bio-fertilisers designed to enrich Indian soil.</div>
-              <a href="#product-grid-anchor" onclick="document.getElementById('megaMenuOverlayV3').classList.remove('active')" style="color: var(--color-wheat); font-weight: 700; font-size: 13px;">See more &rarr;</a>
+              <a href="#" style="color: var(--color-wheat); font-weight: 700; font-size: 13px;">See more &rarr;</a>
             </div>
           </div>
         </div>
@@ -142,242 +132,283 @@
     </div>
   </div>
 
-  <main>
-    <!-- ==========================================================================
-         Homepage Section 1: Single Full-Bleed Hero with Moss Overlay
-         ========================================================================== -->
-    <section class="hero-single-fullbleed">
-      <div class="hero-fullbleed-overlay"></div>
-      <div class="container hero-fullbleed-content">
-        <div class="hero-stat-pill">&#127807; Trusted by 40,000+ farm families</div>
-        <h1 class="hero-headline-v3">Growing stronger soil... for generations to come.</h1>
-        <p style="font-size: 16px; opacity: 0.9; margin-bottom: 28px; line-height: 1.6;">
-          Nchem delivers certified organic fertilisers, active liquid bio-inoculants, and humic conditioners engineered for healthy crop yields and living soil.
-        </p>
-        <div style="display: flex; gap: 16px;">
-          <a href="#product-grid-anchor" class="btn btn-terracotta">Explore Formulations</a>
-          <a href="#grows-section" class="btn btn-outline-terracotta" style="color: #FFFFFF; border-color: #FFFFFF;">Our Network</a>
+  <!-- ==========================================================================
+       FARMER PORTAL VIEW (shown when Farmer toggle is active)
+       ========================================================================== -->
+  <div id="farmerPortalView" style="display: none;">
+
+    <!-- Hero Slideshow -->
+    <section class="fp-slideshow-section">
+      <div class="fp-slideshow" id="fpSlideshow">
+
+        <div class="fp-slide active" style="background-image: url('assets/v2_family.png');">
+          <div class="fp-slide-overlay"></div>
+          <div class="fp-slide-content">
+            <div class="fp-slide-badge">&#127806; Trusted by 40,000+ Farm Families</div>
+            <h1 class="fp-slide-headline">Pure Organic.<br>Easy to Apply.</h1>
+            <p class="fp-slide-sub">Certified bio-fertilisers that boost yield without any chemicals — simply mix and apply.</p>
+            <a href="#fp-products" class="btn btn-terracotta">Browse Products</a>
+          </div>
         </div>
+
+        <div class="fp-slide" style="background-image: url('assets/nchem_hero_field.png');">
+          <div class="fp-slide-overlay"></div>
+          <div class="fp-slide-content">
+            <div class="fp-slide-badge">&#127807; Living Soil for Stronger Roots</div>
+            <h1 class="fp-slide-headline">Your Soil.<br>Our Science.</h1>
+            <p class="fp-slide-sub">Nchem's humic conditioners restore soil microflora and make nutrients available to every crop root.</p>
+            <a href="#fp-products" class="btn btn-terracotta">See Formulations</a>
+          </div>
+        </div>
+
+        <div class="fp-slide" style="background-image: url('assets/v2_bag.png');">
+          <div class="fp-slide-overlay"></div>
+          <div class="fp-slide-content">
+            <div class="fp-slide-badge">&#128205; 12,000+ Outlets Near You</div>
+            <h1 class="fp-slide-headline">Bio-Inputs.<br>At Your Doorstep.</h1>
+            <p class="fp-slide-sub">Available at licensed cooperative outlets across 600+ districts. Authentic, affordable, farmer-first.</p>
+            <a href="#fp-products" class="btn btn-terracotta">Find Dealer</a>
+          </div>
+        </div>
+
+        <div class="fp-slide" style="background-image: url('assets/v2_csr.png');">
+          <div class="fp-slide-overlay"></div>
+          <div class="fp-slide-content">
+            <div class="fp-slide-badge">&#128222; Free Advisory — 1800-889-NCHEM</div>
+            <h1 class="fp-slide-headline">We Are Here<br>For Every Farmer.</h1>
+            <p class="fp-slide-sub">Call our toll-free Kisan helpline for free soil test advice, dosage guidance, and crop disease support.</p>
+            <a href="#fp-products" class="btn btn-terracotta">Call Now</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slideshow Controls -->
+      <button class="fp-slide-arrow fp-prev" id="fpPrev" aria-label="Previous slide">&#8592;</button>
+      <button class="fp-slide-arrow fp-next" id="fpNext" aria-label="Next slide">&#8594;</button>
+      <div class="fp-dots" id="fpDots">
+        <button class="fp-dot active" data-slide="0"></button>
+        <button class="fp-dot" data-slide="1"></button>
+        <button class="fp-dot" data-slide="2"></button>
+        <button class="fp-dot" data-slide="3"></button>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         Homepage Section 2: One-Line Intro
-         ========================================================================== -->
-    <section class="one-line-intro">
+    <!-- Nutrient Filter Section -->
+    <section class="fp-filter-section" id="fp-products">
       <div class="container">
-        <div class="intro-text-v3">&ldquo;Everything we do, in one place &mdash; built for farmers, powered by science.&rdquo;</div>
+        <div class="fp-filter-header">
+          <h2 class="fp-filter-title">Filter by Chemical Nutrient / Bio-Inoculant</h2>
+          <p class="fp-filter-sub">Select what your soil needs — we'll show you the right product.</p>
+        </div>
+        <div class="fp-chips-row">
+          <button class="fp-chip active" data-nutrient="All">&#10003; All Products</button>
+          <button class="fp-chip" data-nutrient="N"><strong>N</strong> &nbsp;Nitrogen Fixers</button>
+          <button class="fp-chip" data-nutrient="P"><strong>P</strong> &nbsp;Phosphate Solubilizers</button>
+          <button class="fp-chip" data-nutrient="K"><strong>K</strong> &nbsp;Potash Mobilizers</button>
+          <button class="fp-chip" data-nutrient="Zn"><strong>Zn</strong> &nbsp;Zinc Chelates</button>
+          <button class="fp-chip" data-nutrient="Fe"><strong>Fe</strong> &nbsp;Iron EDTA</button>
+          <button class="fp-chip" data-nutrient="Org-C"><strong>Org-C</strong> &nbsp;Organic Carbon</button>
+          <button class="fp-chip" data-nutrient="Ca/Mg"><strong>Ca/Mg</strong> &nbsp;Calcium / Magnesium</button>
+        </div>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         Homepage Section 3: Rounded-Hexagon "Seed" Badge Icon Grid
-         ========================================================================== -->
-    <section class="seed-grid-section">
+    <!-- Farmer Product Showcase -->
+    <section class="fp-products-section">
       <div class="container">
-        <div style="text-align: center;">
-          <h2 class="display-heading" style="font-size: 32px; color: var(--color-primary);">Our Business Lines</h2>
-          <p style="color: var(--color-text-muted);">Serving sustainable agriculture through specialized bio-tech services.</p>
-        </div>
-
-        <div class="seed-grid">
-          <div class="seed-badge-card">
-            <div class="seed-hexagon-badge">&#127807;</div>
-            <div class="seed-label">Bio-Fertilisers</div>
-          </div>
-          <div class="seed-badge-card">
-            <div class="seed-hexagon-badge">&#9878;</div>
-            <div class="seed-label">Soil Health</div>
-          </div>
-          <div class="seed-badge-card">
-            <div class="seed-hexagon-badge">&#127808;</div>
-            <div class="seed-label">Organic Inputs</div>
-          </div>
-          <div class="seed-badge-card">
-            <div class="seed-hexagon-badge">&#127978;</div>
-            <div class="seed-label">Farmer Retail</div>
-          </div>
-          <div class="seed-badge-card">
-            <div class="seed-hexagon-badge">&#128214;</div>
-            <div class="seed-label">Agro Advisory</div>
-          </div>
-          <div class="seed-badge-card">
-            <div class="seed-hexagon-badge">&#128666;</div>
-            <div class="seed-label">Logistics</div>
-          </div>
-        </div>
-
-        <div class="seed-grid-bottom">
-          <div class="seed-badge-card" style="max-width: 200px;">
-            <div class="seed-hexagon-badge">&#128179;</div>
-            <div class="seed-label">Rural Finance</div>
-          </div>
-          <div class="seed-badge-card" style="max-width: 200px;">
-            <div class="seed-hexagon-badge">&#128300;</div>
-            <div class="seed-label">Bio-Research</div>
-          </div>
-          <div class="seed-badge-card" style="max-width: 200px;">
-            <div class="seed-hexagon-badge">&#127827;</div>
-            <div class="seed-label">Frozen Foods</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Homepage Section 4: Featured Initiative
-         ========================================================================== -->
-    <section class="initiative-section-v3">
-      <div class="initiative-overlay-card-v3">
-        <div style="font-size: 12px; font-weight: 700; color: var(--color-terracotta); text-transform: uppercase; margin-bottom: 4px;">FEATURED INITIATIVE</div>
-        <h3 class="display-heading" style="font-size: 26px; color: var(--color-primary); margin-bottom: 12px;">Nano Bio-Nitrogen Revolution</h3>
-        <p style="font-size: 14px; color: var(--color-text-muted); margin-bottom: 20px;">
-          Replacing heavy chemical urea bags with 500ml liquid bio-nitrogen bottles for eco-friendly crop nutrition and higher grain protein.
-        </p>
-        <a href="#product-grid-anchor" class="btn btn-outline-terracotta">See more &rarr;</a>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Homepage Section 5: "Where Nchem Grows" Map & Facility Tiles
-         ========================================================================== -->
-    <section class="grows-section" id="grows-section">
-      <div class="container">
-        <h2 class="display-heading" style="font-size: 32px; color: var(--color-primary);">Where Nchem Grows</h2>
-        <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto;">Nchem operates 6 bio-fertiliser production campuses and over 12,000 cooperative distribution hubs.</p>
-
-        <div class="map-box-v3">
-          <svg width="100%" height="150" viewBox="0 0 600 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="300" cy="75" r="65" stroke="#3B5C3E" stroke-width="1.5" stroke-dasharray="4 4"/>
-            <circle cx="280" cy="65" r="5" fill="#C97B4A"/>
-            <circle cx="320" cy="80" r="5" fill="#C97B4A"/>
-            <circle cx="340" cy="55" r="5" fill="#C97B4A"/>
-            <path d="M280 65 Q300 35 340 55" stroke="#E8C468" stroke-width="2" stroke-dasharray="3 3"/>
-            <text x="300" y="130" text-anchor="middle" fill="#6E6A5F" font-size="12" font-family="Inter">12,000+ Cooperative Locations Connected</text>
-          </svg>
-        </div>
-
-        <div class="facility-strip-v3">
-          <div class="facility-tile-v3">
-            <img src="assets/nchem_rd_lab.png" alt="Nchem Bio-Tech Campus">
-            <div class="facility-tile-caption-v3">Nchem Bio-Tech Campus</div>
-          </div>
-          <div class="facility-tile-v3">
-            <img src="assets/nchem_hero_field.png" alt="North Zone Plant">
-            <div class="facility-tile-caption-v3">North Zone Bio Plant</div>
-          </div>
-          <div class="facility-tile-v3">
-            <img src="assets/v2_csr.png" alt="Western R&D Center">
-            <div class="facility-tile-caption-v3">Western R&amp;D Center</div>
-          </div>
-          <div class="facility-tile-v3">
-            <img src="assets/v2_family.png" alt="Southern Research Hub">
-            <div class="facility-tile-caption-v3">Southern Research Hub</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Homepage Section 6: CSR Split Banner
-         ========================================================================== -->
-    <section class="csr-banner-v3">
-      <div style="background: url('assets/v2_csr.png') center/cover; min-height: 300px;"></div>
-      <div class="csr-gradient-moss">
-        <h2 class="display-heading" style="font-size: 32px; margin-bottom: 16px;">Empowering 100,000+ Farm Families</h2>
-        <p style="font-size: 15px; opacity: 0.9; margin-bottom: 24px; line-height: 1.6;">
-          Through free soil health testing clinics, organic farming workshops, and bio-fertilisers, Nchem ensures every farmer achieves long-term soil prosperity.
-        </p>
-        <div>
-          <a href="#" class="btn btn-terracotta">Learn how &rarr;</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Product Category Section (Wave Tab Bar & Top-Rounded Cards)
-         ========================================================================== -->
-    <div style="background-color: #FFFFFF; padding: 12px 0; font-size: 13px; color: var(--color-text-muted); border-bottom: 1px solid var(--color-border-subtle);" id="product-grid-anchor">
-      <div class="container">
-        <a href="#" style="color: var(--color-primary); font-weight: 500;">Home</a> / <a href="#" style="color: var(--color-primary); font-weight: 500;">Product Categories</a> / <span style="color: var(--color-text-main);">Organic &amp; Bio-Fertilisers</span>
-      </div>
-    </div>
-
-    <section class="category-hero-v3">
-      <div class="container">
-        <h1 class="display-heading" style="font-size: 36px;">Building a brighter &amp; healthier...<br>agricultural future together.</h1>
-      </div>
-    </section>
-
-    <!-- Wave-Topped Category Tab Bar in Deep Moss -->
-    <nav class="category-tab-bar-v3">
-      <div class="container category-tab-inner-v3">
-        <button class="cat-tab-v3 active" data-category="All">
-          <span>&starf;</span> All Formulations
-        </button>
-        <button class="cat-tab-v3" data-category="Organic Fertilisers">
-          <span>&spades;</span> Organic Fertilisers
-        </button>
-        <button class="cat-tab-v3" data-category="Bio-Fertilisers">
-          <span>&amp;</span> Bio-Fertilisers
-        </button>
-        <button class="cat-tab-v3" data-category="Soil Conditioners & Humics">
-          <span>&yen;</span> Soil Conditioners
-        </button>
-        <button class="cat-tab-v3" data-category="Micronutrient Fortifiers">
-          <span>&#9733;</span> Micronutrients
-        </button>
-
-        <!-- Terracotta "Find Your Fit" Nutrient Tool Tab -->
-        <button id="toggleNutrientPanelBtn" class="cat-tab-v3 find-fit-tab-v3">
-          <span>&#9878;</span> Find Your Fit &rarr;
-        </button>
-      </div>
-    </nav>
-
-    <!-- Category Intro & Expanded Nutrient Filter Panel -->
-    <section style="background-color: #FFFFFF; padding: 40px 0 20px;">
-      <div class="container">
-        <h2 class="display-heading" style="font-size: 32px; color: var(--color-primary); margin-bottom: 8px;">Organic &amp; Bio-Fertiliser Range</h2>
-        <p style="font-size: 15px; color: var(--color-text-muted); max-width: 800px;">
-          Nchem's range of bio-fertilisers and organic soil improvers are formulated to restore soil microflora, boost nutrient absorption, and yield healthy crops naturally without harmful residues.
-        </p>
-
-        <!-- Expanded Nutrient Chips Panel -->
-        <div id="nutrientPanelV3" class="nutrient-panel-v3" style="display: none;">
-          <div style="font-size: 13px; font-weight: 700; color: var(--color-primary); margin-bottom: 12px; text-transform: uppercase;">Filter by Chemical Nutrient / Bio-Inoculant:</div>
-          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <button class="chip-pill-v3 active" data-nutrient="All">All Nutrients</button>
-            <button class="chip-pill-v3" data-nutrient="N"><strong>N</strong> Nitrogen Fixers</button>
-            <button class="chip-pill-v3" data-nutrient="P"><strong>P</strong> Phosphate Solubilizers</button>
-            <button class="chip-pill-v3" data-nutrient="K"><strong>K</strong> Potash Mobilizers</button>
-            <button class="chip-pill-v3" data-nutrient="Zn"><strong>Zn</strong> Zinc Chelates</button>
-            <button class="chip-pill-v3" data-nutrient="Fe"><strong>Fe</strong> Iron EDTA</button>
-            <button class="chip-pill-v3" data-nutrient="Org-C"><strong>Org-C</strong> Organic Carbon</button>
-            <button class="chip-pill-v3" data-nutrient="Ca/Mg"><strong>Ca/Mg</strong> Calcium/Magnesium</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3-Column Product Card Grid (Top-Rounded Cards) -->
-    <section style="background-color: var(--color-bg-linen);">
-      <div class="container">
-        <div id="productGridV3" class="product-grid-v3">
+        <div id="farmerProductGrid" class="product-grid-v3">
           <!-- Injected via script.js -->
         </div>
       </div>
     </section>
 
-    <!-- Leaf/Sprout Glyph Chat Widget -->
-    <div id="sproutChatWidget" class="sprout-chat-widget">
+    <!-- Simple Helpline Banner -->
+    <section class="fp-helpline-banner">
+      <div class="container fp-helpline-inner">
+        <div>
+          <div class="fp-helpline-label">&#128222; FREE KISAN HELPLINE</div>
+          <div class="fp-helpline-number">1800-889-NCHEM</div>
+          <p class="fp-helpline-sub">Talk to an agronomist in your language — Mon to Sat, 8 AM to 6 PM</p>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="#" class="btn btn-terracotta">Call Now</a>
+          <a href="#" class="btn btn-outline-terracotta" style="border-color: rgba(255,255,255,0.5); color: #fff;">Find Dealer &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leaf/Sprout Chat Widget -->
+    <div id="sproutChatWidgetFarmer" class="sprout-chat-widget">
       <div class="sprout-bubble">Need a hand? Chat with us.</div>
       <div class="sprout-icon-circle">&#127807;</div>
     </div>
-  </main>
+
+  </div><!-- /farmerPortalView -->
+
 
   <!-- ==========================================================================
-       Footer (Deep Moss, Sun Wheat Counter, Terracotta Accents)
+       CORPORATE VIEW (shown by default when Corporate toggle is active)
+       ========================================================================== -->
+  <div id="corporateView">
+    <main>
+      <!-- Section 1: Single Full-Bleed Hero -->
+      <section class="hero-single-fullbleed">
+        <div class="hero-fullbleed-overlay"></div>
+        <div class="container hero-fullbleed-content">
+          <div class="hero-stat-pill">&#127807; Trusted by 40,000+ farm families</div>
+          <h1 class="hero-headline-v3">Growing stronger soil... for generations to come.</h1>
+          <p style="font-size: 16px; opacity: 0.9; margin-bottom: 28px; line-height: 1.6;">
+            Nchem delivers certified organic fertilisers, active liquid bio-inoculants, and humic conditioners engineered for healthy crop yields and living soil.
+          </p>
+          <div style="display: flex; gap: 16px;">
+            <a href="#product-grid-anchor" class="btn btn-terracotta">Explore Formulations</a>
+            <a href="#grows-section" class="btn btn-outline-terracotta" style="color: #FFFFFF; border-color: #FFFFFF;">Our Network</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: One-Line Intro -->
+      <section class="one-line-intro">
+        <div class="container">
+          <div class="intro-text-v3">&ldquo;Everything we do, in one place &mdash; built for farmers, powered by science.&rdquo;</div>
+        </div>
+      </section>
+
+      <!-- Section 3: Seed Badge Grid -->
+      <section class="seed-grid-section">
+        <div class="container">
+          <div style="text-align: center;">
+            <h2 class="display-heading" style="font-size: 32px; color: var(--color-primary);">Our Business Lines</h2>
+            <p style="color: var(--color-text-muted);">Serving sustainable agriculture through specialized bio-tech services.</p>
+          </div>
+          <div class="seed-grid">
+            <div class="seed-badge-card"><div class="seed-hexagon-badge">&#127807;</div><div class="seed-label">Bio-Fertilisers</div></div>
+            <div class="seed-badge-card"><div class="seed-hexagon-badge">&#9878;</div><div class="seed-label">Soil Health</div></div>
+            <div class="seed-badge-card"><div class="seed-hexagon-badge">&#127808;</div><div class="seed-label">Organic Inputs</div></div>
+            <div class="seed-badge-card"><div class="seed-hexagon-badge">&#127978;</div><div class="seed-label">Farmer Retail</div></div>
+            <div class="seed-badge-card"><div class="seed-hexagon-badge">&#128214;</div><div class="seed-label">Agro Advisory</div></div>
+            <div class="seed-badge-card"><div class="seed-hexagon-badge">&#128666;</div><div class="seed-label">Logistics</div></div>
+          </div>
+          <div class="seed-grid-bottom">
+            <div class="seed-badge-card" style="max-width: 200px;"><div class="seed-hexagon-badge">&#128179;</div><div class="seed-label">Rural Finance</div></div>
+            <div class="seed-badge-card" style="max-width: 200px;"><div class="seed-hexagon-badge">&#128300;</div><div class="seed-label">Bio-Research</div></div>
+            <div class="seed-badge-card" style="max-width: 200px;"><div class="seed-hexagon-badge">&#127827;</div><div class="seed-label">Frozen Foods</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Featured Initiative -->
+      <section class="initiative-section-v3">
+        <div class="initiative-overlay-card-v3">
+          <div style="font-size: 12px; font-weight: 700; color: var(--color-terracotta); text-transform: uppercase; margin-bottom: 4px;">FEATURED INITIATIVE</div>
+          <h3 class="display-heading" style="font-size: 26px; color: var(--color-primary); margin-bottom: 12px;">Nano Bio-Nitrogen Revolution</h3>
+          <p style="font-size: 14px; color: var(--color-text-muted); margin-bottom: 20px;">
+            Replacing heavy chemical urea bags with 500ml liquid bio-nitrogen bottles for eco-friendly crop nutrition and higher grain protein.
+          </p>
+          <a href="#product-grid-anchor" class="btn btn-outline-terracotta">See more &rarr;</a>
+        </div>
+      </section>
+
+      <!-- Section 5: Where Nchem Grows -->
+      <section class="grows-section" id="grows-section">
+        <div class="container">
+          <h2 class="display-heading" style="font-size: 32px; color: var(--color-primary);">Where Nchem Grows</h2>
+          <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto;">Nchem operates 6 bio-fertiliser production campuses and over 12,000 cooperative distribution hubs.</p>
+          <div class="map-box-v3">
+            <svg width="100%" height="150" viewBox="0 0 600 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="300" cy="75" r="65" stroke="#3B5C3E" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <circle cx="280" cy="65" r="5" fill="#C97B4A"/>
+              <circle cx="320" cy="80" r="5" fill="#C97B4A"/>
+              <circle cx="340" cy="55" r="5" fill="#C97B4A"/>
+              <path d="M280 65 Q300 35 340 55" stroke="#E8C468" stroke-width="2" stroke-dasharray="3 3"/>
+              <text x="300" y="130" text-anchor="middle" fill="#6E6A5F" font-size="12" font-family="Inter">12,000+ Cooperative Locations Connected</text>
+            </svg>
+          </div>
+          <div class="facility-strip-v3">
+            <div class="facility-tile-v3"><img src="assets/nchem_rd_lab.png" alt="Nchem Bio-Tech Campus"><div class="facility-tile-caption-v3">Nchem Bio-Tech Campus</div></div>
+            <div class="facility-tile-v3"><img src="assets/nchem_hero_field.png" alt="North Zone Plant"><div class="facility-tile-caption-v3">North Zone Bio Plant</div></div>
+            <div class="facility-tile-v3"><img src="assets/v2_csr.png" alt="Western R&D Center"><div class="facility-tile-caption-v3">Western R&amp;D Center</div></div>
+            <div class="facility-tile-v3"><img src="assets/v2_family.png" alt="Southern Research Hub"><div class="facility-tile-caption-v3">Southern Research Hub</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: CSR Split Banner -->
+      <section class="csr-banner-v3">
+        <div style="background: url('assets/v2_csr.png') center/cover; min-height: 300px;"></div>
+        <div class="csr-gradient-moss">
+          <h2 class="display-heading" style="font-size: 32px; margin-bottom: 16px;">Empowering 100,000+ Farm Families</h2>
+          <p style="font-size: 15px; opacity: 0.9; margin-bottom: 24px; line-height: 1.6;">
+            Through free soil health testing clinics, organic farming workshops, and bio-fertilisers, Nchem ensures every farmer achieves long-term soil prosperity.
+          </p>
+          <div><a href="#" class="btn btn-terracotta">Learn how &rarr;</a></div>
+        </div>
+      </section>
+
+      <!-- Product Category Section -->
+      <div style="background-color: #FFFFFF; padding: 12px 0; font-size: 13px; color: var(--color-text-muted); border-bottom: 1px solid var(--color-border-subtle);" id="product-grid-anchor">
+        <div class="container">
+          <a href="#" style="color: var(--color-primary); font-weight: 500;">Home</a> / <a href="#" style="color: var(--color-primary); font-weight: 500;">Product Categories</a> / <span style="color: var(--color-text-main);">Organic &amp; Bio-Fertilisers</span>
+        </div>
+      </div>
+
+      <section class="category-hero-v3">
+        <div class="container">
+          <h1 class="display-heading" style="font-size: 36px;">Building a brighter &amp; healthier...<br>agricultural future together.</h1>
+        </div>
+      </section>
+
+      <nav class="category-tab-bar-v3">
+        <div class="container category-tab-inner-v3">
+          <button class="cat-tab-v3 active" data-category="All"><span>&starf;</span> All Formulations</button>
+          <button class="cat-tab-v3" data-category="Organic Fertilisers"><span>&spades;</span> Organic Fertilisers</button>
+          <button class="cat-tab-v3" data-category="Bio-Fertilisers"><span>&amp;</span> Bio-Fertilisers</button>
+          <button class="cat-tab-v3" data-category="Soil Conditioners & Humics"><span>&yen;</span> Soil Conditioners</button>
+          <button class="cat-tab-v3" data-category="Micronutrient Fortifiers"><span>&#9733;</span> Micronutrients</button>
+          <button id="toggleNutrientPanelBtn" class="cat-tab-v3 find-fit-tab-v3"><span>&#9878;</span> Find Your Fit &rarr;</button>
+        </div>
+      </nav>
+
+      <section style="background-color: #FFFFFF; padding: 40px 0 20px;">
+        <div class="container">
+          <h2 class="display-heading" style="font-size: 32px; color: var(--color-primary); margin-bottom: 8px;">Organic &amp; Bio-Fertiliser Range</h2>
+          <p style="font-size: 15px; color: var(--color-text-muted); max-width: 800px;">
+            Nchem's range of bio-fertilisers and organic soil improvers are formulated to restore soil microflora, boost nutrient absorption, and yield healthy crops naturally without harmful residues.
+          </p>
+          <div id="nutrientPanelV3" class="nutrient-panel-v3" style="display: none;">
+            <div style="font-size: 13px; font-weight: 700; color: var(--color-primary); margin-bottom: 12px; text-transform: uppercase;">Filter by Chemical Nutrient / Bio-Inoculant:</div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <button class="chip-pill-v3 active" data-nutrient="All">All Nutrients</button>
+              <button class="chip-pill-v3" data-nutrient="N"><strong>N</strong> Nitrogen Fixers</button>
+              <button class="chip-pill-v3" data-nutrient="P"><strong>P</strong> Phosphate Solubilizers</button>
+              <button class="chip-pill-v3" data-nutrient="K"><strong>K</strong> Potash Mobilizers</button>
+              <button class="chip-pill-v3" data-nutrient="Zn"><strong>Zn</strong> Zinc Chelates</button>
+              <button class="chip-pill-v3" data-nutrient="Fe"><strong>Fe</strong> Iron EDTA</button>
+              <button class="chip-pill-v3" data-nutrient="Org-C"><strong>Org-C</strong> Organic Carbon</button>
+              <button class="chip-pill-v3" data-nutrient="Ca/Mg"><strong>Ca/Mg</strong> Calcium/Magnesium</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="background-color: var(--color-bg-linen);">
+        <div class="container">
+          <div id="productGridV3" class="product-grid-v3"><!-- Injected via script.js --></div>
+        </div>
+      </section>
+
+      <!-- Leaf/Sprout Chat Widget -->
+      <div id="sproutChatWidget" class="sprout-chat-widget">
+        <div class="sprout-bubble">Need a hand? Chat with us.</div>
+        <div class="sprout-icon-circle">&#127807;</div>
+      </div>
+    </main>
+  </div><!-- /corporateView -->
+
+
+  <!-- ==========================================================================
+       Footer (shared between both views)
        ========================================================================== -->
   <footer class="footer-v3">
     <div class="container">
@@ -387,7 +418,6 @@
           <p style="font-size: 14px; opacity: 0.9; margin-bottom: 12px;">Farmer-owned organic &amp; bio-fertiliser movement since 1984.</p>
           <div id="visitorCounterV3" class="counter-box-v3">Visitor Count: 14,892,410</div>
         </div>
-
         <div>
           <div style="font-family: var(--font-display); font-size: 15px; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; color: var(--color-wheat);">Who We Are</div>
           <ul style="list-style: none; font-size: 13px; opacity: 0.9; display: flex; flex-direction: column; gap: 8px;">
@@ -398,7 +428,6 @@
             <li><a href="#" style="color: inherit;">Privacy Policy</a></li>
           </ul>
         </div>
-
         <div>
           <div style="font-family: var(--font-display); font-size: 15px; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; color: var(--color-wheat);">Farmer Support</div>
           <ul style="list-style: none; font-size: 13px; opacity: 0.9; display: flex; flex-direction: column; gap: 8px;">
@@ -409,7 +438,6 @@
             <li><a href="#" style="color: inherit;">FAQs</a></li>
           </ul>
         </div>
-
         <div>
           <div style="font-family: var(--font-display); font-size: 15px; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; color: var(--color-wheat);">Farmer Helpline</div>
           <div style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--color-wheat); margin-bottom: 8px;">1800-889-NCHEM</div>
@@ -417,7 +445,6 @@
         </div>
       </div>
 
-      <!-- Newsletter Bar -->
       <div class="newsletter-bar-v3">
         <div style="font-family: var(--font-display); font-size: 18px; font-weight: 700;">Get New Updates &amp; Bio-Fertiliser Advisories:</div>
         <div style="display: flex; gap: 10px; flex-grow: 1; max-width: 500px;">
@@ -426,17 +453,12 @@
         </div>
       </div>
 
-      <!-- Subsidiary Logo Strip -->
-      <div style="border-top: 1px solid rgba(255, 255, 255, 0.15); border-bottom: 1px solid rgba(255, 255, 255, 0.15); padding: 20px 0; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; color: rgba(255, 255, 255, 0.8);">
+      <div style="border-top: 1px solid rgba(255,255,255,0.15); border-bottom: 1px solid rgba(255,255,255,0.15); padding: 20px 0; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; color: rgba(255,255,255,0.8);">
         <span>&lsaquo;</span>
-        <span>Nchem Bio-Tech</span>
-        <span>&bull;</span>
-        <span>Nchem Kisan Finance</span>
-        <span>&bull;</span>
-        <span>Nchem General Agri</span>
-        <span>&bull;</span>
-        <span>Nchem Rural Retail</span>
-        <span>&bull;</span>
+        <span>Nchem Bio-Tech</span><span>&bull;</span>
+        <span>Nchem Kisan Finance</span><span>&bull;</span>
+        <span>Nchem General Agri</span><span>&bull;</span>
+        <span>Nchem Rural Retail</span><span>&bull;</span>
         <span>Nchem Logistics</span>
         <span>&rsaquo;</span>
       </div>

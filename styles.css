@@ -931,3 +931,238 @@ button {
     display: none;
   }
 }
+
+/* ==========================================================================
+   FARMER PORTAL VIEW — Slideshow, Filter Chips, Product Grid, Helpline Banner
+   ========================================================================== */
+
+/* --- Hero Slideshow --- */
+.fp-slideshow-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.fp-slideshow {
+  position: relative;
+  height: 540px;
+}
+
+.fp-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  pointer-events: none;
+}
+
+.fp-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fp-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(39, 64, 41, 0.82) 40%, rgba(39, 64, 41, 0.3) 100%);
+}
+
+.fp-slide-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 max(40px, calc((100% - var(--max-width)) / 2 + 40px));
+  color: #FFFFFF;
+  max-width: 640px;
+}
+
+.fp-slide-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-terracotta);
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.fp-slide-headline {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.fp-slide-sub {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+/* Slideshow Arrows */
+.fp-slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #FFFFFF;
+  font-size: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.2s ease;
+}
+
+.fp-slide-arrow:hover {
+  background-color: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+}
+
+.fp-prev { left: 24px; }
+.fp-next { right: 24px; }
+
+/* Dot Indicators */
+.fp-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.fp-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.4);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.fp-dot.active {
+  background-color: var(--color-terracotta);
+  transform: scale(1.3);
+}
+
+/* --- Nutrient Filter Section --- */
+.fp-filter-section {
+  background-color: #FFFFFF;
+  padding: 48px 0 36px;
+  border-bottom: 3px solid var(--color-bg-linen);
+}
+
+.fp-filter-header {
+  margin-bottom: 24px;
+}
+
+.fp-filter-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.fp-filter-sub {
+  font-size: 15px;
+  color: var(--color-text-muted);
+}
+
+.fp-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fp-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-bg-linen);
+  border: 1.5px solid var(--color-border);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fp-chip:hover {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+  background-color: #FFF5EE;
+}
+
+.fp-chip.active {
+  background-color: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(201, 123, 74, 0.25);
+}
+
+/* --- Farmer Product Grid --- */
+.fp-products-section {
+  background-color: var(--color-bg-linen);
+  padding: 40px 0 60px;
+}
+
+/* --- Farmer Helpline Banner --- */
+.fp-helpline-banner {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  color: #FFFFFF;
+  padding: 48px 0;
+}
+
+.fp-helpline-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.fp-helpline-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-wheat);
+  margin-bottom: 6px;
+}
+
+.fp-helpline-number {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--color-wheat);
+  margin-bottom: 6px;
+}
+
+.fp-helpline-sub {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
