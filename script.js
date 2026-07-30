@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'nchem-bio-gold',
       title: 'Nchem Bio-Gold Organic Granules',
-      category: 'Organic Fertilisers',
-      nutrients: ['Org-C', 'N', 'P', 'K'],
+      category: 'Organic & Bio Fertilizers',
       desc: 'Enriched organic fertiliser processed from natural plant biomass to build rich, fertile soil that holds water longer.',
       dosage: '50–100 kg / acre during sowing',
       image: 'assets/v2_bag.png'
@@ -20,8 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'nchem-rhizo-boost',
       title: 'Nchem Rhizo-Boost Liquid Bio-Inoculant',
-      category: 'Bio-Fertilisers',
-      nutrients: ['N'],
+      category: 'Organic & Bio Fertilizers',
       desc: 'High-count nitrogen-fixing liquid bio-inoculant for leguminous crops to fix atmospheric nitrogen directly into root nodules.',
       dosage: '250 ml seed treatment or 500 ml drenching',
       image: 'assets/nchem_rhizo_boost.png'
@@ -29,17 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'nchem-soil-restore',
       title: 'Nchem Soil-Restore Humic Granules',
-      category: 'Soil Conditioners & Humics',
-      nutrients: ['Org-C', 'Ca/Mg'],
-      desc: 'Concentrated leonardite-derived humic granules that increase soil cation exchange capacity (CEC) and root branching.',
+      category: 'Specialized Crop Nutrition & Growth Promoters',
+      desc: 'Concentrated leonardite-derived humic granules that increase soil cation exchange capacity (CEC) and root branching for stronger crop growth.',
       dosage: '5 kg per acre during land prep',
       image: 'assets/nchem_soil_conditioner.png'
     },
     {
       id: 'nchem-phospho-sol',
       title: 'Nchem Phospho-Sol Bio-Fertiliser',
-      category: 'Bio-Fertilisers',
-      nutrients: ['P'],
+      category: 'Specialized Crop Nutrition & Growth Promoters',
       desc: 'Releases bound phosphate trapped in soil so crop roots can easily absorb it for stronger tillering and root mass.',
       dosage: '500 ml per acre via drip or soil drench',
       image: 'assets/nchem_rhizo_boost.png'
@@ -47,8 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'nchem-k-mobilizer',
       title: 'Nchem K-Mobilizer Bio-Potash',
-      category: 'Bio-Fertilisers',
-      nutrients: ['K'],
+      category: 'Water-Soluble & Chemical Fertilizers',
       desc: 'Potash mobilizing bacterial culture that increases fruit size, grain weight, and natural crop stress tolerance.',
       dosage: '500 ml per acre via fertigation',
       image: 'assets/v2_bag.png'
@@ -56,10 +51,25 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'nchem-multi-zinc',
       title: 'Nchem Multi-Zinc & Iron Fortifier',
-      category: 'Micronutrient Fortifiers',
-      nutrients: ['Zn', 'Fe'],
+      category: 'Micro-Nutrients & Micronutrient Fertilizers',
       desc: 'Bio-chelated multi-micronutrient formula engineered for rapid foliar uptake, curing interveinal chlorosis.',
       dosage: '250g - 500g per acre spray',
+      image: 'assets/nchem_soil_conditioner.png'
+    },
+    {
+      id: 'nchem-crop-guard',
+      title: 'Nchem Crop Guard Bio-Protectant',
+      category: 'Crop Protection & Specialized Management',
+      desc: 'Natural bio-based protectant that shields crops from fungal, bacterial, and pest pressure without harmful chemical residues.',
+      dosage: '500 ml per acre foliar spray',
+      image: 'assets/v2_bag.png'
+    },
+    {
+      id: 'nchem-npk-ws',
+      title: 'Nchem NPK Water-Soluble 19:19:19',
+      category: 'Water-Soluble & Chemical Fertilizers',
+      desc: 'Fully water-soluble balanced NPK formula for fast nutrient delivery via drip irrigation or foliar application.',
+      dosage: '3–5 kg per acre via fertigation',
       image: 'assets/nchem_soil_conditioner.png'
     }
   ];
@@ -67,11 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ========================================================================
      SHARED: Product Card Renderer
      ======================================================================== */
-  function renderProducts(gridEl, nutrientFilter) {
+  function renderProducts(gridEl, categoryFilter) {
     if (!gridEl) return;
 
     const filtered = formulationsV3.filter(p => {
-      return nutrientFilter === 'All' || p.nutrients.includes(nutrientFilter);
+      return categoryFilter === 'All' || p.category === categoryFilter;
     });
 
     if (filtered.length === 0) {
@@ -257,9 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderFormulationsV3() {
     if (!productGridV3) return;
     const filtered = formulationsV3.filter(p => {
-      const matchCat     = activeCategory === 'All' || p.category === activeCategory;
-      const matchNutrient = activeNutrient  === 'All' || p.nutrients.includes(activeNutrient);
-      return matchCat && matchNutrient;
+      return activeCategory === 'All' || p.category === activeCategory;
     });
 
     if (filtered.length === 0) {
@@ -305,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
     chip.addEventListener('click', () => {
       chipPills.forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
-      activeNutrient = chip.getAttribute('data-nutrient') || 'All';
+      activeCategory = chip.getAttribute('data-nutrient') || 'All';
       renderFormulationsV3();
     });
   });

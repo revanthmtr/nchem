@@ -110,12 +110,11 @@
         <div>
           <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 16px;">Product Categories</div>
           <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
-            <li><a href="#" class="mega-sub-link-v3">Primary Bio-Nutrients</a></li>
-            <li><a href="#" class="mega-sub-link-v3">Liquid Bio-Inoculants</a></li>
-            <li><a href="#" class="mega-sub-link-v3">Phosphate Solubilizing Bacteria (PSB)</a></li>
-            <li><a href="#" class="mega-sub-link-v3">Potash Mobilizing Bio-Fertilisers</a></li>
-            <li><a href="#" class="mega-sub-link-v3">Humic &amp; Fulvic Soil Conditioners</a></li>
-            <li><a href="#" class="mega-sub-link-v3">Chelated Micronutrient Sprays</a></li>
+            <li><a href="#product-grid-anchor" class="mega-sub-link-v3">&#127806; Specialized Crop Nutrition &amp; Growth Promoters</a></li>
+            <li><a href="#product-grid-anchor" class="mega-sub-link-v3">&#9879; Micro-Nutrients &amp; Micronutrient Fertilizers</a></li>
+            <li><a href="#product-grid-anchor" class="mega-sub-link-v3">&#127811; Organic &amp; Bio Fertilizers</a></li>
+            <li><a href="#product-grid-anchor" class="mega-sub-link-v3">&#128167; Water-Soluble &amp; Chemical Fertilizers</a></li>
+            <li><a href="#product-grid-anchor" class="mega-sub-link-v3">&#128737; Crop Protection &amp; Specialized Management</a></li>
           </ul>
         </div>
         <div>
@@ -203,13 +202,11 @@
         </div>
         <div class="fp-chips-row">
           <button class="fp-chip active" data-nutrient="All">&#10003; All Products</button>
-          <button class="fp-chip" data-nutrient="N"><strong>N</strong> &nbsp;Nitrogen Fixers</button>
-          <button class="fp-chip" data-nutrient="P"><strong>P</strong> &nbsp;Phosphate Solubilizers</button>
-          <button class="fp-chip" data-nutrient="K"><strong>K</strong> &nbsp;Potash Mobilizers</button>
-          <button class="fp-chip" data-nutrient="Zn"><strong>Zn</strong> &nbsp;Zinc Chelates</button>
-          <button class="fp-chip" data-nutrient="Fe"><strong>Fe</strong> &nbsp;Iron EDTA</button>
-          <button class="fp-chip" data-nutrient="Org-C"><strong>Org-C</strong> &nbsp;Organic Carbon</button>
-          <button class="fp-chip" data-nutrient="Ca/Mg"><strong>Ca/Mg</strong> &nbsp;Calcium / Magnesium</button>
+          <button class="fp-chip" data-nutrient="Specialized Crop Nutrition & Growth Promoters">&#127806; Crop Nutrition &amp; Growth</button>
+          <button class="fp-chip" data-nutrient="Micro-Nutrients & Micronutrient Fertilizers">&#9879; Micro-Nutrients</button>
+          <button class="fp-chip" data-nutrient="Organic & Bio Fertilizers">&#127811; Organic &amp; Bio</button>
+          <button class="fp-chip" data-nutrient="Water-Soluble & Chemical Fertilizers">&#128167; Water-Soluble &amp; Chemical</button>
+          <button class="fp-chip" data-nutrient="Crop Protection & Specialized Management">&#128737; Crop Protection</button>
         </div>
       </div>
     </section>
@@ -361,12 +358,13 @@
 
       <nav class="category-tab-bar-v3">
         <div class="container category-tab-inner-v3">
-          <button class="cat-tab-v3 active" data-category="All"><span>&starf;</span> All Formulations</button>
-          <button class="cat-tab-v3" data-category="Organic Fertilisers"><span>&spades;</span> Organic Fertilisers</button>
-          <button class="cat-tab-v3" data-category="Bio-Fertilisers"><span>&amp;</span> Bio-Fertilisers</button>
-          <button class="cat-tab-v3" data-category="Soil Conditioners & Humics"><span>&yen;</span> Soil Conditioners</button>
-          <button class="cat-tab-v3" data-category="Micronutrient Fortifiers"><span>&#9733;</span> Micronutrients</button>
-          <button id="toggleNutrientPanelBtn" class="cat-tab-v3 find-fit-tab-v3"><span>&#9878;</span> Find Your Fit &rarr;</button>
+          <button class="cat-tab-v3 active" data-category="All"><span>&#9733;</span> All Formulations</button>
+          <button class="cat-tab-v3" data-category="Specialized Crop Nutrition & Growth Promoters"><span>&#127806;</span> Crop Nutrition</button>
+          <button class="cat-tab-v3" data-category="Micro-Nutrients & Micronutrient Fertilizers"><span>&#9879;</span> Micro-Nutrients</button>
+          <button class="cat-tab-v3" data-category="Organic & Bio Fertilizers"><span>&#127811;</span> Organic &amp; Bio</button>
+          <button class="cat-tab-v3" data-category="Water-Soluble & Chemical Fertilizers"><span>&#128167;</span> Water-Soluble</button>
+          <button class="cat-tab-v3" data-category="Crop Protection & Specialized Management"><span>&#128737;</span> Crop Protection</button>
+          <button id="toggleNutrientPanelBtn" class="cat-tab-v3 find-fit-tab-v3"><span>&#128269;</span> Find Your Fit &rarr;</button>
         </div>
       </nav>
 
@@ -377,16 +375,14 @@
             Nchem's range of bio-fertilisers and organic soil improvers are formulated to restore soil microflora, boost nutrient absorption, and yield healthy crops naturally without harmful residues.
           </p>
           <div id="nutrientPanelV3" class="nutrient-panel-v3" style="display: none;">
-            <div style="font-size: 13px; font-weight: 700; color: var(--color-primary); margin-bottom: 12px; text-transform: uppercase;">Filter by Chemical Nutrient / Bio-Inoculant:</div>
+            <div style="font-size: 13px; font-weight: 700; color: var(--color-primary); margin-bottom: 12px; text-transform: uppercase;">Filter by Product Group:</div>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-              <button class="chip-pill-v3 active" data-nutrient="All">All Nutrients</button>
-              <button class="chip-pill-v3" data-nutrient="N"><strong>N</strong> Nitrogen Fixers</button>
-              <button class="chip-pill-v3" data-nutrient="P"><strong>P</strong> Phosphate Solubilizers</button>
-              <button class="chip-pill-v3" data-nutrient="K"><strong>K</strong> Potash Mobilizers</button>
-              <button class="chip-pill-v3" data-nutrient="Zn"><strong>Zn</strong> Zinc Chelates</button>
-              <button class="chip-pill-v3" data-nutrient="Fe"><strong>Fe</strong> Iron EDTA</button>
-              <button class="chip-pill-v3" data-nutrient="Org-C"><strong>Org-C</strong> Organic Carbon</button>
-              <button class="chip-pill-v3" data-nutrient="Ca/Mg"><strong>Ca/Mg</strong> Calcium/Magnesium</button>
+              <button class="chip-pill-v3 active" data-nutrient="All">All Formulations</button>
+              <button class="chip-pill-v3" data-nutrient="Specialized Crop Nutrition & Growth Promoters">&#127806; Crop Nutrition &amp; Growth Promoters</button>
+              <button class="chip-pill-v3" data-nutrient="Micro-Nutrients & Micronutrient Fertilizers">&#9879; Micro-Nutrients &amp; Micronutrient Fertilizers</button>
+              <button class="chip-pill-v3" data-nutrient="Organic & Bio Fertilizers">&#127811; Organic &amp; Bio Fertilizers</button>
+              <button class="chip-pill-v3" data-nutrient="Water-Soluble & Chemical Fertilizers">&#128167; Water-Soluble &amp; Chemical Fertilizers</button>
+              <button class="chip-pill-v3" data-nutrient="Crop Protection & Specialized Management">&#128737; Crop Protection &amp; Specialized Management</button>
             </div>
           </div>
         </div>
