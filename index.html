@@ -54,7 +54,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=27.0">
+  <link rel="stylesheet" href="styles.css?v=28.0">
 </head>
 <body>
 
@@ -1197,6 +1197,22 @@
             <p class="story-main-desc">
               Discover how four decades of Indian agri-biotechnology heritage journey from molecular microbial isolation in Hyderabad to industrial fermentation, village field trials, and the radiant smiles of thriving farming families.
             </p>
+
+            <!-- Dual Presentation Mode Switcher & Real-Time Telemetry -->
+            <div class="story-mode-switch-wrap">
+              <div class="story-mode-pill-toggle" role="tablist" aria-label="Story Presentation Mode">
+                <button type="button" class="story-mode-btn active" data-story-mode="scroll" id="storyModeScroll">
+                  <span class="mode-icon">&#8693;</span> Story Scroll Stream
+                </button>
+                <button type="button" class="story-mode-btn" data-story-mode="deck" id="storyModeDeck">
+                  <span class="mode-icon">&#9655;</span> Interactive Stage Deck
+                </button>
+              </div>
+              <div class="story-live-telemetry">
+                <span class="telemetry-pulse"></span>
+                <span class="telemetry-label" id="storyTelemetryLabel">CHAPTER 01 OF 05 &bull; LAB DISCOVERY ACTIVE</span>
+              </div>
+            </div>
           </div>
 
           <!-- Story-Driven Vertical Scroll Timeline Model -->
@@ -1218,7 +1234,7 @@
               <div class="story-timeline-item active" id="storyPhase1" data-phase="1">
                 <!-- Timeline Node & Connector -->
                 <div class="story-timeline-node-wrap">
-                  <button type="button" class="story-timeline-node" aria-label="Scroll to Phase 01: Lab Discovery" data-target="storyPhase1">
+                  <button type="button" class="story-timeline-node" aria-label="Phase 01: Lab Discovery" data-target="storyPhase1">
                     <span class="node-badge-num">01</span>
                     <svg class="node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M6 18h8"></path>
@@ -1251,19 +1267,19 @@
                       <div class="story-card-highlights">
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>Pure Strain Isolation:</strong> Laminar airflow isolation under certified Class-10,000 cleanroom environments.
                           </div>
                         </div>
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>Genomic PCR Verification:</strong> Automated DNA fingerprinting guaranteeing 100% species purity and zero contamination.
                           </div>
                         </div>
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>Rhizosphere Colonization Audits:</strong> Verified symbiotic root affinity for rapid seedling vigor and soil enzyme stimulation.
                           </div>
                         </div>
@@ -1275,6 +1291,12 @@
                           <div class="metric-label">Living Potency Standard</div>
                           <div class="metric-sub">Over 200 field strains screened annually to select the top 1% biological vigor</div>
                         </div>
+                      </div>
+
+                      <div class="story-card-nav-actions">
+                        <button type="button" class="btn btn-terracotta story-step-nav-btn" data-go="2">
+                          Next Chapter: Industrial Fermentation &rarr;
+                        </button>
                       </div>
                     </div>
 
@@ -1300,7 +1322,7 @@
                    ============================================================ -->
               <div class="story-timeline-item" id="storyPhase2" data-phase="2">
                 <div class="story-timeline-node-wrap">
-                  <button type="button" class="story-timeline-node" aria-label="Scroll to Phase 02: Bio-Fermentation" data-target="storyPhase2">
+                  <button type="button" class="story-timeline-node" aria-label="Phase 02: Bio-Fermentation" data-target="storyPhase2">
                     <span class="node-badge-num">02</span>
                     <svg class="node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M10 2v7.31"></path>
@@ -1331,19 +1353,19 @@
                       <div class="story-card-highlights">
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>SCADA-Monitored Bioreactors:</strong> Real-time computer control of pH, dissolved oxygen, and gentle variable-speed agitation.
                           </div>
                         </div>
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>Pure Organic Substrates:</strong> Formulated using plant-origin hydrolysates, seaweed extracts, and pure carbohydrate precursors.
                           </div>
                         </div>
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>Non-Thermal Cold Harvesting:</strong> High-efficiency cell separation preserving fragile bacterial membranes and living enzymes.
                           </div>
                         </div>
@@ -1355,6 +1377,13 @@
                           <div class="metric-label">Aseptic Deep-Tank Reactor Capacity</div>
                           <div class="metric-sub">Continuous batch consistency delivering zero-chemical-residue formulations</div>
                         </div>
+                      </div>
+
+                      <div class="story-card-nav-actions">
+                        <button type="button" class="btn btn-outline-forest story-step-nav-btn" data-go="1">&larr; Previous</button>
+                        <button type="button" class="btn btn-terracotta story-step-nav-btn" data-go="3">
+                          Next Chapter: Formulation &amp; Packaging &rarr;
+                        </button>
                       </div>
                     </div>
 
@@ -1380,7 +1409,7 @@
                    ============================================================ -->
               <div class="story-timeline-item" id="storyPhase3" data-phase="3">
                 <div class="story-timeline-node-wrap">
-                  <button type="button" class="story-timeline-node" aria-label="Scroll to Phase 03: Formulation & QC" data-target="storyPhase3">
+                  <button type="button" class="story-timeline-node" aria-label="Phase 03: Formulation & QC" data-target="storyPhase3">
                     <span class="node-badge-num">03</span>
                     <svg class="node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -1408,19 +1437,19 @@
                       <div class="story-card-highlights">
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>Biological Osmoprotection:</strong> Safe cellular dormancy stabilizers guaranteeing over 12 months of room-temperature shelf life.
                           </div>
                         </div>
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>UV-Barrier HDPE Bottles:</strong> High-density light-blocking polymers shielding sensitive microbes during transit and retail storage.
                           </div>
                         </div>
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>Micro-Porous Venting Caps:</strong> One-way breathable membranes relieving internal metabolic gases without admitting moisture.
                           </div>
                         </div>
@@ -1432,6 +1461,13 @@
                           <div class="metric-label">Serialized Batch FCO Compliance</div>
                           <div class="metric-sub">Every container backed by traceable government-accredited Certificate of Analysis</div>
                         </div>
+                      </div>
+
+                      <div class="story-card-nav-actions">
+                        <button type="button" class="btn btn-outline-forest story-step-nav-btn" data-go="2">&larr; Previous</button>
+                        <button type="button" class="btn btn-terracotta story-step-nav-btn" data-go="4">
+                          Next Chapter: Field Outreach &rarr;
+                        </button>
                       </div>
                     </div>
 
@@ -1457,7 +1493,7 @@
                    ============================================================ -->
               <div class="story-timeline-item" id="storyPhase4" data-phase="4">
                 <div class="story-timeline-node-wrap">
-                  <button type="button" class="story-timeline-node" aria-label="Scroll to Phase 04: Field Outreach" data-target="storyPhase4">
+                  <button type="button" class="story-timeline-node" aria-label="Phase 04: Field Outreach" data-target="storyPhase4">
                     <span class="node-badge-num">04</span>
                     <svg class="node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M7 20h10"></path>
@@ -1486,19 +1522,19 @@
                       <div class="story-card-highlights">
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>Village Soil Diagnostic Camps:</strong> On-site rhizosphere health checks and soil conductivity evaluations.
                           </div>
                         </div>
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>Precision Stage-Wise Protocols:</strong> Custom crop schedules guiding farmers from seed germination through fruit filling.
                           </div>
                         </div>
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>12,000+ Cooperative Touchpoints:</strong> Direct distribution ensuring authentic, fresh-batch bio-inputs reach remote villages.
                           </div>
                         </div>
@@ -1510,6 +1546,13 @@
                           <div class="metric-label">Annual Village Demonstration Trials</div>
                           <div class="metric-sub">Educating over 150,000 farmers in regenerative bio-input applications</div>
                         </div>
+                      </div>
+
+                      <div class="story-card-nav-actions">
+                        <button type="button" class="btn btn-outline-forest story-step-nav-btn" data-go="3">&larr; Previous</button>
+                        <button type="button" class="btn btn-terracotta story-step-nav-btn" data-go="5">
+                          Next Chapter: Harvest &amp; Prosperity &rarr;
+                        </button>
                       </div>
                     </div>
 
@@ -1535,7 +1578,7 @@
                    ============================================================ -->
               <div class="story-timeline-item" id="storyPhase5" data-phase="5">
                 <div class="story-timeline-node-wrap">
-                  <button type="button" class="story-timeline-node" aria-label="Scroll to Phase 05: Harvest & Happiness" data-target="storyPhase5">
+                  <button type="button" class="story-timeline-node" aria-label="Phase 05: Harvest & Happiness" data-target="storyPhase5">
                     <span class="node-badge-num">05</span>
                     <svg class="node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <circle cx="12" cy="12" r="4"></circle>
@@ -1570,19 +1613,19 @@
                       <div class="story-card-highlights">
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>18% to 26% Verified Yield Surge:</strong> Proven across diverse crops including paddy, cotton, chilli, tomato, and banana.
                           </div>
                         </div>
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>30%–40% Chemical Savings:</strong> Lower expenses on synthetic urea, DAP, and toxic chemical pesticides per acre.
                           </div>
                         </div>
                         <div class="story-card-highlight">
                           <div class="highlight-check">&#10003;</div>
-                          <div class="highlight-text">
+                          <div class="highlight-info">
                             <strong>Living Soil Carbon Regeneration:</strong> Noticeable comeback of earthworms, natural mycorrhizae, and moisture retention.
                           </div>
                         </div>
@@ -1596,7 +1639,8 @@
                         </div>
                       </div>
 
-                      <div class="story-card-cta-wrap" style="margin-top: 20px;">
+                      <div class="story-card-nav-actions">
+                        <button type="button" class="btn btn-outline-forest story-step-nav-btn" data-go="4">&larr; Previous</button>
                         <a href="#corpProducts" class="btn btn-terracotta" style="display: inline-flex; align-items: center; gap: 8px;">
                           Explore 121 Certified Formulations &darr;
                         </a>
@@ -2624,6 +2668,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=19.0"></script>
+  <script src="script.js?v=20.0"></script>
 </body>
 </html>

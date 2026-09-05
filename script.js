@@ -3782,13 +3782,74 @@ document.addEventListener('DOMContentLoaded', () => {
   const storyContainer = document.getElementById('storyTimelineContainer');
   const storyRailGlow = document.getElementById('storyTimelineGlow');
   const storyBeacon = document.getElementById('storyTimelineBeacon');
-  const storyItems = document.querySelectorAll('.story-timeline-item');
+  const storyItems = Array.from(document.querySelectorAll('.story-timeline-item'));
   const storyNodes = document.querySelectorAll('.story-timeline-node');
+  const storyTelemetryLabel = document.getElementById('storyTelemetryLabel');
+  const btnStoryScroll = document.getElementById('storyModeScroll');
+  const btnStoryDeck = document.getElementById('storyModeDeck');
+  const storyNavBtns = document.querySelectorAll('.story-step-nav-btn');
 
+  const chapterMeta = {
+    1: 'CHAPTER 01 OF 05 \u2022 LAB DISCOVERY ACTIVE',
+    2: 'CHAPTER 02 OF 05 \u2022 BIO-FERMENTATION ACTIVE',
+    3: 'CHAPTER 03 OF 05 \u2022 FORMULATION & QC ACTIVE',
+    4: 'CHAPTER 04 OF 05 \u2022 FIELD OUTREACH ACTIVE',
+    5: 'CHAPTER 05 OF 05 \u2022 HARVEST & PROSPERITY ACTIVE'
+  };
+
+  let currentStoryMode = 'scroll'; // 'scroll' or 'deck'
+  let currentDeckStage = 1;
   let storyTicking = false;
+
+  function updateTelemetry(phaseNum) {
+    if (storyTelemetryLabel && chapterMeta[phaseNum]) {
+      storyTelemetryLabel.textContent = chapterMeta[phaseNum];
+    }
+  }
+
+  function setDeckStage(targetPhase) {
+    const phaseNum = parseInt(targetPhase, 10);
+    if (isNaN(phaseNum) || phaseNum < 1 || phaseNum > storyItems.length) return;
+    currentDeckStage = phaseNum;
+
+    storyItems.forEach((item) => {
+      const p = parseInt(item.getAttribute('data-phase'), 10);
+      const nodeBtn = item.querySelector('.story-timeline-node');
+      if (p === phaseNum) {
+        item.classList.add('active');
+        if (nodeBtn) nodeBtn.setAttribute('aria-current', 'step');
+      } else {
+        item.classList.remove('active');
+        if (nodeBtn) nodeBtn.removeAttribute('aria-current');
+      }
+    });
+
+    updateTelemetry(phaseNum);
+
+    // Position beacon and rail glow precisely on active node in deck mode
+    if (storyContainer && storyItems.length > 0) {
+      const firstItem = storyItems[0];
+      const activeItem = storyItems[phaseNum - 1];
+      if (firstItem && activeItem) {
+        const firstTop = firstItem.offsetTop + 27;
+        const activeTop = activeItem.offsetTop + 27;
+        const beamHeight = Math.max(0, activeTop - firstTop);
+
+        if (storyRailGlow) {
+          storyRailGlow.style.top = `${firstTop}px`;
+          storyRailGlow.style.height = `${beamHeight}px`;
+        }
+        if (storyBeacon) {
+          storyBeacon.style.top = `${activeTop}px`;
+          storyBeacon.style.opacity = '1';
+        }
+      }
+    }
+  }
 
   function updateStoryScroll() {
     if (!storyContainer || storyItems.length === 0) return;
+    if (currentStoryMode === 'deck') return; // In Deck mode, scroll position doesn't drive stages
 
     const containerRect = storyContainer.getBoundingClientRect();
     const windowH = window.innerHeight;
@@ -3796,7 +3857,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Only compute when container is near or inside viewport
     if (containerRect.bottom < -200 || containerRect.top > windowH + 200) return;
 
-    // Trigger focal plane (40% down from viewport top)
+    // Trigger focal plane (42% down from viewport top)
     const focalY = windowH * 0.42;
     const firstItem = storyItems[0];
     const lastItem = storyItems[storyItems.length - 1];
@@ -3834,16 +3895,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     storyItems.forEach((item, idx) => {
+      const nodeBtn = item.querySelector('.story-timeline-node');
       if (idx === activeIdx) {
         item.classList.add('active');
-        const nodeBtn = item.querySelector('.story-timeline-node');
         if (nodeBtn) nodeBtn.setAttribute('aria-current', 'step');
       } else {
         item.classList.remove('active');
-        const nodeBtn = item.querySelector('.story-timeline-node');
         if (nodeBtn) nodeBtn.removeAttribute('aria-current');
       }
     });
+
+    updateTelemetry(activeIdx + 1);
   }
 
   function requestStoryTick() {
@@ -3856,13 +3918,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Node click: smooth scroll to that phase
+  // Node clicks:
   storyNodes.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const targetId = btn.getAttribute('data-target');
       const targetEl = document.getElementById(targetId);
-      if (targetEl) {
+      if (!targetEl) return;
+
+      const phaseNum = parseInt(targetEl.getAttribute('data-phase'), 10);
+
+      if (currentStoryMode === 'deck') {
+        setDeckStage(phaseNum);
+        // Ensure container is scrolled into visible view if needed
+        const cRect = storyContainer.getBoundingClientRect();
+        if (cRect.top < 80 || cRect.top > window.innerHeight * 0.4) {
+          const targetY = storyContainer.getBoundingClientRect().top + window.pageYOffset - 110;
+          window.scrollTo({ top: targetY, behavior: 'smooth' });
+        }
+      } else {
         const headerOffset = 110;
         const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - headerOffset;
         window.scrollTo({ top: targetPos, behavior: 'smooth' });
@@ -3870,9 +3944,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Step Navigation Buttons inside cards
+  storyNavBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetPhase = btn.getAttribute('data-go');
+      if (!targetPhase) return;
+
+      if (currentStoryMode === 'deck') {
+        setDeckStage(parseInt(targetPhase, 10));
+      } else {
+        const targetEl = document.getElementById(`storyPhase${targetPhase}`);
+        if (targetEl) {
+          const headerOffset = 110;
+          const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: targetPos, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+
+  // Dual-Mode Toggles: Continuous Story Scroll Stream vs. Interactive Stage Deck
+  if (btnStoryScroll && btnStoryDeck && storyContainer) {
+    btnStoryScroll.addEventListener('click', () => {
+      currentStoryMode = 'scroll';
+      btnStoryScroll.classList.add('active');
+      btnStoryDeck.classList.remove('active');
+      storyContainer.classList.remove('mode-deck');
+      requestStoryTick();
+    });
+
+    btnStoryDeck.addEventListener('click', () => {
+      currentStoryMode = 'deck';
+      btnStoryDeck.classList.add('active');
+      btnStoryScroll.classList.remove('active');
+      storyContainer.classList.add('mode-deck');
+      setDeckStage(currentDeckStage || 1);
+    });
+  }
+
   window.addEventListener('scroll', requestStoryTick, { passive: true });
   window.addEventListener('resize', requestStoryTick, { passive: true });
-  // Initial check
   requestStoryTick();
 
   /* ========================================================================
