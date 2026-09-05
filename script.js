@@ -3777,215 +3777,155 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ========================================================================
-     MANUFACTURING & R&D EXCELLENCE — STORY-DRIVEN SCROLL MODEL CONTROLLER
+     MANUFACTURING & R&D EXCELLENCE — EDITORIAL SCROLLYTELLING CONTROLLER
      ======================================================================== */
-  const storyContainer = document.getElementById('storyTimelineContainer');
-  const storyRailGlow = document.getElementById('storyTimelineGlow');
-  const storyBeacon = document.getElementById('storyTimelineBeacon');
-  const storyItems = Array.from(document.querySelectorAll('.story-timeline-item'));
-  const storyNodes = document.querySelectorAll('.story-timeline-node');
-  const storyTelemetryLabel = document.getElementById('storyTelemetryLabel');
-  const btnStoryScroll = document.getElementById('storyModeScroll');
-  const btnStoryDeck = document.getElementById('storyModeDeck');
-  const storyNavBtns = document.querySelectorAll('.story-step-nav-btn');
+  const editorialRows = document.querySelectorAll('.editorial-story-row');
+  if (editorialRows.length > 0) {
+    const rowObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -80px 0px',
+      threshold: 0.15
+    });
 
-  const chapterMeta = {
-    1: 'CHAPTER 01 OF 05 \u2022 LAB DISCOVERY ACTIVE',
-    2: 'CHAPTER 02 OF 05 \u2022 BIO-FERMENTATION ACTIVE',
-    3: 'CHAPTER 03 OF 05 \u2022 FORMULATION & QC ACTIVE',
-    4: 'CHAPTER 04 OF 05 \u2022 FIELD OUTREACH ACTIVE',
-    5: 'CHAPTER 05 OF 05 \u2022 HARVEST & PROSPERITY ACTIVE'
+    editorialRows.forEach(row => {
+      rowObserver.observe(row);
+    });
+  }
+
+  // Support editorial button clicks to activate matching category or smooth scroll
+  const editorialBtns = document.querySelectorAll('.editorial-btn[data-category]');
+  editorialBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.getAttribute('data-category');
+      if (cat) {
+        const catFilterBtn = document.querySelector(`.corp-cat-pill[data-category="${cat}"]`);
+        if (catFilterBtn) {
+          catFilterBtn.click();
+        }
+      }
+    });
+  });
+
+  /* ========================================================================
+     PAN-INDIA SUPPLY CHAIN & FREIGHT CORRIDOR CONTROLLER
+     ======================================================================== */
+  const corridorBtns = document.querySelectorAll('.corridor-tab-btn');
+  const corridorTag = document.getElementById('corridorTag');
+  const corridorTitle = document.getElementById('corridorTitle');
+  const corridorDesc = document.getElementById('corridorDesc');
+  const specHub = document.getElementById('specHub');
+  const specTurnaround = document.getElementById('specTurnaround');
+  const specCoverage = document.getElementById('specCoverage');
+  const specProtocol = document.getElementById('specProtocol');
+
+  const corridorData = {
+    all: {
+      tag: 'PAN-INDIA ARTERIAL FLEET',
+      title: 'Integrated 28-State Distribution Mesh',
+      desc: 'Direct multi-axle freight departs weekly from Ameenpur Biotechnology Campus to regional buffer depots, institutional cooperatives, and state agricultural federations across all 28 states. Every shipment carries verified FCO Certificate of Analysis dossiers and living CFU viability assurance.',
+      hub: 'Ameenpur Campus, Hyderabad',
+      turnaround: '48 – 72 Hours',
+      coverage: '28 Indian States',
+      protocol: 'UV-Barrier & Vent-Safe',
+      activeRoutes: ['routeSouth', 'routeWest', 'routeNorth', 'routeEast'],
+      activeHubs: ['hubSouthNode', 'hubWestNode', 'hubNorthNode', 'hubEastNode']
+    },
+    south: {
+      tag: 'SOUTHERN ARTERIAL CORRIDOR',
+      title: 'Direct Telangana, AP, Karnataka & Tamil Nadu Network',
+      desc: 'Immediate intra-zone dispatch from Ameenpur Campus serving primary agricultural federations, chilli belts of Guntur, cotton basins of Warangal, and delta paddy cooperatives with same-day to 48-hour turnarounds.',
+      hub: 'Hyderabad Central & Bengaluru Depot',
+      turnaround: '24 – 48 Hours',
+      coverage: 'TS, AP, KA, TN, KL',
+      protocol: 'Direct Express Inter-State Fleet',
+      activeRoutes: ['routeSouth'],
+      activeHubs: ['hubSouthNode']
+    },
+    west: {
+      tag: 'WESTERN AGRONOMIC CORRIDOR',
+      title: 'Maharashtra, Gujarat & Malwa Plateau Network',
+      desc: 'Dedicated freight line to Pune and Nagpur regional transit centers, feeding sugarcane cooperatives, soybean acreage, onion growers of Nashik, and high-tech commercial horticulture clusters.',
+      hub: 'Pune & Nagpur Buffer Depots',
+      turnaround: '36 – 48 Hours',
+      coverage: 'MH, GJ, MP, Goa',
+      protocol: 'Insulated Moisture-Locked Cargo',
+      activeRoutes: ['routeWest'],
+      activeHubs: ['hubWestNode']
+    },
+    north: {
+      tag: 'NORTHERN AGRO-BELT TRANSIT',
+      title: 'Punjab, Haryana, UP & Rajasthan Agro Network',
+      desc: 'Express rail and multi-axle freight to Delhi-NCR and Karnal staging depots, servicing the Indo-Gangetic wheat-paddy rotations, commercial sugarcane mills, and state agro federations.',
+      hub: 'Delhi-NCR & Karnal Transit Hub',
+      turnaround: '48 – 72 Hours',
+      coverage: 'PB, HR, UP, RJ, UK',
+      protocol: 'Sealed Thermal-Protected Freight',
+      activeRoutes: ['routeNorth'],
+      activeHubs: ['hubNorthNode']
+    },
+    east: {
+      tag: 'EASTERN DELTA & COROMANDEL CORRIDOR',
+      title: 'West Bengal, Odisha, Bihar & Delta Plains',
+      desc: 'Strategic route to Kolkata and Bhubaneswar buffer points, supporting intense triple-cropped paddy deltas, vegetable clusters, and eastern primary cooperative unions.',
+      hub: 'Kolkata & Bhubaneswar Depots',
+      turnaround: '48 – 72 Hours',
+      coverage: 'WB, OD, BR, JH, NE',
+      protocol: 'High-Humidity Protected Packing',
+      activeRoutes: ['routeEast'],
+      activeHubs: ['hubEastNode']
+    }
   };
 
-  let currentStoryMode = 'scroll'; // 'scroll' or 'deck'
-  let currentDeckStage = 1;
-  let storyTicking = false;
+  const allRouteIds = ['routeSouth', 'routeWest', 'routeNorth', 'routeEast'];
+  const allHubIds = ['hubSouthNode', 'hubWestNode', 'hubNorthNode', 'hubEastNode'];
 
-  function updateTelemetry(phaseNum) {
-    if (storyTelemetryLabel && chapterMeta[phaseNum]) {
-      storyTelemetryLabel.textContent = chapterMeta[phaseNum];
-    }
-  }
+  corridorBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cKey = btn.getAttribute('data-corridor');
+      if (!corridorData[cKey]) return;
 
-  function setDeckStage(targetPhase) {
-    const phaseNum = parseInt(targetPhase, 10);
-    if (isNaN(phaseNum) || phaseNum < 1 || phaseNum > storyItems.length) return;
-    currentDeckStage = phaseNum;
+      corridorBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-    storyItems.forEach((item) => {
-      const p = parseInt(item.getAttribute('data-phase'), 10);
-      const nodeBtn = item.querySelector('.story-timeline-node');
-      if (p === phaseNum) {
-        item.classList.add('active');
-        if (nodeBtn) nodeBtn.setAttribute('aria-current', 'step');
-      } else {
-        item.classList.remove('active');
-        if (nodeBtn) nodeBtn.removeAttribute('aria-current');
-      }
-    });
+      const data = corridorData[cKey];
+      if (corridorTag) corridorTag.textContent = data.tag;
+      if (corridorTitle) corridorTitle.textContent = data.title;
+      if (corridorDesc) corridorDesc.textContent = data.desc;
+      if (specHub) specHub.textContent = data.hub;
+      if (specTurnaround) specTurnaround.textContent = data.turnaround;
+      if (specCoverage) specCoverage.textContent = data.coverage;
+      if (specProtocol) specProtocol.textContent = data.protocol;
 
-    updateTelemetry(phaseNum);
-
-    // Position beacon and rail glow precisely on active node in deck mode
-    if (storyContainer && storyItems.length > 0) {
-      const firstItem = storyItems[0];
-      const activeItem = storyItems[phaseNum - 1];
-      if (firstItem && activeItem) {
-        const firstTop = firstItem.offsetTop + 27;
-        const activeTop = activeItem.offsetTop + 27;
-        const beamHeight = Math.max(0, activeTop - firstTop);
-
-        if (storyRailGlow) {
-          storyRailGlow.style.top = `${firstTop}px`;
-          storyRailGlow.style.height = `${beamHeight}px`;
+      allRouteIds.forEach(rId => {
+        const routeEl = document.getElementById(rId);
+        if (!routeEl) return;
+        if (data.activeRoutes.includes(rId)) {
+          routeEl.classList.add('active');
+          routeEl.classList.remove('dimmed');
+        } else {
+          routeEl.classList.remove('active');
+          routeEl.classList.add('dimmed');
         }
-        if (storyBeacon) {
-          storyBeacon.style.top = `${activeTop}px`;
-          storyBeacon.style.opacity = '1';
-        }
-      }
-    }
-  }
-
-  function updateStoryScroll() {
-    if (!storyContainer || storyItems.length === 0) return;
-    if (currentStoryMode === 'deck') return; // In Deck mode, scroll position doesn't drive stages
-
-    const containerRect = storyContainer.getBoundingClientRect();
-    const windowH = window.innerHeight;
-
-    // Only compute when container is near or inside viewport
-    if (containerRect.bottom < -200 || containerRect.top > windowH + 200) return;
-
-    // Trigger focal plane (42% down from viewport top)
-    const focalY = windowH * 0.42;
-    const firstItem = storyItems[0];
-    const lastItem = storyItems[storyItems.length - 1];
-
-    if (!firstItem || !lastItem) return;
-
-    // Node centers relative to the container
-    const firstItemTop = firstItem.offsetTop + 27;
-    const lastItemTop = lastItem.offsetTop + 27;
-    const totalBeamSpan = lastItemTop - firstItemTop;
-
-    // Current scroll distance within the timeline relative to focal line
-    const scrollDistance = (focalY - containerRect.top) - firstItemTop;
-    const clampedProgress = Math.min(Math.max(scrollDistance / totalBeamSpan, 0), 1);
-    const glowHeight = clampedProgress * totalBeamSpan;
-
-    if (storyRailGlow) {
-      storyRailGlow.style.top = `${firstItemTop}px`;
-      storyRailGlow.style.height = `${glowHeight}px`;
-    }
-
-    if (storyBeacon) {
-      storyBeacon.style.top = `${firstItemTop + glowHeight}px`;
-      storyBeacon.style.opacity = clampedProgress > 0.01 ? '1' : '0';
-    }
-
-    // Determine currently active phase item based on viewport position
-    let activeIdx = 0;
-    storyItems.forEach((item, idx) => {
-      const itemRect = item.getBoundingClientRect();
-      const itemTrigger = itemRect.top + 80;
-      if (itemTrigger <= focalY) {
-        activeIdx = idx;
-      }
-    });
-
-    storyItems.forEach((item, idx) => {
-      const nodeBtn = item.querySelector('.story-timeline-node');
-      if (idx === activeIdx) {
-        item.classList.add('active');
-        if (nodeBtn) nodeBtn.setAttribute('aria-current', 'step');
-      } else {
-        item.classList.remove('active');
-        if (nodeBtn) nodeBtn.removeAttribute('aria-current');
-      }
-    });
-
-    updateTelemetry(activeIdx + 1);
-  }
-
-  function requestStoryTick() {
-    if (!storyTicking) {
-      requestAnimationFrame(() => {
-        updateStoryScroll();
-        storyTicking = false;
       });
-      storyTicking = true;
-    }
-  }
 
-  // Node clicks:
-  storyNodes.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = btn.getAttribute('data-target');
-      const targetEl = document.getElementById(targetId);
-      if (!targetEl) return;
-
-      const phaseNum = parseInt(targetEl.getAttribute('data-phase'), 10);
-
-      if (currentStoryMode === 'deck') {
-        setDeckStage(phaseNum);
-        // Ensure container is scrolled into visible view if needed
-        const cRect = storyContainer.getBoundingClientRect();
-        if (cRect.top < 80 || cRect.top > window.innerHeight * 0.4) {
-          const targetY = storyContainer.getBoundingClientRect().top + window.pageYOffset - 110;
-          window.scrollTo({ top: targetY, behavior: 'smooth' });
+      allHubIds.forEach(hId => {
+        const hubEl = document.getElementById(hId);
+        if (!hubEl) return;
+        if (data.activeHubs.includes(hId)) {
+          hubEl.classList.add('active');
+          hubEl.classList.remove('dimmed');
+        } else {
+          hubEl.classList.remove('active');
+          hubEl.classList.add('dimmed');
         }
-      } else {
-        const headerOffset = 110;
-        const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-        window.scrollTo({ top: targetPos, behavior: 'smooth' });
-      }
+      });
     });
   });
-
-  // Step Navigation Buttons inside cards
-  storyNavBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetPhase = btn.getAttribute('data-go');
-      if (!targetPhase) return;
-
-      if (currentStoryMode === 'deck') {
-        setDeckStage(parseInt(targetPhase, 10));
-      } else {
-        const targetEl = document.getElementById(`storyPhase${targetPhase}`);
-        if (targetEl) {
-          const headerOffset = 110;
-          const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-          window.scrollTo({ top: targetPos, behavior: 'smooth' });
-        }
-      }
-    });
-  });
-
-  // Dual-Mode Toggles: Continuous Story Scroll Stream vs. Interactive Stage Deck
-  if (btnStoryScroll && btnStoryDeck && storyContainer) {
-    btnStoryScroll.addEventListener('click', () => {
-      currentStoryMode = 'scroll';
-      btnStoryScroll.classList.add('active');
-      btnStoryDeck.classList.remove('active');
-      storyContainer.classList.remove('mode-deck');
-      requestStoryTick();
-    });
-
-    btnStoryDeck.addEventListener('click', () => {
-      currentStoryMode = 'deck';
-      btnStoryDeck.classList.add('active');
-      btnStoryScroll.classList.remove('active');
-      storyContainer.classList.add('mode-deck');
-      setDeckStage(currentDeckStage || 1);
-    });
-  }
-
-  window.addEventListener('scroll', requestStoryTick, { passive: true });
-  window.addEventListener('resize', requestStoryTick, { passive: true });
-  requestStoryTick();
 
   /* ========================================================================
      INITIALIZATION
