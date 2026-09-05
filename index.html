@@ -54,7 +54,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=26.0">
+  <link rel="stylesheet" href="styles.css?v=27.0">
 </head>
 <body>
 
@@ -1199,403 +1199,427 @@
             </p>
           </div>
 
-          <!-- Interactive Story Journey Stepper Tracker -->
-          <div class="story-stepper-container">
-            <div class="story-stepper-track">
-              <div class="story-stepper-progress-fill" id="storyProgressFill"></div>
+          <!-- Story-Driven Vertical Scroll Timeline Model -->
+          <div class="story-timeline-container" id="storyTimelineContainer">
+            
+            <!-- Continuous Glowing Neon Timeline Beam Rail -->
+            <div class="story-timeline-rail">
+              <div class="story-timeline-rail-track"></div>
+              <div class="story-timeline-rail-glow" id="storyTimelineGlow"></div>
+              <div class="story-timeline-beacon" id="storyTimelineBeacon"></div>
             </div>
-            <div class="story-stepper-nav" role="tablist">
-              <button type="button" class="story-nav-step active" data-step="1" role="tab" aria-selected="true" id="storyStepBtn1">
-                <div class="story-nav-badge">
-                  <span class="step-num">01</span>
-                  <span class="step-icon">&#128300;</span>
-                </div>
-                <div class="story-nav-info">
-                  <div class="story-nav-title">Lab Discovery</div>
-                  <div class="story-nav-subtitle">Rhizosphere Genomics</div>
-                </div>
-              </button>
 
-              <button type="button" class="story-nav-step" data-step="2" role="tab" aria-selected="false" id="storyStepBtn2">
-                <div class="story-nav-badge">
-                  <span class="step-num">02</span>
-                  <span class="step-icon">&#9881;</span>
-                </div>
-                <div class="story-nav-info">
-                  <div class="story-nav-title">Bio-Fermentation</div>
-                  <div class="story-nav-subtitle">Deep-Tank Bioreactors</div>
-                </div>
-              </button>
+            <!-- Vertical Sequence of 5 Story Phases -->
+            <div class="story-timeline-items">
 
-              <button type="button" class="story-nav-step" data-step="3" role="tab" aria-selected="false" id="storyStepBtn3">
-                <div class="story-nav-badge">
-                  <span class="step-num">03</span>
-                  <span class="step-icon">&#128737;</span>
+              <!-- ============================================================
+                   PHASE 01: LAB DISCOVERY & GENOMICS
+                   ============================================================ -->
+              <div class="story-timeline-item active" id="storyPhase1" data-phase="1">
+                <!-- Timeline Node & Connector -->
+                <div class="story-timeline-node-wrap">
+                  <button type="button" class="story-timeline-node" aria-label="Scroll to Phase 01: Lab Discovery" data-target="storyPhase1">
+                    <span class="node-badge-num">01</span>
+                    <svg class="node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M6 18h8"></path>
+                      <path d="M3 22h18"></path>
+                      <path d="M14 22a7 7 0 1 0 0-14h-1"></path>
+                      <path d="M9 14h2"></path>
+                      <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"></path>
+                      <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"></path>
+                    </svg>
+                  </button>
+                  <div class="story-timeline-connector"></div>
                 </div>
-                <div class="story-nav-info">
-                  <div class="story-nav-title">Formulation &amp; QC</div>
-                  <div class="story-nav-subtitle">UV-Shield Bottling &amp; FCO</div>
-                </div>
-              </button>
 
-              <button type="button" class="story-nav-step" data-step="4" role="tab" aria-selected="false" id="storyStepBtn4">
-                <div class="story-nav-badge">
-                  <span class="step-num">04</span>
-                  <span class="step-icon">&#127806;</span>
-                </div>
-                <div class="story-nav-info">
-                  <div class="story-nav-title">Field Outreach</div>
-                  <div class="story-nav-subtitle">Village Agronomy Trials</div>
-                </div>
-              </button>
-
-              <button type="button" class="story-nav-step" data-step="5" role="tab" aria-selected="false" id="storyStepBtn5">
-                <div class="story-nav-badge">
-                  <span class="step-num">05</span>
-                  <span class="step-icon">&#129309;</span>
-                </div>
-                <div class="story-nav-info">
-                  <div class="story-nav-title">Harvest &amp; Happiness</div>
-                  <div class="story-nav-subtitle">Yield Surge &amp; Joy</div>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          <!-- Showcase Panels Container -->
-          <div class="story-panels-wrapper">
-            <!-- STAGE 1: LAB DISCOVERY -->
-            <div class="story-stage-panel active" id="storyPanel1" role="tabpanel">
-              <div class="story-stage-grid">
-                <div class="story-stage-content">
-                  <div class="story-stage-tagline">
-                    <span class="stage-tag-badge">STAGE 01 OF 05</span>
-                    <span class="stage-tag-name">DISCOVERY AT THE LAB BENCH</span>
+                <!-- Phase Card -->
+                <div class="story-phase-card">
+                  <div class="story-card-header">
+                    <div class="story-card-phase-meta">
+                      <span class="phase-tag-badge">PHASE 01 &bull; RHIZOSPHERE GENOMICS</span>
+                      <span class="phase-stage-counter">STAGE 01 OF 05</span>
+                    </div>
+                    <h3 class="story-card-title">Where Living Science Begins: High-Potency Rhizosphere Microbial Genomics</h3>
                   </div>
-                  <h3 class="story-stage-title">Where Living Science Begins: High-Potency Rhizosphere Microbial Genomics</h3>
-                  <p class="story-stage-paragraph">
-                    Every breakthrough begins under laminar airflow hoods at our Ameenpur biotechnology campus in Hyderabad. Our doctoral microbiologists isolate and cultivate indigenous, hyper-resilient soil bacterial and fungal strains—selecting hyper-potent Nitrogen fixers (<em>Rhizobium, Azotobacter</em>) and Phosphate solubilizers (<em>PSB, VAM</em>) genetically pre-conditioned to withstand semi-arid Indian heat, salinity, and erratic rainfall.
-                  </p>
 
-                  <div class="story-stage-highlights">
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>Pure Strain Isolation:</strong> Laminar airflow isolation under certified Class-10,000 cleanroom environments.
+                  <div class="story-card-body">
+                    <div class="story-card-content">
+                      <p class="story-card-desc">
+                        Every breakthrough begins under laminar airflow hoods at our Ameenpur biotechnology campus in Hyderabad. Our doctoral microbiologists isolate and cultivate indigenous, hyper-resilient soil bacterial and fungal strains—selecting hyper-potent Nitrogen fixers (<em>Rhizobium, Azotobacter</em>) and Phosphate solubilizers (<em>PSB, VAM</em>) genetically pre-conditioned to withstand semi-arid Indian heat, salinity, and erratic rainfall.
+                      </p>
+
+                      <div class="story-card-highlights">
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>Pure Strain Isolation:</strong> Laminar airflow isolation under certified Class-10,000 cleanroom environments.
+                          </div>
+                        </div>
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>Genomic PCR Verification:</strong> Automated DNA fingerprinting guaranteeing 100% species purity and zero contamination.
+                          </div>
+                        </div>
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>Rhizosphere Colonization Audits:</strong> Verified symbiotic root affinity for rapid seedling vigor and soil enzyme stimulation.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="story-card-metric">
+                        <div class="metric-val">10<sup>9</sup> <span class="metric-unit">CFU/g</span></div>
+                        <div class="metric-meta">
+                          <div class="metric-label">Living Potency Standard</div>
+                          <div class="metric-sub">Over 200 field strains screened annually to select the top 1% biological vigor</div>
+                        </div>
                       </div>
                     </div>
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>Genomic PCR Verification:</strong> Automated DNA fingerprinting guaranteeing 100% species purity and zero contamination.
+
+                    <div class="story-card-media">
+                      <div class="story-photo-frame">
+                        <img src="assets/nchem_rd_lab.png" alt="Nchem Central Biotechnology R&D Laboratory Hyderabad" class="story-photo-img" loading="lazy">
+                        <div class="story-photo-badge">
+                          <span class="badge-dot"></span>
+                          <span>Central R&amp;D Analytical &amp; Isolation Laboratories &bull; Ameenpur, Hyderabad</span>
+                        </div>
+                        <div class="story-photo-quote">
+                          <p>&ldquo;Every potent bio-input starts with genetic purity. We ensure that only the most resilient native strains reach Indian soils.&rdquo;</p>
+                          <cite>&mdash; Dr. K. Ramanathan, Head of Biotechnology R&amp;D</cite>
+                        </div>
                       </div>
-                    </div>
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>Rhizosphere Colonization Audits:</strong> Verified symbiotic root affinity for rapid seedling vigor and soil enzyme stimulation.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="story-stage-metric-card">
-                    <div class="metric-val">10<sup>9</sup> <span class="metric-unit">CFU/g</span></div>
-                    <div class="metric-meta">
-                      <div class="metric-label">Living Potency Standard</div>
-                      <div class="metric-sub">Over 200 field strains screened annually to select the top 1% biological vigor</div>
-                    </div>
-                  </div>
-
-                  <div class="story-stage-actions">
-                    <button type="button" class="btn btn-terracotta story-next-btn" data-next="2">
-                      Next Chapter: Industrial Fermentation &rarr;
-                    </button>
-                    <span class="story-stepper-indicator">Step 1 of 5</span>
-                  </div>
-                </div>
-
-                <div class="story-stage-visual">
-                  <div class="story-photo-frame">
-                    <img src="assets/nchem_rd_lab.png" alt="Nchem Central Biotechnology R&D Laboratory Hyderabad" class="story-photo-img">
-                    <div class="story-photo-badge">
-                      <span class="badge-dot"></span>
-                      <span>Central R&amp;D Analytical &amp; Isolation Laboratories &bull; Ameenpur, Hyderabad</span>
-                    </div>
-                    <div class="story-photo-quote">
-                      <p>&ldquo;Every potent bio-input starts with genetic purity. We ensure that only the most resilient native strains reach Indian soils.&rdquo;</p>
-                      <cite>&mdash; Dr. K. Ramanathan, Head of Biotechnology R&amp;D</cite>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- STAGE 2: BIO-FERMENTATION -->
-            <div class="story-stage-panel" id="storyPanel2" role="tabpanel">
-              <div class="story-stage-grid">
-                <div class="story-stage-content">
-                  <div class="story-stage-tagline">
-                    <span class="stage-tag-badge">STAGE 02 OF 05</span>
-                    <span class="stage-tag-name">INDUSTRIAL BIOTECHNOLOGY SCALE</span>
-                  </div>
-                  <h3 class="story-stage-title">Precision Bio-Fermentation: Scaling Living Biology to Industrial Tonnage</h3>
-                  <p class="story-stage-paragraph">
-                    Transitioning delicate microbial consortia from petri dish to high-volume commercial production requires immaculate engineering. Inside our aseptic stainless-steel deep-tank bioreactors, computer-governed cascades regulate dissolved oxygen saturation, thermodynamic temperature curves, and organic nutrient feeds—nurturing trillions of beneficial living cells in aseptic harmony.
-                  </p>
-
-                  <div class="story-stage-highlights">
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>SCADA-Monitored Bioreactors:</strong> Real-time computer control of pH, dissolved oxygen, and gentle variable-speed agitation.
-                      </div>
-                    </div>
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>Pure Organic Substrates:</strong> Formulated using plant-origin hydrolysates, seaweed extracts, and pure carbohydrate precursors.
-                      </div>
-                    </div>
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>Non-Thermal Cold Harvesting:</strong> High-efficiency cell separation preserving fragile bacterial membranes and living enzymes.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="story-stage-metric-card">
-                    <div class="metric-val">25,000 <span class="metric-unit">Liters</span></div>
-                    <div class="metric-meta">
-                      <div class="metric-label">Aseptic Deep-Tank Reactor Capacity</div>
-                      <div class="metric-sub">Continuous batch consistency delivering zero-chemical-residue formulations</div>
-                    </div>
-                  </div>
-
-                  <div class="story-stage-actions">
-                    <button type="button" class="btn btn-outline-dark story-prev-btn" data-prev="1">&larr; Back</button>
-                    <button type="button" class="btn btn-terracotta story-next-btn" data-next="3">
-                      Next Chapter: Formulation &amp; Packaging &rarr;
-                    </button>
-                    <span class="story-stepper-indicator">Step 2 of 5</span>
-                  </div>
+              <!-- ============================================================
+                   PHASE 02: PRECISION BIO-FERMENTATION
+                   ============================================================ -->
+              <div class="story-timeline-item" id="storyPhase2" data-phase="2">
+                <div class="story-timeline-node-wrap">
+                  <button type="button" class="story-timeline-node" aria-label="Scroll to Phase 02: Bio-Fermentation" data-target="storyPhase2">
+                    <span class="node-badge-num">02</span>
+                    <svg class="node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M10 2v7.31"></path>
+                      <path d="M14 9.3V1.99"></path>
+                      <path d="M8.5 2h7"></path>
+                      <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path>
+                      <path d="M5.52 16h12.96"></path>
+                    </svg>
+                  </button>
+                  <div class="story-timeline-connector"></div>
                 </div>
 
-                <div class="story-stage-visual">
-                  <div class="story-photo-frame">
-                    <img src="assets/nchem_soil_conditioner.png" alt="Industrial Fermentation Plant and Bio Synthesis" class="story-photo-img">
-                    <div class="story-photo-badge">
-                      <span class="badge-dot"></span>
-                      <span>Industrial Deep-Tank Fermentation Facility &bull; Hyderabad Campus</span>
+                <div class="story-phase-card">
+                  <div class="story-card-header">
+                    <div class="story-card-phase-meta">
+                      <span class="phase-tag-badge">PHASE 02 &bull; INDUSTRIAL FERMENTATION</span>
+                      <span class="phase-stage-counter">STAGE 02 OF 05</span>
                     </div>
-                    <div class="story-photo-quote">
-                      <p>&ldquo;Industrial bio-fermentation is a delicate science. Our closed-loop bioreactors replicate the pristine biology of virgin forest soil at industrial scale.&rdquo;</p>
-                      <cite>&mdash; Plant Operations &amp; Bioprocess Directorate</cite>
-                    </div>
+                    <h3 class="story-card-title">Precision Bio-Fermentation: Scaling Living Biology to Industrial Tonnage</h3>
                   </div>
-                </div>
-              </div>
-            </div>
 
-            <!-- STAGE 3: FORMULATION & PACKAGING -->
-            <div class="story-stage-panel" id="storyPanel3" role="tabpanel">
-              <div class="story-stage-grid">
-                <div class="story-stage-content">
-                  <div class="story-stage-tagline">
-                    <span class="stage-tag-badge">STAGE 03 OF 05</span>
-                    <span class="stage-tag-name">QUALITY GOVERNANCE &amp; BOTTLING</span>
-                  </div>
-                  <h3 class="story-stage-title">UV-Barrier Stabilization &amp; Batch-Level FCO Certified Integrity</h3>
-                  <p class="story-stage-paragraph">
-                    Bio-inputs contain active living organisms that perish if exposed to oxygen spikes or solar UV radiation. Nchem formulates with specialized natural osmoprotectants that induce safe microbial dormancy until applied to moist soil. Packaged into UV-blocking HDPE containers with micro-porous breathable caps, every batch undergoes HPLC assay before receiving an official FCO Certificate of Analysis (COA).
-                  </p>
+                  <div class="story-card-body">
+                    <div class="story-card-content">
+                      <p class="story-card-desc">
+                        Transitioning delicate microbial consortia from petri dish to high-volume commercial production requires immaculate engineering. Inside our aseptic stainless-steel deep-tank bioreactors, computer-governed cascades regulate dissolved oxygen saturation, thermodynamic temperature curves, and organic nutrient feeds—nurturing trillions of beneficial living cells in aseptic harmony.
+                      </p>
 
-                  <div class="story-stage-highlights">
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>Biological Osmoprotection:</strong> Safe cellular dormancy stabilizers guaranteeing over 12 months of room-temperature shelf life.
+                      <div class="story-card-highlights">
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>SCADA-Monitored Bioreactors:</strong> Real-time computer control of pH, dissolved oxygen, and gentle variable-speed agitation.
+                          </div>
+                        </div>
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>Pure Organic Substrates:</strong> Formulated using plant-origin hydrolysates, seaweed extracts, and pure carbohydrate precursors.
+                          </div>
+                        </div>
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>Non-Thermal Cold Harvesting:</strong> High-efficiency cell separation preserving fragile bacterial membranes and living enzymes.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="story-card-metric">
+                        <div class="metric-val">25,000 <span class="metric-unit">Liters</span></div>
+                        <div class="metric-meta">
+                          <div class="metric-label">Aseptic Deep-Tank Reactor Capacity</div>
+                          <div class="metric-sub">Continuous batch consistency delivering zero-chemical-residue formulations</div>
+                        </div>
                       </div>
                     </div>
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>UV-Barrier HDPE Bottles:</strong> High-density light-blocking polymers shielding sensitive microbes during transit and retail storage.
+
+                    <div class="story-card-media">
+                      <div class="story-photo-frame">
+                        <img src="assets/nchem_soil_conditioner.png" alt="Industrial Fermentation Plant and Bio Synthesis" class="story-photo-img" loading="lazy">
+                        <div class="story-photo-badge">
+                          <span class="badge-dot"></span>
+                          <span>Industrial Deep-Tank Fermentation Facility &bull; Hyderabad Campus</span>
+                        </div>
+                        <div class="story-photo-quote">
+                          <p>&ldquo;Industrial bio-fermentation is a delicate science. Our closed-loop bioreactors replicate the pristine biology of virgin forest soil at industrial scale.&rdquo;</p>
+                          <cite>&mdash; Plant Operations &amp; Bioprocess Directorate</cite>
+                        </div>
                       </div>
-                    </div>
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>Micro-Porous Venting Caps:</strong> One-way breathable membranes relieving internal metabolic gases without admitting moisture.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="story-stage-metric-card">
-                    <div class="metric-val">100<span class="metric-unit">%</span></div>
-                    <div class="metric-meta">
-                      <div class="metric-label">Serialized Batch FCO Compliance</div>
-                      <div class="metric-sub">Every container backed by traceable government-accredited Certificate of Analysis</div>
-                    </div>
-                  </div>
-
-                  <div class="story-stage-actions">
-                    <button type="button" class="btn btn-outline-dark story-prev-btn" data-prev="2">&larr; Back</button>
-                    <button type="button" class="btn btn-terracotta story-next-btn" data-next="4">
-                      Next Chapter: Field Outreach &rarr;
-                    </button>
-                    <span class="story-stepper-indicator">Step 3 of 5</span>
-                  </div>
-                </div>
-
-                <div class="story-stage-visual">
-                  <div class="story-photo-frame">
-                    <img src="assets/v2_bag.png" alt="Certified Bio-Formulations & Nitrogen Flushed Packaging" class="story-photo-img">
-                    <div class="story-photo-badge">
-                      <span class="badge-dot"></span>
-                      <span>High-Speed Automated Packaging Lines &bull; Quality Certified Packaging</span>
-                    </div>
-                    <div class="story-photo-quote">
-                      <p>&ldquo;When a farmer unseals a container 6 months after dispatch, the viable microbial count must match the exact lab benchmark brewed in Hyderabad.&rdquo;</p>
-                      <cite>&mdash; QA/QC Chief Controller</cite>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- STAGE 4: FIELD OUTREACH & AGRONOMY -->
-            <div class="story-stage-panel" id="storyPanel4" role="tabpanel">
-              <div class="story-stage-grid">
-                <div class="story-stage-content">
-                  <div class="story-stage-tagline">
-                    <span class="stage-tag-badge">STAGE 04 OF 05</span>
-                    <span class="stage-tag-name">LAB-TO-LAND FIELD COLLABORATION</span>
-                  </div>
-                  <h3 class="story-stage-title">Agronomists in the Field: Soil Health Audits &amp; Village Trials</h3>
-                  <p class="story-stage-paragraph">
-                    True agricultural science does not end at the factory gates. Nchem maintains active agronomist field stations across 28 Indian states, working hand-in-hand with primary agricultural cooperative societies and village farm communities. We conduct rapid on-farm soil pH and organic carbon audits, demonstrating exact microbial seed coating, root drenching, and drip fertigation timing.
-                  </p>
-
-                  <div class="story-stage-highlights">
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>Village Soil Diagnostic Camps:</strong> On-site rhizosphere health checks and soil conductivity evaluations.
-                      </div>
-                    </div>
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>Precision Stage-Wise Protocols:</strong> Custom crop schedules guiding farmers from seed germination through fruit filling.
-                      </div>
-                    </div>
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>12,000+ Cooperative Touchpoints:</strong> Direct distribution ensuring authentic, fresh-batch bio-inputs reach remote villages.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="story-stage-metric-card">
-                    <div class="metric-val">500<span class="metric-unit">+</span></div>
-                    <div class="metric-meta">
-                      <div class="metric-label">Annual Village Demonstration Trials</div>
-                      <div class="metric-sub">Educating over 150,000 farmers in regenerative bio-input applications</div>
-                    </div>
-                  </div>
-
-                  <div class="story-stage-actions">
-                    <button type="button" class="btn btn-outline-dark story-prev-btn" data-prev="3">&larr; Back</button>
-                    <button type="button" class="btn btn-terracotta story-next-btn" data-next="5">
-                      Next Chapter: Harvest &amp; Happiness &rarr;
-                    </button>
-                    <span class="story-stepper-indicator">Step 4 of 5</span>
-                  </div>
+              <!-- ============================================================
+                   PHASE 03: FORMULATION & QC
+                   ============================================================ -->
+              <div class="story-timeline-item" id="storyPhase3" data-phase="3">
+                <div class="story-timeline-node-wrap">
+                  <button type="button" class="story-timeline-node" aria-label="Scroll to Phase 03: Formulation & QC" data-target="storyPhase3">
+                    <span class="node-badge-num">03</span>
+                    <svg class="node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      <path d="m9 12 2 2 4-4"></path>
+                    </svg>
+                  </button>
+                  <div class="story-timeline-connector"></div>
                 </div>
 
-                <div class="story-stage-visual">
-                  <div class="story-photo-frame">
-                    <img src="assets/v2_csr.png" alt="Agronomists conducting field soil diagnostic audits with farmers" class="story-photo-img">
-                    <div class="story-photo-badge">
-                      <span class="badge-dot"></span>
-                      <span>Agronomy Extension Outreach &bull; Rural Field Health Audits</span>
+                <div class="story-phase-card">
+                  <div class="story-card-header">
+                    <div class="story-card-phase-meta">
+                      <span class="phase-tag-badge">PHASE 03 &bull; QUALITY GOVERNANCE &amp; BOTTLING</span>
+                      <span class="phase-stage-counter">STAGE 03 OF 05</span>
                     </div>
-                    <div class="story-photo-quote">
-                      <p>&ldquo;When we stand in the field beside the farmer and show how living microbes loosen compacted soil, scientific belief becomes farmer trust.&rdquo;</p>
-                      <cite>&mdash; Senior Agronomist, Telangana &amp; Andhra Extension</cite>
-                    </div>
+                    <h3 class="story-card-title">UV-Barrier Stabilization &amp; Batch-Level FCO Certified Integrity</h3>
                   </div>
-                </div>
-              </div>
-            </div>
 
-            <!-- STAGE 5: HARVEST, YIELD & FARMER HAPPINESS -->
-            <div class="story-stage-panel" id="storyPanel5" role="tabpanel">
-              <div class="story-stage-grid">
-                <div class="story-stage-content">
-                  <div class="story-stage-tagline">
-                    <span class="stage-tag-badge">STAGE 05 OF 05</span>
-                    <span class="stage-tag-name">THE ULTIMATE HARVEST &amp; PROSPERITY</span>
-                  </div>
-                  <h3 class="story-stage-title">Bountiful Yields, Living Soil Regeneration &amp; Radiant Farmer Smiles</h3>
-                  <p class="story-stage-paragraph">
-                    The ultimate proof of our laboratory science is revealed at harvest time: massive fibrous root systems holding crumbly, humus-rich living soil, pest-resilient dark green canopies, heavy grain and fruit filling, and premium market prices. Best of all, it shines in the radiant smiles of farming families who reduce costly synthetic chemicals while building generational wealth.
-                  </p>
+                  <div class="story-card-body">
+                    <div class="story-card-content">
+                      <p class="story-card-desc">
+                        Bio-inputs contain active living organisms that perish if exposed to oxygen spikes or solar UV radiation. Nchem formulates with specialized natural osmoprotectants that induce safe microbial dormancy until applied to moist soil. Packaged into UV-blocking HDPE containers with micro-porous breathable caps, every batch undergoes HPLC assay before receiving an official FCO Certificate of Analysis (COA).
+                      </p>
 
-                  <div class="story-stage-highlights">
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>18% to 26% Verified Yield Surge:</strong> Proven across diverse crops including paddy, cotton, chilli, tomato, and banana.
+                      <div class="story-card-highlights">
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>Biological Osmoprotection:</strong> Safe cellular dormancy stabilizers guaranteeing over 12 months of room-temperature shelf life.
+                          </div>
+                        </div>
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>UV-Barrier HDPE Bottles:</strong> High-density light-blocking polymers shielding sensitive microbes during transit and retail storage.
+                          </div>
+                        </div>
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>Micro-Porous Venting Caps:</strong> One-way breathable membranes relieving internal metabolic gases without admitting moisture.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="story-card-metric">
+                        <div class="metric-val">100<span class="metric-unit">%</span></div>
+                        <div class="metric-meta">
+                          <div class="metric-label">Serialized Batch FCO Compliance</div>
+                          <div class="metric-sub">Every container backed by traceable government-accredited Certificate of Analysis</div>
+                        </div>
                       </div>
                     </div>
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>30%–40% Chemical Savings:</strong> Lower expenses on synthetic urea, DAP, and toxic chemical pesticides per acre.
+
+                    <div class="story-card-media">
+                      <div class="story-photo-frame">
+                        <img src="assets/v2_bag.png" alt="Certified Bio-Formulations & Nitrogen Flushed Packaging" class="story-photo-img" loading="lazy">
+                        <div class="story-photo-badge">
+                          <span class="badge-dot"></span>
+                          <span>High-Speed Automated Packaging Lines &bull; Quality Certified Packaging</span>
+                        </div>
+                        <div class="story-photo-quote">
+                          <p>&ldquo;When a farmer unseals a container 6 months after dispatch, the viable microbial count must match the exact lab benchmark brewed in Hyderabad.&rdquo;</p>
+                          <cite>&mdash; QA/QC Chief Controller</cite>
+                        </div>
                       </div>
-                    </div>
-                    <div class="story-highlight-pill">
-                      <div class="highlight-bullet">&#10003;</div>
-                      <div class="highlight-text">
-                        <strong>Living Soil Carbon Regeneration:</strong> Noticeable comeback of earthworms, natural mycorrhizae, and moisture retention.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="story-stage-metric-card">
-                    <div class="metric-val">&#8377;42,000<span class="metric-unit">+</span></div>
-                    <div class="metric-meta">
-                      <div class="metric-label">Average Net Profit Elevation per Acre</div>
-                      <div class="metric-sub">98.4% farmer re-order rate across consecutive cropping seasons</div>
-                    </div>
-                  </div>
-
-                  <div class="story-stage-actions">
-                    <button type="button" class="btn btn-outline-dark story-prev-btn" data-prev="4">&larr; Back</button>
-                    <a href="#corpProducts" class="btn btn-terracotta">
-                      Explore 121 Certified Formulations &darr;
-                    </a>
-                    <span class="story-stepper-indicator">Step 5 of 5</span>
-                  </div>
-                </div>
-
-                <div class="story-stage-visual">
-                  <div class="story-photo-frame">
-                    <img src="assets/v2_family.png" alt="Indian farming family smiling with abundant crop yield and harvest" class="story-photo-img">
-                    <div class="story-photo-badge">
-                      <span class="badge-dot" style="background: #27AE60;"></span>
-                      <span>Generational Prosperity &bull; Bountiful Harvest &amp; Revitalized Soil</span>
-                    </div>
-                    <div class="story-photo-quote">
-                      <p>&ldquo;For years our soil felt hardened and tired. With Nchem bio-fertilizers, our soil breathed again, earthworms returned, and our harvest brought true happiness to our family!&rdquo;</p>
-                      <cite>&mdash; Ramesh &amp; Suneetha Reddy, Progressive Chilli &amp; Cotton Farmers</cite>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <!-- ============================================================
+                   PHASE 04: FIELD OUTREACH & AGRONOMY
+                   ============================================================ -->
+              <div class="story-timeline-item" id="storyPhase4" data-phase="4">
+                <div class="story-timeline-node-wrap">
+                  <button type="button" class="story-timeline-node" aria-label="Scroll to Phase 04: Field Outreach" data-target="storyPhase4">
+                    <span class="node-badge-num">04</span>
+                    <svg class="node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 20h10"></path>
+                      <path d="M10 20c0-4.4 3.6-8 8-8V8c-4.4 0-8 3.6-8 8"></path>
+                      <path d="M14 20c0-2.2-1.8-4-4-4H6c0 2.2 1.8 4 4 4"></path>
+                    </svg>
+                  </button>
+                  <div class="story-timeline-connector"></div>
+                </div>
+
+                <div class="story-phase-card">
+                  <div class="story-card-header">
+                    <div class="story-card-phase-meta">
+                      <span class="phase-tag-badge">PHASE 04 &bull; LAB-TO-LAND COLLABORATION</span>
+                      <span class="phase-stage-counter">STAGE 04 OF 05</span>
+                    </div>
+                    <h3 class="story-card-title">Agronomists in the Field: Soil Health Audits &amp; Village Trials</h3>
+                  </div>
+
+                  <div class="story-card-body">
+                    <div class="story-card-content">
+                      <p class="story-card-desc">
+                        True agricultural science does not end at the factory gates. Nchem maintains active agronomist field stations across 28 Indian states, working hand-in-hand with primary agricultural cooperative societies and village farm communities. We conduct rapid on-farm soil pH and organic carbon audits, demonstrating exact microbial seed coating, root drenching, and drip fertigation timing.
+                      </p>
+
+                      <div class="story-card-highlights">
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>Village Soil Diagnostic Camps:</strong> On-site rhizosphere health checks and soil conductivity evaluations.
+                          </div>
+                        </div>
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>Precision Stage-Wise Protocols:</strong> Custom crop schedules guiding farmers from seed germination through fruit filling.
+                          </div>
+                        </div>
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>12,000+ Cooperative Touchpoints:</strong> Direct distribution ensuring authentic, fresh-batch bio-inputs reach remote villages.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="story-card-metric">
+                        <div class="metric-val">500<span class="metric-unit">+</span></div>
+                        <div class="metric-meta">
+                          <div class="metric-label">Annual Village Demonstration Trials</div>
+                          <div class="metric-sub">Educating over 150,000 farmers in regenerative bio-input applications</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="story-card-media">
+                      <div class="story-photo-frame">
+                        <img src="assets/v2_csr.png" alt="Agronomists conducting field soil diagnostic audits with farmers" class="story-photo-img" loading="lazy">
+                        <div class="story-photo-badge">
+                          <span class="badge-dot"></span>
+                          <span>Agronomy Extension Outreach &bull; Rural Field Health Audits</span>
+                        </div>
+                        <div class="story-photo-quote">
+                          <p>&ldquo;When we stand in the field beside the farmer and show how living microbes loosen compacted soil, scientific belief becomes farmer trust.&rdquo;</p>
+                          <cite>&mdash; Senior Agronomist, Telangana &amp; Andhra Extension</cite>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ============================================================
+                   PHASE 05: HARVEST & FARMER PROSPERITY
+                   ============================================================ -->
+              <div class="story-timeline-item" id="storyPhase5" data-phase="5">
+                <div class="story-timeline-node-wrap">
+                  <button type="button" class="story-timeline-node" aria-label="Scroll to Phase 05: Harvest & Happiness" data-target="storyPhase5">
+                    <span class="node-badge-num">05</span>
+                    <svg class="node-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="4"></circle>
+                      <path d="M12 2v2"></path>
+                      <path d="M12 20v2"></path>
+                      <path d="m4.93 4.93 1.41 1.41"></path>
+                      <path d="m17.66 17.66 1.41 1.41"></path>
+                      <path d="M2 12h2"></path>
+                      <path d="M20 12h2"></path>
+                      <path d="m6.34 17.66-1.41 1.41"></path>
+                      <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg>
+                  </button>
+                  <div class="story-timeline-connector"></div>
+                </div>
+
+                <div class="story-phase-card">
+                  <div class="story-card-header">
+                    <div class="story-card-phase-meta">
+                      <span class="phase-tag-badge">PHASE 05 &bull; HARVEST &amp; PROSPERITY</span>
+                      <span class="phase-stage-counter">STAGE 05 OF 05</span>
+                    </div>
+                    <h3 class="story-card-title">Bountiful Yields, Living Soil Regeneration &amp; Radiant Farmer Smiles</h3>
+                  </div>
+
+                  <div class="story-card-body">
+                    <div class="story-card-content">
+                      <p class="story-card-desc">
+                        The ultimate proof of our laboratory science is revealed at harvest time: massive fibrous root systems holding crumbly, humus-rich living soil, pest-resilient dark green canopies, heavy grain and fruit filling, and premium market prices. Best of all, it shines in the radiant smiles of farming families who reduce costly synthetic chemicals while building generational wealth.
+                      </p>
+
+                      <div class="story-card-highlights">
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>18% to 26% Verified Yield Surge:</strong> Proven across diverse crops including paddy, cotton, chilli, tomato, and banana.
+                          </div>
+                        </div>
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>30%–40% Chemical Savings:</strong> Lower expenses on synthetic urea, DAP, and toxic chemical pesticides per acre.
+                          </div>
+                        </div>
+                        <div class="story-card-highlight">
+                          <div class="highlight-check">&#10003;</div>
+                          <div class="highlight-text">
+                            <strong>Living Soil Carbon Regeneration:</strong> Noticeable comeback of earthworms, natural mycorrhizae, and moisture retention.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="story-card-metric">
+                        <div class="metric-val">&#8377;42,000<span class="metric-unit">+</span></div>
+                        <div class="metric-meta">
+                          <div class="metric-label">Average Net Profit Elevation per Acre</div>
+                          <div class="metric-sub">98.4% farmer re-order rate across consecutive cropping seasons</div>
+                        </div>
+                      </div>
+
+                      <div class="story-card-cta-wrap" style="margin-top: 20px;">
+                        <a href="#corpProducts" class="btn btn-terracotta" style="display: inline-flex; align-items: center; gap: 8px;">
+                          Explore 121 Certified Formulations &darr;
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="story-card-media">
+                      <div class="story-photo-frame">
+                        <img src="assets/v2_family.png" alt="Indian farming family smiling with abundant crop yield and harvest" class="story-photo-img" loading="lazy">
+                        <div class="story-photo-badge">
+                          <span class="badge-dot" style="background: #27AE60;"></span>
+                          <span>Generational Prosperity &bull; Bountiful Harvest &amp; Revitalized Soil</span>
+                        </div>
+                        <div class="story-photo-quote">
+                          <p>&ldquo;For years our soil felt hardened and tired. With Nchem bio-fertilizers, our soil breathed again, earthworms returned, and our harvest brought true happiness to our family!&rdquo;</p>
+                          <cite>&mdash; Ramesh &amp; Suneetha Reddy, Progressive Chilli &amp; Cotton Farmers</cite>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -2600,6 +2624,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=18.0"></script>
+  <script src="script.js?v=19.0"></script>
 </body>
 </html>

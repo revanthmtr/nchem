@@ -3777,64 +3777,103 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ========================================================================
-     MANUFACTURING & R&D EXCELLENCE — LAB-TO-LAND STORY CONTROLLER
+     MANUFACTURING & R&D EXCELLENCE — STORY-DRIVEN SCROLL MODEL CONTROLLER
      ======================================================================== */
-  const storySteps = document.querySelectorAll('.story-nav-step');
-  const storyPanels = document.querySelectorAll('.story-stage-panel');
-  const storyProgressFill = document.getElementById('storyProgressFill');
+  const storyContainer = document.getElementById('storyTimelineContainer');
+  const storyRailGlow = document.getElementById('storyTimelineGlow');
+  const storyBeacon = document.getElementById('storyTimelineBeacon');
+  const storyItems = document.querySelectorAll('.story-timeline-item');
+  const storyNodes = document.querySelectorAll('.story-timeline-node');
 
-  function switchStoryStage(stageNum) {
-    const num = parseInt(stageNum, 10);
-    if (isNaN(num) || num < 1 || num > 5) return;
+  let storyTicking = false;
 
-    // Update stepper tabs
-    storySteps.forEach(step => {
-      const stepIdx = parseInt(step.getAttribute('data-step'), 10);
-      if (stepIdx === num) {
-        step.classList.add('active');
-        step.setAttribute('aria-selected', 'true');
-      } else {
-        step.classList.remove('active');
-        step.setAttribute('aria-selected', 'false');
+  function updateStoryScroll() {
+    if (!storyContainer || storyItems.length === 0) return;
+
+    const containerRect = storyContainer.getBoundingClientRect();
+    const windowH = window.innerHeight;
+
+    // Only compute when container is near or inside viewport
+    if (containerRect.bottom < -200 || containerRect.top > windowH + 200) return;
+
+    // Trigger focal plane (40% down from viewport top)
+    const focalY = windowH * 0.42;
+    const firstItem = storyItems[0];
+    const lastItem = storyItems[storyItems.length - 1];
+
+    if (!firstItem || !lastItem) return;
+
+    // Node centers relative to the container
+    const firstItemTop = firstItem.offsetTop + 27;
+    const lastItemTop = lastItem.offsetTop + 27;
+    const totalBeamSpan = lastItemTop - firstItemTop;
+
+    // Current scroll distance within the timeline relative to focal line
+    const scrollDistance = (focalY - containerRect.top) - firstItemTop;
+    const clampedProgress = Math.min(Math.max(scrollDistance / totalBeamSpan, 0), 1);
+    const glowHeight = clampedProgress * totalBeamSpan;
+
+    if (storyRailGlow) {
+      storyRailGlow.style.top = `${firstItemTop}px`;
+      storyRailGlow.style.height = `${glowHeight}px`;
+    }
+
+    if (storyBeacon) {
+      storyBeacon.style.top = `${firstItemTop + glowHeight}px`;
+      storyBeacon.style.opacity = clampedProgress > 0.01 ? '1' : '0';
+    }
+
+    // Determine currently active phase item based on viewport position
+    let activeIdx = 0;
+    storyItems.forEach((item, idx) => {
+      const itemRect = item.getBoundingClientRect();
+      const itemTrigger = itemRect.top + 80;
+      if (itemTrigger <= focalY) {
+        activeIdx = idx;
       }
     });
 
-    // Update panels
-    storyPanels.forEach(panel => {
-      if (panel.id === `storyPanel${num}`) {
-        panel.classList.add('active');
+    storyItems.forEach((item, idx) => {
+      if (idx === activeIdx) {
+        item.classList.add('active');
+        const nodeBtn = item.querySelector('.story-timeline-node');
+        if (nodeBtn) nodeBtn.setAttribute('aria-current', 'step');
       } else {
-        panel.classList.remove('active');
+        item.classList.remove('active');
+        const nodeBtn = item.querySelector('.story-timeline-node');
+        if (nodeBtn) nodeBtn.removeAttribute('aria-current');
       }
     });
+  }
 
-    // Update progress fill line
-    if (storyProgressFill) {
-      const percentages = { 1: '20%', 2: '40%', 3: '60%', 4: '80%', 5: '100%' };
-      storyProgressFill.style.width = percentages[num] || '20%';
+  function requestStoryTick() {
+    if (!storyTicking) {
+      requestAnimationFrame(() => {
+        updateStoryScroll();
+        storyTicking = false;
+      });
+      storyTicking = true;
     }
   }
 
-  storySteps.forEach(step => {
-    step.addEventListener('click', () => {
-      const stage = step.getAttribute('data-step');
-      switchStoryStage(stage);
+  // Node click: smooth scroll to that phase
+  storyNodes.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = btn.getAttribute('data-target');
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        const headerOffset = 110;
+        const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: targetPos, behavior: 'smooth' });
+      }
     });
   });
 
-  document.querySelectorAll('.story-next-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const nextStage = btn.getAttribute('data-next');
-      switchStoryStage(nextStage);
-    });
-  });
-
-  document.querySelectorAll('.story-prev-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const prevStage = btn.getAttribute('data-prev');
-      switchStoryStage(prevStage);
-    });
-  });
+  window.addEventListener('scroll', requestStoryTick, { passive: true });
+  window.addEventListener('resize', requestStoryTick, { passive: true });
+  // Initial check
+  requestStoryTick();
 
   /* ========================================================================
      INITIALIZATION
