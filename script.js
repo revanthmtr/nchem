@@ -3812,7 +3812,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ========================================================================
-     PAN-INDIA SUPPLY CHAIN & FREIGHT CORRIDOR CONTROLLER
+     PAN-INDIA DISTRIBUTION CORRIDOR CONTROLLER
      ======================================================================== */
   const corridorBtns = document.querySelectorAll('.corridor-tab-btn');
   const corridorTag = document.getElementById('corridorTag');
@@ -3822,6 +3822,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const specTurnaround = document.getElementById('specTurnaround');
   const specCoverage = document.getElementById('specCoverage');
   const specProtocol = document.getElementById('specProtocol');
+  const stage2Depot = document.getElementById('stage2Depot');
+  const stage2Detail = document.getElementById('stage2Detail');
 
   const corridorData = {
     all: {
@@ -3831,58 +3833,55 @@ document.addEventListener('DOMContentLoaded', () => {
       hub: 'Ameenpur Campus, Hyderabad',
       turnaround: '48 – 72 Hours',
       coverage: '28 Indian States',
-      protocol: 'UV-Barrier & Vent-Safe',
-      activeRoutes: ['routeSouth', 'routeWest', 'routeNorth', 'routeEast'],
-      activeHubs: ['hubSouthNode', 'hubWestNode', 'hubNorthNode', 'hubEastNode']
+      protocol: 'UV-Barrier & Vent-Safe Cargo',
+      depot: 'Regional Staging Depots',
+      depotDetail: 'Hyderabad • Pune • Delhi • Kolkata'
     },
     south: {
-      tag: 'SOUTHERN ARTERIAL CORRIDOR',
-      title: 'Direct Telangana, AP, Karnataka & Tamil Nadu Network',
+      tag: 'SOUTHERN AGRARIAN CORRIDOR',
+      title: 'Telangana, AP, Karnataka, Tamil Nadu & Kerala',
       desc: 'Immediate intra-zone dispatch from Ameenpur Campus serving primary agricultural federations, chilli belts of Guntur, cotton basins of Warangal, and delta paddy cooperatives with same-day to 48-hour turnarounds.',
-      hub: 'Hyderabad Central & Bengaluru Depot',
+      hub: 'Hyderabad Central & Bengaluru Staging',
       turnaround: '24 – 48 Hours',
       coverage: 'TS, AP, KA, TN, KL',
       protocol: 'Direct Express Inter-State Fleet',
-      activeRoutes: ['routeSouth'],
-      activeHubs: ['hubSouthNode']
+      depot: 'Hyderabad & Bengaluru Buffer Hubs',
+      depotDetail: 'Serving Warangal, Guntur, Shimoga, Coimbatore'
     },
     west: {
       tag: 'WESTERN AGRONOMIC CORRIDOR',
-      title: 'Maharashtra, Gujarat & Malwa Plateau Network',
+      title: 'Maharashtra, Gujarat, MP & Goa Agrarian Belt',
       desc: 'Dedicated freight line to Pune and Nagpur regional transit centers, feeding sugarcane cooperatives, soybean acreage, onion growers of Nashik, and high-tech commercial horticulture clusters.',
       hub: 'Pune & Nagpur Buffer Depots',
       turnaround: '36 – 48 Hours',
       coverage: 'MH, GJ, MP, Goa',
       protocol: 'Insulated Moisture-Locked Cargo',
-      activeRoutes: ['routeWest'],
-      activeHubs: ['hubWestNode']
+      depot: 'Pune & Nagpur Agronomic Depots',
+      depotDetail: 'Serving Kolhapur, Nashik, Rajkot, Indore'
     },
     north: {
-      tag: 'NORTHERN AGRO-BELT TRANSIT',
-      title: 'Punjab, Haryana, UP & Rajasthan Agro Network',
+      tag: 'NORTHERN GRANARY CORRIDOR',
+      title: 'Punjab, Haryana, UP, Rajasthan & Uttarakhand',
       desc: 'Express rail and multi-axle freight to Delhi-NCR and Karnal staging depots, servicing the Indo-Gangetic wheat-paddy rotations, commercial sugarcane mills, and state agro federations.',
-      hub: 'Delhi-NCR & Karnal Transit Hub',
+      hub: 'Delhi-NCR & Karnal Staging Depot',
       turnaround: '48 – 72 Hours',
       coverage: 'PB, HR, UP, RJ, UK',
       protocol: 'Sealed Thermal-Protected Freight',
-      activeRoutes: ['routeNorth'],
-      activeHubs: ['hubNorthNode']
+      depot: 'Delhi-NCR & Karnal Transit Centers',
+      depotDetail: 'Serving Ludhiana, Meerut, Karnal, Jaipur'
     },
     east: {
-      tag: 'EASTERN DELTA & COROMANDEL CORRIDOR',
-      title: 'West Bengal, Odisha, Bihar & Delta Plains',
+      tag: 'EASTERN DELTA & COROMANDEL BELT',
+      title: 'West Bengal, Odisha, Bihar, Jharkhand & North-East',
       desc: 'Strategic route to Kolkata and Bhubaneswar buffer points, supporting intense triple-cropped paddy deltas, vegetable clusters, and eastern primary cooperative unions.',
       hub: 'Kolkata & Bhubaneswar Depots',
       turnaround: '48 – 72 Hours',
       coverage: 'WB, OD, BR, JH, NE',
       protocol: 'High-Humidity Protected Packing',
-      activeRoutes: ['routeEast'],
-      activeHubs: ['hubEastNode']
+      depot: 'Kolkata & Bhubaneswar Staging Centers',
+      depotDetail: 'Serving Bardhaman, Cuttack, Patna, Guwahati'
     }
   };
-
-  const allRouteIds = ['routeSouth', 'routeWest', 'routeNorth', 'routeEast'];
-  const allHubIds = ['hubSouthNode', 'hubWestNode', 'hubNorthNode', 'hubEastNode'];
 
   corridorBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -3900,30 +3899,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (specTurnaround) specTurnaround.textContent = data.turnaround;
       if (specCoverage) specCoverage.textContent = data.coverage;
       if (specProtocol) specProtocol.textContent = data.protocol;
-
-      allRouteIds.forEach(rId => {
-        const routeEl = document.getElementById(rId);
-        if (!routeEl) return;
-        if (data.activeRoutes.includes(rId)) {
-          routeEl.classList.add('active');
-          routeEl.classList.remove('dimmed');
-        } else {
-          routeEl.classList.remove('active');
-          routeEl.classList.add('dimmed');
-        }
-      });
-
-      allHubIds.forEach(hId => {
-        const hubEl = document.getElementById(hId);
-        if (!hubEl) return;
-        if (data.activeHubs.includes(hId)) {
-          hubEl.classList.add('active');
-          hubEl.classList.remove('dimmed');
-        } else {
-          hubEl.classList.remove('active');
-          hubEl.classList.add('dimmed');
-        }
-      });
+      if (stage2Depot) stage2Depot.textContent = data.depot;
+      if (stage2Detail) stage2Detail.textContent = data.depotDetail;
     });
   });
 
