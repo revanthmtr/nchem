@@ -84,18 +84,23 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'fulvicid',
-      title: 'Fulvicid',
+      title: 'Fulvicid (Nutrient Mobilizer)',
       category: 'Bio-Fertilizers, Soil Health & Organics',
       subcategory: 'Bio-Stimulants & Nutrient Mobilizers',
-      composition: 'Fulvic Acid 80%',
-      dosage: 'Fertigation / Drip (250g–500g / acre) or Foliar (1g/L)',
-      applicationMethod: 'Fertigation / Drip',
-      productType: 'Bio-Stimulant',
-      targetCrops: 'All Crops, Vegetables, Fruit Crops, Polyhouse Crops',
-      stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
-      desc: 'High-potency nutrient mobilizer; increases nutrient absorption, seed germination, and soil porosity.',
-      packSizes: '250g, 500g, 1kg',
-      image: 'assets/nchem_rhizo_boost.png'
+      composition: 'Fulvic Acid 80% (Organic Electrolyte Mobilizer)',
+      dosage: 'Fertigation: 1–2 kg per acre | Soil Application',
+      applicationMethod: 'Fertigation & Soil Application',
+      productType: '100% Organic Nutrient Mobilizer',
+      targetCrops: 'All Crops (Vegetables, Fruit Crops, Cotton, Paddy, Polyhouse Crops)',
+      stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I), Root Development',
+      desc: 'Specialty 100% organic electrolyte nutrient mobilizer. Solubilizes soil nutrients for rapid plant uptake, enhances seed germination rate and root vigor, and improves soil structure and porosity to maximize water and nutrient retention.',
+      packSizes: '1 kg & 5 kg',
+      image: 'assets/nchem_fulvicid_1kg.jpg',
+      gallery: [
+        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_fulvicid_1kg.jpg' },
+        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_fulvicid_5kg.jpg' },
+        { label: 'Technical Brochure', short: 'Dossier', image: 'assets/nchem_fulvicid_brochure.png' }
+      ]
     },
     {
       id: 'sea-extract',
