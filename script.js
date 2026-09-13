@@ -1833,18 +1833,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6.1 Silicon Polyether Adjuvants & Spreaders
     {
       id: 'superior',
-      title: 'Superior',
+      title: 'Superior (Silicon Super Spreader)',
       category: 'Specialty Adjuvants & Silicon Formulations',
       subcategory: 'Silicon Polyether Adjuvants & Spreaders',
-      composition: 'Non-ionic Silicon Polyether Surfactant (100% Pure Active)',
-      dosage: 'Foliar Spray (0.2–0.25 ml/L) / Drip (50 ml/acre)',
-      applicationMethod: 'Foliar Spray',
-      productType: 'Adjuvant / Silicon',
-      targetCrops: 'All Agrochemical & Nutrient Foliar Sprays',
+      composition: 'Non-ionic Silicon Polyether Surfactant (Low Molecular Weight)',
+      dosage: 'Spraying: 0.2–0.25 ml/L | Fertigation: 1 L / 4 acre',
+      applicationMethod: 'Foliar Spray & Fertigation',
+      productType: 'Adjuvant / Silicon Super Spreader',
+      targetCrops: 'All Crops (Field Crops, Vegetables, Fruits, Horticulture)',
       stage: 'All Crop Stages',
-      desc: 'Super spreader and penetrant; drastically reduces surface tension for agrochemical sprays and ensures 100% rainfastness in 30 mins.',
-      packSizes: '100 ml, 250 ml, 500 ml, 1 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      desc: 'Specialty low molecular weight non-ionic silicon polyether surfactant. Drastically reduces spray surface tension for rapid wetting and spreading on leaves and fruits; enhances the efficacy of broadleaf herbicides, insecticides, fungicides, and plant growth regulators.',
+      packSizes: '250 ml, 1 L, 5 L',
+      image: 'assets/nchem_superior.jpg'
     },
 
     // 6.2 Orthosilicic Acid & Silicon Stress Relievers
