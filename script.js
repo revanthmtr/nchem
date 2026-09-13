@@ -1843,8 +1843,12 @@ document.addEventListener('DOMContentLoaded', () => {
       targetCrops: 'All Crops (Field Crops, Vegetables, Fruits, Horticulture)',
       stage: 'All Crop Stages',
       desc: 'Specialty low molecular weight non-ionic silicon polyether surfactant. Drastically reduces spray surface tension for rapid wetting and spreading on leaves and fruits; enhances the efficacy of broadleaf herbicides, insecticides, fungicides, and plant growth regulators.',
-      packSizes: '250 ml, 1 L, 5 L',
-      image: 'assets/nchem_superior.jpg'
+      packSizes: '1 L, 5 L, 250 ml',
+      image: 'assets/nchem_superior_5L.jpg',
+      gallery: [
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_superior_5L.jpg' },
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_superior_1L.jpg' }
+      ]
     },
 
     // 6.2 Orthosilicic Acid & Silicon Stress Relievers
@@ -2535,7 +2539,16 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Top: color accent bar + image zone -->
             <div class="compact-card-visual">
               <div class="compact-card-bar"></div>
-              <img src="${p.image}" alt="${p.title}" loading="lazy" class="compact-card-img">
+              <img src="${p.image}" alt="${p.title}" loading="lazy" class="compact-card-img" id="card-img-${p.id}">
+              ${p.gallery && p.gallery.length > 1 ? `
+                <div class="card-pack-switcher" style="position: absolute; bottom: 6px; right: 6px; display: flex; gap: 4px; z-index: 2;" onclick="event.stopPropagation();">
+                  ${p.gallery.map((g, idx) => `
+                    <button type="button" class="btn-pack-switch ${idx === 0 ? 'active' : ''}" data-target="card-img-${p.id}" data-img="${g.image}" title="${g.label}" style="border: 1px solid rgba(27,56,43,0.3); background: ${idx === 0 ? 'var(--color-primary, #1B382B)' : 'rgba(255,255,255,0.95)'}; color: ${idx === 0 ? '#FFF' : 'var(--color-primary, #1B382B)'}; font-size: 9.5px; font-weight: 700; border-radius: 4px; padding: 2px 5px; cursor: pointer; transition: all 0.2s ease;">
+                      ${g.short || g.label}
+                    </button>
+                  `).join('')}
+                </div>
+              ` : ''}
             </div>
 
             <!-- Body -->
@@ -2633,6 +2646,32 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
         const prodId = btn.getAttribute('data-id');
         openSpecModal(prodId);
+      });
+    });
+
+    // Attach click events to card pack switcher buttons
+    document.querySelectorAll('.btn-pack-switch').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const targetId = btn.getAttribute('data-target');
+        const imgUrl = btn.getAttribute('data-img');
+        const targetImg = document.getElementById(targetId);
+        if (targetImg) {
+          targetImg.style.opacity = '0.4';
+          setTimeout(() => {
+            targetImg.src = imgUrl;
+            targetImg.style.opacity = '1';
+          }, 100);
+        }
+        const parent = btn.parentElement;
+        if (parent) {
+          parent.querySelectorAll('.btn-pack-switch').forEach(b => {
+            b.style.background = 'rgba(255,255,255,0.95)';
+            b.style.color = 'var(--color-primary, #1B382B)';
+          });
+          btn.style.background = 'var(--color-primary, #1B382B)';
+          btn.style.color = '#FFF';
+        }
       });
     });
 
@@ -3097,6 +3136,41 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modalProdPacks').textContent = prod.packSizes;
     document.getElementById('modalProdImage').src = prod.image;
 
+    const modalGalleryThumbs = document.getElementById('modalGalleryThumbs');
+    if (modalGalleryThumbs) {
+      if (prod.gallery && prod.gallery.length > 1) {
+        modalGalleryThumbs.style.display = 'flex';
+        modalGalleryThumbs.innerHTML = prod.gallery.map((g, idx) => `
+          <button type="button" class="modal-thumb-btn ${idx === 0 ? 'active' : ''}" data-src="${g.image}" title="${g.label}" style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 8px; border: 2px solid ${idx === 0 ? 'var(--color-primary, #1B382B)' : 'rgba(27,56,43,0.18)'}; background: #FFF; cursor: pointer; transition: all 0.2s ease;">
+            <img src="${g.image}" alt="${g.label}" style="width: 28px; height: 28px; object-fit: cover; border-radius: 4px;">
+            <span style="font-size: 11px; font-weight: 700; color: #1B382B;">${g.label}</span>
+          </button>
+        `).join('');
+
+        modalGalleryThumbs.querySelectorAll('.modal-thumb-btn').forEach(tBtn => {
+          tBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const newSrc = tBtn.getAttribute('data-src');
+            const mainModalImg = document.getElementById('modalProdImage');
+            if (mainModalImg) {
+              mainModalImg.style.opacity = '0.3';
+              setTimeout(() => {
+                mainModalImg.src = newSrc;
+                mainModalImg.style.opacity = '1';
+              }, 120);
+            }
+            modalGalleryThumbs.querySelectorAll('.modal-thumb-btn').forEach(b => {
+              b.style.border = '2px solid rgba(27,56,43,0.18)';
+            });
+            tBtn.style.border = '2px solid var(--color-primary, #1B382B)';
+          });
+        });
+      } else {
+        modalGalleryThumbs.style.display = 'none';
+        modalGalleryThumbs.innerHTML = '';
+      }
+    }
+
     specModalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
@@ -3436,12 +3510,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     farmerProductGrid.innerHTML = filtered.map(p => `
       <article class="product-card-top-rounded" data-id="${p.id}">
-        <div class="card-photo-v3">
+        <div class="card-photo-v3" style="position: relative;">
           <div class="card-badges-row">
             <span class="badge-cat-pill">${getCategoryIcon(p.category)} ${p.category}</span>
             <span class="badge-subcat-pill" title="${p.subcategory}">${p.subcategory}</span>
           </div>
-          <img src="${p.image}" alt="${p.title}" loading="lazy">
+          <img src="${p.image}" alt="${p.title}" loading="lazy" id="farmer-img-${p.id}">
+          ${p.gallery && p.gallery.length > 1 ? `
+            <div class="card-pack-switcher" style="position: absolute; bottom: 8px; right: 8px; display: flex; gap: 4px; z-index: 2;" onclick="event.stopPropagation();">
+              ${p.gallery.map((g, idx) => `
+                <button type="button" class="btn-farmer-pack-switch ${idx === 0 ? 'active' : ''}" data-target="farmer-img-${p.id}" data-img="${g.image}" title="${g.label}" style="border: 1px solid rgba(27,56,43,0.3); background: ${idx === 0 ? 'var(--color-primary, #1B382B)' : 'rgba(255,255,255,0.95)'}; color: ${idx === 0 ? '#FFF' : 'var(--color-primary, #1B382B)'}; font-size: 10px; font-weight: 700; border-radius: 4px; padding: 2px 7px; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+                  ${g.short || g.label}
+                </button>
+              `).join('')}
+            </div>
+          ` : ''}
         </div>
         <div class="card-body-v3">
           <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--color-terracotta); margin-bottom: 2px;">${p.productType}</div>
@@ -3469,6 +3552,31 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </article>
     `).join('');
+
+    farmerProductGrid.querySelectorAll('.btn-farmer-pack-switch').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const targetId = btn.getAttribute('data-target');
+        const imgUrl = btn.getAttribute('data-img');
+        const targetImg = document.getElementById(targetId);
+        if (targetImg) {
+          targetImg.style.opacity = '0.4';
+          setTimeout(() => {
+            targetImg.src = imgUrl;
+            targetImg.style.opacity = '1';
+          }, 100);
+        }
+        const parent = btn.parentElement;
+        if (parent) {
+          parent.querySelectorAll('.btn-farmer-pack-switch').forEach(b => {
+            b.style.background = 'rgba(255,255,255,0.95)';
+            b.style.color = 'var(--color-primary, #1B382B)';
+          });
+          btn.style.background = 'var(--color-primary, #1B382B)';
+          btn.style.color = '#FFF';
+        }
+      });
+    });
 
     farmerProductGrid.querySelectorAll('.btn-open-spec').forEach(btn => {
       btn.addEventListener('click', () => {
