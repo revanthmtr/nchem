@@ -48,18 +48,19 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Humicid++ (Nutrient Mobilizer)',
       category: 'Bio-Fertilizers, Soil Health & Organics',
       subcategory: 'Bio-Stimulants & Nutrient Mobilizers',
-      composition: 'Humic Acid 50%, Amino Acid 30%, Fulvic Acid 20%',
-      dosage: 'Soil Application: 1 kg – 5 kg / acre | Fertigation / Drip',
-      applicationMethod: 'Soil Application & Fertigation',
+      composition: 'Humic Acid (Activated) 50%, Amino Acid 30%, Fulvic Acid 20%',
+      dosage: 'Fertigation: 1–2 kg per acre | Soil Application',
+      applicationMethod: 'Fertigation & Soil Application',
       productType: '100% Organic Nutrient Mobilizer',
       targetCrops: 'All Crops (Paddy, Cotton, Chilli, Vegetables, Fruits, Horticulture)',
       stage: 'Basal, Vegetative Growth (Stage-I), Root Development',
-      desc: '100% Organic nutrient mobilizer and bio-stimulant. Increases productivity of crops, stimulates prolific white root formation, enhances cation exchange capacity (CEC), and optimizes nutrient uptake for healthy & higher yield.',
-      packSizes: '1 kg, 5 kg',
+      desc: 'Specialty 100% organic bio-stimulant & nutrient mobilizer to improve plant growth and soil health. Helps plants develop deeper and stronger root systems, enhances tolerance to biotic & abiotic stress, resists pests and diseases, and maximizes crop yield and quality.',
+      packSizes: '1 kg & 5 kg',
       image: 'assets/nchem_humicid_plus_plus_1kg.jpg',
       gallery: [
         { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_humicid_plus_plus_1kg.jpg' },
-        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_humicid_plus_plus_5kg.jpg' }
+        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_humicid_plus_plus_5kg.jpg' },
+        { label: 'Technical Brochure', short: 'Dossier', image: 'assets/nchem_humicid_plus_plus_brochure.png' }
       ]
     },
     {
