@@ -1854,18 +1854,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6.2 Orthosilicic Acid & Silicon Stress Relievers
     {
       id: 'relief',
-      title: 'Relief / N Chem Relief',
+      title: 'Relief (Ortho Silicic Acid 2.0% WSL)',
       category: 'Specialty Adjuvants & Silicon Formulations',
       subcategory: 'Orthosilicic Acid & Silicon Stress Relievers',
       composition: 'Ortho Silicic Acid (OSA) 2.0% WSL',
-      dosage: 'Foliar Spray (2 ml/L)',
+      dosage: 'Spraying: 2 ml/L of water | Foliar Application',
       applicationMethod: 'Foliar Spray',
-      productType: 'Adjuvant / Silicon',
-      targetCrops: 'Pomegranate, Mango, Banana, Chilli, Rice, Polyhouse Crops',
+      productType: 'Adjuvant / Silicon Stress Reliever',
+      targetCrops: 'All Crops (Pomegranate, Mango, Banana, Chilli, Rice, Polyhouse & Horticulture)',
       stage: 'Vegetative Growth (Stage-I), Fruit Sizing & Maturation (Stage-IV)',
-      desc: 'Bio-available silicon that strengthens epidermal cell walls against heat, drought, and biotic stress.',
-      packSizes: '250 ml, 500 ml, 1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: 'Specialty bio-available Ortho Silicic Acid (OSA) 2.0% WSL. Improves the response of crops to biotic and abiotic stress, boosts plant immune power, optimizes internal water utilization, and minimizes required doses of synthetic pesticides and fertilizers.',
+      packSizes: '5 L, 1 L, 500 ml, 250 ml',
+      image: 'assets/nchem_relief.jpg',
+      gallery: [
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_relief.jpg' },
+        { label: 'Technical Brochure', short: 'Dossier', image: 'assets/nchem_relief_brochure.png' }
+      ]
     },
     {
       id: 'n-chem-silica-boost',
