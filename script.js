@@ -65,18 +65,22 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'or-mix-4-in-1',
-      title: 'OR MIX 4 in 1',
+      title: 'OR MIX 4 in 1 (Organic Nutrient Mobilizer)',
       category: 'Bio-Fertilizers, Soil Health & Organics',
       subcategory: 'Bio-Stimulants & Nutrient Mobilizers',
-      composition: 'Humic 40%, Amino 20%, Fulvic 20%, Seaweed 20%',
-      dosage: 'Fertigation / Drip (1–2 L / acre)',
-      applicationMethod: 'Fertigation / Drip',
-      productType: 'Bio-Stimulant',
-      targetCrops: 'All Crops, Pomegranate, Guava, Citrus, Papaya, Mango',
-      stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II), Fruit Sizing & Maturation (Stage-IV)',
-      desc: 'Promotes plant growth, flowering, and fruiting; keeps plants healthy and enhances water retention.',
-      packSizes: '500 ml, 1 L, 5 L, 20 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      composition: 'Humic Acid 40%, Amino Acid 20%, Fulvic Acid 20%, Seaweed Extract 20%',
+      dosage: 'Soil Application: 1 kg – 5 kg / acre | Fertigation / Drip: 1–2 kg / acre',
+      applicationMethod: 'Soil Application & Fertigation',
+      productType: '100% Organic Nutrient Mobilizer',
+      targetCrops: 'All Crops (Paddy, Cotton, Chilli, Pomegranate, Guava, Citrus, Vegetables & Fruits)',
+      stage: 'Basal, Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II), Fruit Sizing (Stage-IV)',
+      desc: '100% Organic 4-in-1 nutrient mobilizer and bio-stimulant. Synergistic formulation of humic acid, amino acids, fulvic acid, and seaweed extract designed to increase crop productivity, optimize nutrient utilization, stimulate root vigor, and maximize harvest yield.',
+      packSizes: '1 kg & 5 kg',
+      image: 'assets/nchem_or_mix_1kg.jpg',
+      gallery: [
+        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_or_mix_1kg.jpg' },
+        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_or_mix_5kg.jpg' }
+      ]
     },
     {
       id: 'fulvicid',
