@@ -3009,11 +3009,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    const subcatFunnelIcon = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>';
     if (subcatContainer) subcatContainer.style.display = 'block';
     if (subcatTitleLabel) {
       subcatTitleLabel.innerHTML = activeMainCategory === 'All'
-        ? `<span>&#128073;</span> Filter by Specific Product Subcategory:`
-        : `<span>&#128073;</span> ${activeMainCategory} Subcategories:`;
+        ? `${subcatFunnelIcon} Filter by Specific Product Subcategory:`
+        : `${subcatFunnelIcon} ${activeMainCategory} Subcategories:`;
     }
 
     let html = `
