@@ -2772,7 +2772,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Render Compact 4-Column Cards View
+    // Render Compact 3-Column Cards View
     if (currentCatalogView === 'cards') {
       productGridV3.style.display = 'grid';
       if (productMatrixTableView) productMatrixTableView.style.display = 'none';
@@ -2780,10 +2780,10 @@ document.addEventListener('DOMContentLoaded', () => {
       productGridV3.innerHTML = filtered.map(p => {
         const skuCode = getProductSKU(p);
         const pillar  = getPillarMeta(p.category);
-        const cropArr = p.targetCrops.split(',').map(c => c.trim()).slice(0, 3);
+        const cropArr = p.targetCrops.split(',').map(c => c.trim()).slice(0, 2);
         const compositionShort = p.composition.length > 44 ? p.composition.slice(0, 44) + '…' : p.composition;
         const dosageShort = p.dosage.length > 40 ? p.dosage.slice(0, 40) + '…' : p.dosage;
-        const moreCrops = p.targetCrops.split(',').length > 3 ? `+${p.targetCrops.split(',').length - 3}` : '';
+        const moreCrops = p.targetCrops.split(',').length > 2 ? `+${p.targetCrops.split(',').length - 2}` : '';
 
         return `
           <article class="nchem-compact-card" data-id="${p.id}" style="--pc-color: ${pillar.color}; --pc-bg: ${pillar.bg};">
@@ -2808,10 +2808,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
               <div class="compact-card-head">
                 <span class="compact-sku">${skuCode}</span>
-                <span class="compact-type">${p.productType.split(' ')[0]}</span>
               </div>
 
               <h3 class="compact-title">${p.title}</h3>
+              <div class="gold-rule"></div>
 
               <div class="compact-formula">
                 <span>⚗</span><span class="compact-formula-text">${compositionShort}</span>
@@ -2953,14 +2953,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Small line-icon set (stroke = currentColor) replacing emoji glyphs, so
+  // pillar icons stay crisp, recolorable and render identically everywhere.
+  const pillarIconSvg = {
+    leaf: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13a1 1 0 0 1 1-1h6a7 7 0 0 1 7 7 1 1 0 0 1-1 1h-6Z"/><path d="M11 20v-9a4 4 0 0 1 4-4h2"/></svg>',
+    shield: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>',
+    apple: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.5 1.5-.5 3-2 3"/><path d="M12 8c-3.5 0-6 2.5-6 6.5S8.5 21 12 21s6-2.5 6-6.5S15.5 8 12 8Z"/></svg>',
+    flask: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6.5L4.5 19a1 1 0 0 0 .9 1.5h13.2a1 1 0 0 0 .9-1.5L14 9.5V3"/></svg>',
+    droplet: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg>',
+    atom: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><ellipse cx="12" cy="12" rx="9" ry="4"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(120 12 12)"/></svg>'
+  };
+
   function getCategoryIcon(category) {
-    if (category.includes('Bio-Fertilizers')) return '🌱';
-    if (category.includes('Plant Protection')) return '🛡️';
-    if (category.includes('Crop-Specific')) return '🍎';
-    if (category.includes('Micronutrients')) return '⚗️';
-    if (category.includes('Water Soluble')) return '💧';
-    if (category.includes('Specialty Adjuvants')) return '🔬';
-    return '🌿';
+    if (category.includes('Bio-Fertilizers')) return pillarIconSvg.leaf;
+    if (category.includes('Plant Protection')) return pillarIconSvg.shield;
+    if (category.includes('Crop-Specific')) return pillarIconSvg.apple;
+    if (category.includes('Micronutrients')) return pillarIconSvg.flask;
+    if (category.includes('Water Soluble')) return pillarIconSvg.droplet;
+    if (category.includes('Specialty Adjuvants')) return pillarIconSvg.atom;
+    return pillarIconSvg.leaf;
   }
 
   function updateTabBadges() {
@@ -3819,7 +3830,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <article class="product-card-top-rounded" data-id="${p.id}">
         <div class="card-photo-v3" style="position: relative;">
           <div class="card-badges-row">
-            <span class="badge-cat-pill">${getCategoryIcon(p.category)} ${p.category}</span>
+            <span class="badge-cat-pill">${getCategoryIcon(p.category)}<span>${getPillarMeta(p.category).label}</span></span>
             <span class="badge-subcat-pill" title="${p.subcategory}">${p.subcategory}</span>
           </div>
           <img src="${p.image}" alt="${p.title}" loading="lazy" id="farmer-img-${p.id}">
@@ -3835,7 +3846,8 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="card-body-v3">
           <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--color-terracotta); margin-bottom: 2px;">${p.productType}</div>
-          <h3 class="card-title-v3" style="font-size: 18.5px; line-height: 1.3; margin-bottom: 8px;">${p.title}</h3>
+          <h3 class="card-title-v3" style="font-size: 18.5px; line-height: 1.3; margin-bottom: 4px;">${p.title}</h3>
+          <div class="gold-rule" style="margin-bottom: 12px;"></div>
           
           <div class="card-spec-highlight">
             <span>&#9879;</span>
