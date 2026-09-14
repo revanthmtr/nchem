@@ -1,0 +1,88 @@
+# ============================================================
+#  Nchem Sciences — GoDaddy cPanel Apache Config
+# ============================================================
+
+Options -Indexes
+Options +FollowSymLinks
+
+# ── Security Headers ────────────────────────────────────────
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ── Force HTTPS ─────────────────────────────────────────────
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirect HTTP → HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Single-Page App fallback — serve index.html for all missing paths
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# ── MIME Types ───────────────────────────────────────────────
+<IfModule mod_mime.c>
+  AddType application/javascript        .js
+  AddType text/css                      .css
+  AddType image/svg+xml                 .svg
+  AddType image/webp                    .webp
+  AddType font/woff2                    .woff2
+</IfModule>
+
+# ── Gzip Compression ─────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# ── Browser Caching ──────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg              "access plus 6 months"
+  ExpiresByType image/png               "access plus 6 months"
+  ExpiresByType image/webp              "access plus 6 months"
+  ExpiresByType image/gif               "access plus 6 months"
+  ExpiresByType image/svg+xml           "access plus 6 months"
+  ExpiresByType image/x-icon            "access plus 1 year"
+  ExpiresByType font/woff2              "access plus 1 year"
+  ExpiresByType text/css                "access plus 1 year"
+  ExpiresByType application/javascript  "access plus 1 year"
+  ExpiresByType text/html               "access plus 0 seconds"
+  ExpiresDefault                        "access plus 1 month"
+</IfModule>
+
+# ── Cache-Control ────────────────────────────────────────────
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(js|css)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=15552000"
+  </FilesMatch>
+  <FilesMatch "\.(woff|woff2|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# ── ETags ────────────────────────────────────────────────────
+FileETag None
+
+# ── Error Pages ──────────────────────────────────────────────
+ErrorDocument 404 /index.html
+ErrorDocument 403 /index.html

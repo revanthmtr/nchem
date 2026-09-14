@@ -21,12 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Humic Acid 80%',
       dosage: 'Fertigation / Drip (500g–1kg / acre)',
       applicationMethod: 'Fertigation / Drip',
-      productType: 'Bio-Fertilizer',
+      productType: '100% Organic Nutrient Mobilizer',
       targetCrops: 'All Crops, Horticulture, Vegetables, Cotton, Sugarcane',
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
-      desc: 'Biologically activated humic acid product to enhance soil health and stimulate root systems.',
-      packSizes: '500g, 1kg, 5kg, 25kg',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: 'Biologically activated humic acid formulation to enhance soil health and stimulate root systems. Enhances crop productivity, strengthens plant growth, and promotes healthy soil and higher yield.',
+      packSizes: '1 kg & 5 kg',
+      image: 'assets/nchem_humicid_1kg.jpg',
+      gallery: [
+        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_humicid_1kg.jpg' },
+        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_humicid_5kg.jpg' }
+      ]
     },
     {
       id: 'humicid-plus',
@@ -34,14 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Bio-Fertilizers, Soil Health & Organics',
       subcategory: 'Bio-Stimulants & Nutrient Mobilizers',
       composition: 'Humic Acid 65%, Amino Acid 20%',
-      dosage: 'Fertigation / Drip (500 ml–1 L / acre) or Foliar (2 ml/L)',
-      applicationMethod: 'Fertigation / Drip',
-      productType: 'Bio-Stimulant',
+      dosage: 'Fertigation / Drip: 1–2 kg / acre | Soil Application',
+      applicationMethod: 'Fertigation & Soil Application',
+      productType: '100% Organic Nutrient Mobilizer',
       targetCrops: 'All Crops, Chilli, Tomato, Pomegranate, Banana, Citrus',
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
-      desc: 'Enhances plant growth, promotes chlorophyll development, and increases vitamin/mineral uptake.',
-      packSizes: '250 ml, 500 ml, 1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      desc: 'Specialty organic nutrient mobilizer and bio-stimulant. Increases crop productivity, optimizes nutrient utilization, and strengthens plant growth and root vitality.',
+      packSizes: '1 kg & 5 kg',
+      image: 'assets/nchem_humicid_plus_1kg.jpg',
+      gallery: [
+        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_humicid_plus_1kg.jpg' },
+        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_humicid_plus_5kg.jpg' }
+      ]
     },
     {
       id: 'humicid-plus-plus',
@@ -98,8 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'assets/nchem_fulvicid_1kg.jpg',
       gallery: [
         { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_fulvicid_1kg.jpg' },
-        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_fulvicid_5kg.jpg' },
-        { label: 'Technical Brochure', short: 'Dossier', image: 'assets/nchem_fulvicid_brochure.png' }
+        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_fulvicid_5kg.jpg' }
       ]
     },
     {
@@ -127,12 +134,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Liquid consortium of Azotobacter, PSB, KMB (2x10^8 CFU/ml)',
       dosage: 'Fertigation / Drip (1 L / acre) or Seed Treatment (250 ml)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Fertilizer',
+      productType: '100% Eco-Friendly Bio-Fertilizer (Beneficial Bacteria Consortium)',
       targetCrops: 'All Crops, Paddy, Sugarcane, Cotton, Maize, Pulses',
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
-      desc: 'Solubilizes Nitrogen, Phosphorus, and Potash; promotes root hormone production and soil fertility.',
-      packSizes: '500 ml, 1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      desc: 'Solubilizes Nitrogen, Phosphorus, and Potash; promotes root hormone production and biological soil fertility.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_npk_3_in_1_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_npk_3_in_1_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_npk_3_in_1_5l.jpg' }
+      ]
     },
     {
       id: 'cms-microbes',
@@ -142,12 +153,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Calcium, Magnesium, Sulphur solubilizing bacteria (2x10^8 CFU/ml)',
       dosage: 'Fertigation / Drip (1 L / acre)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Fertilizer',
+      productType: '100% Natural Bio-Fertilizer (Combination of Beneficial Bacteria)',
       targetCrops: 'All Crops, Groundnut, Mustard, Soybean, Tomato, Pomegranate',
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
-      desc: 'Liquid beneficial bacteria for secondary nutrient uptake, improving soil structure and plant vigor.',
-      packSizes: '500 ml, 1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: 'Liquid beneficial bacteria consortium for secondary nutrient uptake (Calcium, Magnesium, Sulphur), improving soil structure, root zone vitality, and plant vigor.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_cms_microbes_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_cms_microbes_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_cms_microbes_5l.jpg' }
+      ]
     },
     {
       id: 'mix-microbes',
@@ -157,12 +172,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Liquid beneficial bacteria with B, Mn, Fe, Zn (2x10^8 CFU/ml)',
       dosage: 'Fertigation / Drip (1 L / acre)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Fertilizer',
+      productType: '100% Natural Bio-Fertilizer (Combination of Beneficial Bacteria)',
       targetCrops: 'All Crops, Citrus, Pomegranate, Banana, Chilli, Polyhouse Crops',
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
-      desc: 'Essential micronutrient mobilizer that enhances soil fertility and stimulates rapid plant growth.',
-      packSizes: '1 L, 5 L, 20 L',
-      image: 'assets/nchem_bio_gold.png'
+      desc: 'Essential micronutrient mobilizer and beneficial bacterial consortium that enhances soil biological fertility, improves trace mineral absorption, and stimulates rapid crop growth.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_mix_microbes_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_mix_microbes_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_mix_microbes_5l.jpg' }
+      ]
     },
 
     // 1.3 Organic Fertilizers, Composts & Manures
@@ -327,14 +346,18 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Plant Protection & Bio-Pesticides',
       subcategory: 'Biological Pest & Insect Control',
       composition: 'Beauveria bassiana + Verticillium lecanii (2x10^8 CFU/ml)',
-      dosage: 'Foliar Spray (5–10 ml/L)',
+      dosage: 'Spraying 5–10 ml per litre of water',
       applicationMethod: 'Foliar Spray',
-      productType: 'Bio-Pesticide',
-      targetCrops: 'Chilli, Cotton, Vegetables, Citrus, Papaya, Pulses',
+      productType: '100% Organic Bio-Pesticide Plant Protector',
+      targetCrops: 'Pomegranate, Chilli, Cotton, Vegetables, Citrus, Papaya, Pulses, All Crops',
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
-      desc: 'Bio-insecticide formulated to manage sucking pests, thrips, mites, and whiteflies.',
-      packSizes: '250 ml, 500 ml, 1 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      desc: '100% organic bio-pesticide plant protector consisting of Beauveria bassiana and Verticillium lecanii. Effectively manages sucking pests, thrips, mites, whiteflies, and other harmful pest diseases across all crop varieties.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_focus_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_focus_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_focus_5l.jpg' }
+      ]
     },
     {
       id: 'focus-plus',
@@ -342,14 +365,18 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Plant Protection & Bio-Pesticides',
       subcategory: 'Biological Pest & Insect Control',
       composition: 'Beauveria bassiana + Verticillium lecanii (2x10^8 CFU/ml) Fortified',
-      dosage: 'Foliar Spray (5–10 ml/L)',
+      dosage: 'Spraying 5–10 ml per litre of water',
       applicationMethod: 'Foliar Spray',
-      productType: 'Bio-Pesticide',
-      targetCrops: 'Chilli, Tomato, Brinjal, Pomegranate, Banana, Floriculture',
+      productType: '100% Organic Bio-Pesticide Plant Protector',
+      targetCrops: 'Pomegranate, Chilli, Tomato, Brinjal, Banana, Floriculture, Cotton, All Crops',
       stage: 'Vegetative Growth (Stage-I), Fruit Setting (Stage-III)',
-      desc: 'Enhanced fungal formulation for controlling persistent pest outbreaks and resistant thrips/mites.',
-      packSizes: '250 ml, 500 ml, 1 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: '100% organic enhanced bio-pesticide plant protector with fortified Beauveria bassiana and Verticillium lecanii. Controls persistent pest outbreaks, resistant thrips, mites, and whiteflies for all horticultural and agricultural crops.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_focus_plus_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_focus_plus_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_focus_5l.jpg' }
+      ]
     },
     {
       id: 'raksha',
@@ -359,12 +386,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Specialized bio-components in natural botanical form',
       dosage: 'Foliar Spray (2–2.5 ml/L)',
       applicationMethod: 'Foliar Spray',
-      productType: 'Bio-Pesticide',
-      targetCrops: 'Horticulture, Floriculture, Polyhouse Vegetables, Chilli, Tea',
+      productType: '100% Botanical Plant Protector (Bio-Pesticide)',
+      targetCrops: 'Horticulture, Floriculture, Polyhouse Vegetables, Chilli, Cotton, Paddy, Tea',
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
-      desc: 'Botanical/bio-protective formulation delivering powerful control against mites and sucking pests.',
-      packSizes: '250 ml, 500 ml, 1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      desc: 'Botanical and bio-protective plant protector formulation delivering powerful broad-spectrum control against mites, thrips, and sucking insect pests.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_raksha_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_raksha_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_raksha_5l.jpg' }
+      ]
     },
 
     // 2.2 Biological Disease & Blight Management
@@ -373,45 +404,57 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Killer',
       category: 'Plant Protection & Bio-Pesticides',
       subcategory: 'Biological Disease & Blight Management',
-      composition: 'Bacillus subtilis (2x10^8 CFU/ml) + Enhancers',
-      dosage: 'Foliar Spray (5–10 ml/L)',
+      composition: 'Bacillus subtilis (2x10^8 CFU/ml) + Biological Enhancers',
+      dosage: 'Foliar Spray 2–3 ml / Litre of water (or 500 ml – 1 L / acre)',
       applicationMethod: 'Foliar Spray',
-      productType: 'Bio-Pesticide',
-      targetCrops: 'Pomegranate, Tomato, Paddy, Citrus, Grapes, Ginger',
-      stage: 'Vegetative Growth (Stage-I), Fruit Setting (Stage-III)',
-      desc: 'Bio-bactericide for effective suppression and management of bacterial blight and spot diseases.',
-      packSizes: '250 ml, 500 ml, 1 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      productType: '100% Organic Bio-Bactericide (Bacterial Blight Specialist)',
+      targetCrops: 'Pomegranate (Bacterial Blight / Oily Spot), Tomato, Paddy, Citrus (Canker), Grapes, Chilli',
+      stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II), Fruit Setting (Stage-III)',
+      desc: 'Specialized bio-bactericide formulation engineered for effective prevention and rapid suppression of bacterial blight, oily spot (Telya) in pomegranate, and bacterial leaf spots.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_killer_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_killer_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_killer_5l.jpg' }
+      ]
     },
     {
       id: 'power-killer',
       title: 'Power Killer',
       category: 'Plant Protection & Bio-Pesticides',
       subcategory: 'Biological Disease & Blight Management',
-      composition: 'Bacillus subtilis + Pseudomonas fluorescens (2x10^8 CFU/ml)',
-      dosage: 'Foliar Spray (5–10 ml/L)',
+      composition: 'Bacillus subtilis + Pseudomonas fluorescens (2x10^8 CFU/ml) + Bio-Actives',
+      dosage: 'Foliar Spray 2–3 ml / Litre of water (or 500 ml – 1 L / acre)',
       applicationMethod: 'Foliar Spray',
-      productType: 'Bio-Pesticide',
-      targetCrops: 'Pomegranate (Oily Spot), Tomato (Wilt), Paddy (Bacterial Leaf Blight), Citrus (Canker)',
+      productType: '100% Friendly Advanced Bio-Bactericide & Bio-Fungicide',
+      targetCrops: 'Tomato (Bacterial Canker, Wilt & Blight), Pomegranate (Oily Spot), Paddy (BLB), Chilli, Citrus',
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II), Fruit Setting (Stage-III)',
-      desc: 'Dual-action bio-fungicide/bactericide for severe bacterial blight, cankers, and leaf spots.',
-      packSizes: '500 ml, 1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: 'High-potency dual-action bio-bactericide and bio-fungicide offering systemic protective action against severe bacterial blight, fruit cankers, leaf blight, and vascular wilt.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_power_killer_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_power_killer_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_power_killer_5l.jpg' }
+      ]
     },
     {
       id: 'horty-fungal',
       title: 'Horty Fungal',
       category: 'Plant Protection & Bio-Pesticides',
       subcategory: 'Biological Disease & Blight Management',
-      composition: 'Trichoderma viride + Pseudomonas fluorescens + Paecilomyces',
-      dosage: 'Fertigation / Drip (1–2 L / acre) or Foliar (3 ml/L)',
+      composition: 'Trichoderma viride + Pseudomonas fluorescens + Paecilomyces lilacinus (2x10^8 CFU/ml)',
+      dosage: 'Fertigation 1–3 Litres per acre',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Pesticide',
-      targetCrops: 'Horticultural Orchards, Mango, Guava, Papaya, Banana, Vegetables',
+      productType: '100% Organic Bio-Fungicide & Bio-Nematicide',
+      targetCrops: 'All Crops, Horticultural Orchards, Mango, Guava, Papaya, Banana, Vegetables, Citrus',
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I), Fruit Setting (Stage-III)',
-      desc: 'Broad-spectrum bio-fungicide protecting horticulture roots from wilt, root rot, and damping-off.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      desc: 'Premium 100% organic broad-spectrum horticulture bio-fungicide. Effectively controls wilt, nematodes, and soil-borne diseases. Increases plant resistance power, boosts immunity with beneficial bacterial strains, and enhances overall crop growth.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_horty_fungal_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_horty_fungal_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_horty_fungal_5l.jpg' }
+      ]
     },
 
     // 2.3 Nematode & Root Inoculants
@@ -421,46 +464,57 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Plant Protection & Bio-Pesticides',
       subcategory: 'Nematode & Root Inoculants',
       composition: 'Paecilomyces lilacinus (2x10^8 CFU/ml) + VAM (50 ip/ml)',
-      dosage: 'Fertigation / Drip (1 L / acre)',
+      dosage: 'Fertigation 1–3 Litres per acre',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Pesticide',
-      targetCrops: 'Pomegranate, Guava, Papaya, Polyhouse Capsicum/Cucumber, Banana',
+      productType: '100% Organic Bio-Nematicide',
+      targetCrops: 'Pomegranate, Guava, Papaya, Polyhouse Capsicum/Cucumber, Banana, Citrus',
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
-      desc: 'Bio-nematicide and mycorrhizal inoculant that controls root-knot nematodes and builds root mass.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      desc: '100% organic bio-nematicide and root development inoculant consisting of Paecilomyces lilacinus and VAM. Effectively controls nematodes, promotes vigorous healthy roots, improves soil health, and enhances overall crop growth.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_nem_roots_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_nem_roots_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_nem_roots_5l.jpg' }
+      ]
     },
     {
       id: 'nem-roots-plus',
       title: 'Nem Roots Plus',
       category: 'Plant Protection & Bio-Pesticides',
       subcategory: 'Nematode & Root Inoculants',
-      composition: 'Paecilomyces + Trichoderma (2x10^8 CFU/ml) + VAM (50 ip/ml)',
-      dosage: 'Fertigation / Drip (1 L / acre)',
+      composition: 'Paecilomyces lilacinus + Trichoderma (2x10^8 CFU/ml) + VAM (50 ip/ml)',
+      dosage: 'Fertigation 1–3 Litres per acre',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Pesticide',
-      targetCrops: 'All Nematode-sensitive crops, Citrus, Ginger, Turmeric, Black Pepper',
+      productType: '100% Organic Bio-Nematicide & Fungicide',
+      targetCrops: 'Pomegranate, Citrus, Ginger, Turmeric, Black Pepper, Horticulture, All Nematode-sensitive crops',
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
-      desc: 'Complete root health inoculant targeting root nematodes while eliminating soil-borne fungal pathogens.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: 'Advanced dual-action root health inoculant consisting of Paecilomyces lilacinus, Trichoderma, and VAM. Controls root-knot nematodes while eliminating harmful soil-borne fungal pathogens and optimizing root development.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_nem_roots_plus_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_nem_roots_plus_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_nem_roots_plus_5l.jpg' }
+      ]
     },
 
     // 2.4 Pheromone Traps & Attractants
     {
       id: 'n-chem-fruit-fly-trap',
-      title: 'N Chem Fruit Fly Trap',
+      title: 'N Chem Fruit Fly Attractant & Trap',
       category: 'Plant Protection & Bio-Pesticides',
       subcategory: 'Pheromone Traps & Attractants',
-      composition: 'Methyl Eugenol Liquid Attractant Matrix',
-      dosage: 'Trap Setup (10–20 traps / acre)',
+      composition: 'Methyl Eugenol Liquid Attractant Matrix (200 ml) + High-Efficiency Field Trap with Lure',
+      dosage: 'Field Setup (6–10 traps/acre for monitoring, 15–20 traps/acre for mass trapping)',
       applicationMethod: 'Pheromone Trap',
-      productType: 'Bio-Pesticide',
-      targetCrops: 'Guava, Mango, Citrus, Papaya, Melons, Cucurbits, Orchards',
+      productType: 'Fruit Fly Attractant & Trap Kit',
+      targetCrops: 'Guava, Mango, Citrus, Banana, Dragon Fruit, Papaya, Melons, Cucurbits, Orchards',
       stage: 'Flowering & Blooming (Stage-II), Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
-      desc: 'Monitors and traps male fruit flies (Bactrocera dorsalis, B. correcta) to prevent crop damage.',
-      packSizes: 'Kit with 10 Traps & 10 Lures',
-      image: 'assets/v2_bag.png'
+      desc: 'High-potency fruit fly attractant and weather-proof field trap system designed to lure and capture male Bactrocera fruit fly species across orchards and vegetable fields. Prevents oviposition, puncture damage, and premature fruit rot.',
+      packSizes: '200 ml Bottle with Field Trap & Lure Kit',
+      image: 'assets/nchem_fruit_fly_trap.jpg',
+      gallery: [
+        { label: '200 ml Attractant Bottle & Field Trap Kit', short: '200ml Kit', image: 'assets/nchem_fruit_fly_trap.jpg' }
+      ]
     },
 
     // ======================================================================
@@ -472,15 +526,19 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Pomo General',
       category: 'Crop-Specific Stage Nutrition',
       subcategory: 'Pomegranate Stage Care',
-      composition: 'PSB, KSB, ZSB (2x10^8 CFU/ml) + VAM (50 ip/ml)',
-      dosage: 'Fertigation / Drip (2–3 L / acre)',
+      composition: 'PSB, KSB, ZSB (2x10^8 CFU/ml) + VAM (50 ip/ml) + Growth Enhanced Ingredients',
+      dosage: 'Fertigation 1–3 Litres per acre',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Fertilizer',
+      productType: '100% Organic Special Pomegranate Product',
       targetCrops: 'Pomegranate',
-      stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
-      desc: 'Stimulates root systems and overall plant immunity in pomegranate orchards throughout the season.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I), Post-Harvest',
+      desc: 'Premium 100% organic special pomegranate product consisting of PSB, KSB, ZSB, VAM, and growth-enhanced ingredients. Develops heavy roots and vigorous plant growth, increases resistance against pests, nematodes, and diseases, and boosts immunity with beneficial bacterial strains.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_pomo_general_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomo_general_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomo_general_5l.jpg' }
+      ]
     },
     {
       id: 'pomegranate-special-1',
@@ -490,12 +548,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'PSB, KSB, ZSB, CSB, BSB + Flowering Enhanced Ingredients',
       dosage: 'Fertigation / Drip (2 L / acre) + Foliar (3 ml/L)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Organic Flowering Bio-Stimulant',
       targetCrops: 'Pomegranate',
       stage: 'Flowering & Blooming (Stage-II)',
       desc: 'Promotes profuse flowering, strong root development, and pest resistance in pomegranate Bahar treatment.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_pomegranate_special_1_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomegranate_special_1_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomegranate_special_1_5l.jpg' }
+      ]
     },
     {
       id: 'pomegranate-special-2',
@@ -505,42 +567,54 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'PSB, ZSB, CSB, BSB + Fruit Setting Enhancers',
       dosage: 'Fertigation / Drip (2.5 L / acre) + Foliar (2 ml/L)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Organic Fruit Setting Bio-Stimulant',
       targetCrops: 'Pomegranate',
       stage: 'Fruit Setting (Stage-III)',
       desc: 'Minimizes flower/fruit drop and boosts setting percentage in pomegranate orchards.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_pomegranate_special_2_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomegranate_special_2_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomegranate_special_2_5l.jpg' }
+      ]
     },
     {
       id: 'pomegranate-special-3',
       title: 'Pomegranate Fruit Development Special-III',
       category: 'Crop-Specific Stage Nutrition',
       subcategory: 'Pomegranate Stage Care',
-      composition: 'PSB, ZSB, CSB, MSB, SSB + Development Enhancers',
-      dosage: 'Fertigation / Drip (3 L / acre)',
+      composition: 'PSB, ZSB, CSB, MSB, SSB (each 2x10^8 CFU/ml) + Fruit Development Enhanced Ingredients',
+      dosage: 'Fertigation 1–3 Litres per acre',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Organic Fruit Development Bio-Stimulant',
       targetCrops: 'Pomegranate',
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
-      desc: 'Supports rapid aril expansion, rind strength, and nutrient translocation.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_bio_gold.png'
+      desc: 'Promotes heavy root development and rapid fruit sizing. Boosts plant resistance against pests, nematodes, and diseases while increasing natural bacterial immunity.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_pomegranate_special_3_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomegranate_special_3_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomegranate_special_3_5l.jpg' }
+      ]
     },
     {
       id: 'pomegranate-special-4',
       title: 'Pomegranate Fruit Colour & Size Special-IV',
       category: 'Crop-Specific Stage Nutrition',
       subcategory: 'Pomegranate Stage Care',
-      composition: 'CSB, MSB, SSB, PSB + Fruit Size Enhancers',
-      dosage: 'Fertigation / Drip (2 L / acre) + Foliar (2 ml/L)',
+      composition: 'CSB, MSB, SSB, PSB (each 2x10^8 CFU/ml) + Fruit Size Enhanced Ingredients',
+      dosage: 'Fertigation 1–3 Litres per acre',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Organic Fruit Colour & Size Bio-Stimulant',
       targetCrops: 'Pomegranate',
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
-      desc: 'Enhances deep natural red rind colour, fruit weight, sugar Brix, and export market grade.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: 'Enhances deep natural red rind color, fruit weight, sugar Brix, and export market grade. Strengthens roots and pest/disease resistance.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_pomegranate_special_4_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomegranate_special_4_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomegranate_special_4_5l.jpg' }
+      ]
     },
 
     // 3.2 Guava Range
@@ -552,12 +626,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
       dosage: 'Fertigation / Drip (2 L / acre)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Eco-Friendly & Bio-Organic Growth Stimulant',
       targetCrops: 'Guava',
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Accelerates vegetative canopy development and root expansion in Thai & Taiwan Pink guava orchards.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_guava_special_1_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_guava_special_1_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_guava_special_1_5l.jpg' }
+      ]
     },
     {
       id: 'guava-special-2',
@@ -567,12 +645,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Zn + Flowering Enhancers',
       dosage: 'Foliar Spray (2.5 ml/L) / Drip (2 L/acre)',
       applicationMethod: 'Foliar Spray',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Flowering Booster',
       targetCrops: 'Guava',
       stage: 'Flowering & Blooming (Stage-II)',
       desc: 'Encourages uniform bud initiation and bloom quality with high flower cluster retention.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_guava_special_2_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_guava_special_2_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_guava_special_2_5l.jpg' }
+      ]
     },
     {
       id: 'guava-special-3',
@@ -582,12 +664,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Zn + Fruit Setting Enhancers',
       dosage: 'Fertigation / Drip (2.5 L / acre)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Fruit Setting Booster',
       targetCrops: 'Guava',
       stage: 'Fruit Setting (Stage-III)',
       desc: 'Prevents premature fruitlet shedding and promotes uniform setting across all branches.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_guava_special_3_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_guava_special_3_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_guava_special_3_5l.jpg' }
+      ]
     },
     {
       id: 'guava-special-4',
@@ -597,12 +683,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Ca + Fruit Development Enhancers',
       dosage: 'Fertigation / Drip (3 L / acre) + Foliar (2 ml/L)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Organic Fruit Development & Sizing Stimulant',
       targetCrops: 'Guava',
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Improves fruit size, pulp firmness, sweet aroma, and post-harvest shelf life.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_bio_gold.png'
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_guava_special_4_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_guava_special_4_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_guava_special_4_5l.jpg' }
+      ]
     },
 
     // 3.3 Citrus Range
@@ -614,12 +704,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
       dosage: 'Fertigation / Drip (2 L / acre)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Growth Stimulant',
       targetCrops: 'Citrus',
       stage: 'Vegetative Growth (Stage-I)',
-      desc: 'Promotes new flushes, foliage vigor, and deep feeder root establishment in Sweet Lime, Lemon & Mandarin.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      desc: 'Promotes vigorous new flushes, lush foliage vigor, and deep feeder root establishment in Sweet Lime, Lemon & Mandarin.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_citrus_special_1_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_citrus_special_1_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_citrus_special_1_5l.jpg' }
+      ]
     },
     {
       id: 'citrus-special-2',
@@ -629,12 +723,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Boron + Flowering Enhancers',
       dosage: 'Foliar Spray (2.5 ml/L)',
       applicationMethod: 'Foliar Spray',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Flowering Booster',
       targetCrops: 'Citrus',
       stage: 'Flowering & Blooming (Stage-II)',
-      desc: 'Optimizes floral bloom, pollen viability, and heavy blossom set.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      desc: 'Optimizes floral bloom, pollen viability, flower retention, and heavy blossom set across orchards.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_citrus_special_2_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_citrus_special_2_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_citrus_special_2_5l.jpg' }
+      ]
     },
     {
       id: 'citrus-special-3',
@@ -644,12 +742,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Calcium + Fruit Setting Enhancers',
       dosage: 'Fertigation / Drip (2.5 L / acre)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Fruit Setting Booster',
       targetCrops: 'Citrus',
       stage: 'Fruit Setting (Stage-III)',
-      desc: 'Prevents fruit drop and strengthens button attachment at pea/marble fruit stage.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: 'Prevents premature fruit drop and strengthens button attachment at pea and marble fruit stages.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_citrus_special_3_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_citrus_special_3_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_citrus_special_3_5l.jpg' }
+      ]
     },
     {
       id: 'citrus-special-4',
@@ -659,12 +761,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, Zn, Magnesium + Fruit Development Enhancers',
       dosage: 'Fertigation / Drip (3 L / acre) + Foliar (2 ml/L)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Fruit Development & Sizing Stimulant',
       targetCrops: 'Citrus',
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
-      desc: 'Promotes juice vesicle expansion, sugar accumulation, and lustrous thin rind texture.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_bio_gold.png'
+      desc: 'Promotes juice vesicle expansion, pulp fullness, sugar accumulation, and lustrous thin rind texture.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_citrus_special_4_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_citrus_special_4_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_citrus_special_4_5l.jpg' }
+      ]
     },
 
     // 3.4 Papaya Range
@@ -676,12 +782,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
       dosage: 'Fertigation / Drip (1.5–2 L / acre)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Growth Stimulant',
       targetCrops: 'Papaya',
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Stimulates girth development and root anchoring in Red Lady 786 papaya seedlings.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_papaya_special_1_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_papaya_special_1_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_papaya_special_1_5l.jpg' }
+      ]
     },
     {
       id: 'papaya-special-2',
@@ -691,12 +801,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Boron + Flowering Enhancers',
       dosage: 'Fertigation / Drip (2 L / acre) + Foliar (2 ml/L)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Flowering Booster',
       targetCrops: 'Papaya',
       stage: 'Flowering & Blooming (Stage-II)',
       desc: 'Enhances flower retention and bisexual blossom vigor for continuous tier fruit bearing.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_papaya_special_2_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_papaya_special_2_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_papaya_special_2_5l.jpg' }
+      ]
     },
     {
       id: 'papaya-special-3',
@@ -706,12 +820,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Calcium + Fruit Setting Enhancers',
       dosage: 'Fertigation / Drip (2.5 L / acre)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Fruit Setting Booster',
       targetCrops: 'Papaya',
       stage: 'Fruit Setting (Stage-III)',
-      desc: 'Ensures continuous fruit setting along the stem trunk without tier gaps.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: 'Ensures continuous fruit setting along the stem trunk without tier gaps, preventing fruitlet drop.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_papaya_special_3_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_papaya_special_3_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_papaya_special_3_5l.jpg' }
+      ]
     },
     {
       id: 'papaya-special-4',
@@ -721,12 +839,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, Zn, Magnesium + Fruit Development Enhancers',
       dosage: 'Fertigation / Drip (2 L / acre weekly)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Fruit Development & Sizing Stimulant',
       targetCrops: 'Papaya',
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
-      desc: 'Enhances fruit sizing, flesh firmness, deep red carotene colour, and 13.5+ Brix sugar levels.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_bio_gold.png'
+      desc: 'Enhances fruit sizing, thick pulp firmness, deep red carotene colour, and 13.5+ Brix sugar levels.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_papaya_special_4_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_papaya_special_4_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_papaya_special_4_5l.jpg' }
+      ]
     },
 
     // 3.5 Banana Range
@@ -738,12 +860,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
       dosage: 'Fertigation / Drip (2.5 L / acre)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Growth Stimulant',
       targetCrops: 'Banana',
       stage: 'Vegetative Growth (Stage-I)',
-      desc: 'Enhances pseudostem development and leaf emergence rate in Grand Naine G9 & Robusta banana.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      desc: 'Enhances pseudostem development, robust root architecture, and rapid leaf emergence rate in Grand Naine G9 & Robusta banana.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_banana_special_1_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_banana_special_1_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_banana_special_1_5l.jpg' }
+      ]
     },
     {
       id: 'banana-special-2',
@@ -753,12 +879,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Boron + Flowering Enhancers',
       dosage: 'Fertigation / Drip (3 L / acre)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Flowering Booster',
       targetCrops: 'Banana',
       stage: 'Flowering & Blooming (Stage-II)',
-      desc: 'Facilitates smooth bunch shooting and inflorescence emergence with high hand counts.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      desc: 'Facilitates smooth bunch shooting, robust floral stalk elongation, and inflorescence emergence with high hand counts.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_banana_special_2_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_banana_special_2_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_banana_special_2_5l.jpg' }
+      ]
     },
     {
       id: 'banana-special-3',
@@ -768,12 +898,18 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Calcium + Fruit Setting Enhancers',
       dosage: 'Fertigation / Drip (3.5 L / acre) + Bunch Spray (2 ml/L)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Fruit Setting Booster',
       targetCrops: 'Banana',
       stage: 'Fruit Setting (Stage-III)',
-      desc: 'Promotes finger elongation and bunch calibration across top and bottom hands.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: 'Promotes finger elongation, hand calibration, and uniform bunch development across top and bottom hands.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_banana_special_3_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle (Design A)', short: '1L', image: 'assets/nchem_banana_special_3_1l.jpg' },
+        { label: '5 Litre Can (Design A)', short: '5L', image: 'assets/nchem_banana_special_3_5l.jpg' },
+        { label: '1 Litre Bottle (Design B)', short: '1L (V2)', image: 'assets/nchem_banana_special_b_1l.jpg' },
+        { label: '5 Litre Can (Design B)', short: '5L (V2)', image: 'assets/nchem_banana_special_b_5l.jpg' }
+      ]
     },
     {
       id: 'banana-special-4',
@@ -800,12 +936,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
       dosage: 'Fertigation / Drip (1.5 L / acre) + Foliar (2 ml/L)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Growth Stimulant',
       targetCrops: 'Chilli',
       stage: 'Vegetative Growth (Stage-I)',
-      desc: 'Accelerates lateral branching and root mass expansion in green & red chilli crops.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      desc: 'Accelerates lateral branching, robust root mass expansion, and dense foliage in green & red chilli crops.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_chilli_special_1_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_chilli_special_1_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_chilli_special_1_5l.jpg' }
+      ]
     },
     {
       id: 'chilli-special-2',
@@ -815,27 +955,35 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Boron + Flowering Enhancers',
       dosage: 'Foliar Spray (2 ml/L weekly)',
       applicationMethod: 'Foliar Spray',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Flowering Booster',
       targetCrops: 'Chilli',
       stage: 'Flowering & Blooming (Stage-II)',
-      desc: 'Stimulates heavy star-white flower formation and prevents blossom drop.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      desc: 'Stimulates heavy star-white flower formation, flower retention, and prevents blossom drop.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_chilli_special_2_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_chilli_special_2_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_chilli_special_2_5l.jpg' }
+      ]
     },
     {
       id: 'chilli-special-3',
-      title: 'Chilli Fruit Setting Special-III',
+      title: 'Chilli Fruit Development Special-III',
       category: 'Crop-Specific Stage Nutrition',
       subcategory: 'Chilli Stage Care',
       composition: 'Bio Organic Azotobacter, P, K, Calcium + Fruit Setting Enhancers',
       dosage: 'Fertigation / Drip (2 L / acre) + Foliar (2 ml/L)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Fruit Development Booster',
       targetCrops: 'Chilli',
       stage: 'Fruit Setting (Stage-III)',
-      desc: 'Promotes pod setting, straight pod lengthening, and prevents blossom end rot.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: 'Promotes pod elongation, straight pod development, thick pericarp wall firmness, and prevents blossom end rot.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_chilli_special_3_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_chilli_special_3_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_chilli_special_3_5l.jpg' }
+      ]
     },
     {
       id: 'chilli-special-4',
@@ -845,12 +993,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Calcium, Magnesium, Sulphur + Colour Enhancers',
       dosage: 'Foliar Spray (2.5 ml/L)',
       applicationMethod: 'Foliar Spray',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Colour & Quality Booster',
       targetCrops: 'Chilli',
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
-      desc: 'Enhances deep red colour pigment synthesis (ASTA), capsaicin pungency, and dry recovery weight.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_bio_gold.png'
+      desc: 'Enhances deep glossy red colour pigment synthesis (ASTA), capsaicin pungency, and uniform drying recovery weight.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_chilli_special_4_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_chilli_special_4_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_chilli_special_4_5l.jpg' }
+      ]
     },
 
     // 3.7 Tomato Range
@@ -862,12 +1014,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
       dosage: 'Fertigation / Drip (1.5 L / acre)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Eco-Friendly Growth & Plant Health Booster',
       targetCrops: 'Tomato',
       stage: 'Vegetative Growth (Stage-I)',
-      desc: 'Fosters strong main stems, dense root systems, and resistance against early wilt.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      desc: 'Fosters strong main stems, vigorous foliage, dense root systems, and resistance against early wilt.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_tomato_special_1_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_tomato_special_1_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_tomato_special_1_5l.jpg' }
+      ]
     },
     {
       id: 'tomato-special-2',
@@ -877,12 +1033,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Boron + Flowering Enhancers',
       dosage: 'Foliar Spray (2 ml/L)',
       applicationMethod: 'Foliar Spray',
-      productType: 'Bio-Stimulant',
+      productType: '100% Eco-Friendly Flowering & Truss Booster',
       targetCrops: 'Tomato',
       stage: 'Flowering & Blooming (Stage-II)',
-      desc: 'Maximizes floral clusters (trusses) and pollination success.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      desc: 'Maximizes floral clusters (trusses), pollen viability, flower retention, and pollination success.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_tomato_special_2_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_tomato_special_2_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_tomato_special_2_5l.jpg' }
+      ]
     },
     {
       id: 'tomato-special-3',
@@ -892,12 +1052,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Calcium + Fruit Setting Enhancers',
       dosage: 'Fertigation / Drip (2.5 L / acre)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Fruit Setting Booster',
       targetCrops: 'Tomato',
       stage: 'Fruit Setting (Stage-III)',
-      desc: 'Optimizes cluster fruit set, thickens fruit walls, and prevents blossom end rot.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: 'Optimizes truss fruit set, thickens fruit walls, prevents premature fruitlet drop, and prevents blossom end rot.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_tomato_special_3_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_tomato_special_3_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_tomato_special_3_5l.jpg' }
+      ]
     },
     {
       id: 'tomato-special-4',
@@ -907,12 +1071,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Phosphorus, Potash, Zinc, Calcium + Development Enhancers',
       dosage: 'Foliar Spray (2 ml/L) / Drip (2.5 L/acre)',
       applicationMethod: 'Foliar Spray',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Fruit Development & Sizing Stimulant',
       targetCrops: 'Tomato',
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
-      desc: 'Accelerates uniform sizing, deep lycopene crimson finish, fruit firmness, and shelf life.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_bio_gold.png'
+      desc: 'Accelerates uniform sizing, deep lycopene crimson finish, thick pericarp firmness, and long transit shelf life.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_tomato_special_4_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_tomato_special_4_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_tomato_special_4_5l.jpg' }
+      ]
     },
 
     // 3.8 Onion Range
@@ -924,12 +1092,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
       dosage: 'Fertigation / Drip (2 L / acre) or Broadcasting',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Plant Nutrition Growth Stimulant',
       targetCrops: 'Onion',
       stage: 'Vegetative Growth (Stage-I)',
-      desc: 'Encourages robust vegetative leaf foliage necessary for photosynthate storage in bulbs.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      desc: 'Encourages robust vegetative leaf foliage, deep root anchoring, and early photosynthate storage in bulbs.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_onion_special_1_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_onion_special_1_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_onion_special_1_5l.jpg' }
+      ]
     },
     {
       id: 'onion-special-2',
@@ -939,12 +1111,16 @@ document.addEventListener('DOMContentLoaded', () => {
       composition: 'Bio Organic Azotobacter, P, K, Calcium + Size Enhancers',
       dosage: 'Fertigation / Drip (3 L / acre) + Foliar (2.5 ml/L)',
       applicationMethod: 'Drip / Fertigation',
-      productType: 'Bio-Stimulant',
+      productType: '100% Natural Bulb Development & Sizing Stimulant',
       targetCrops: 'Onion',
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
-      desc: 'Promotes bulb expansion, compactness, neck closure, tight red skin, and long storage quality.',
-      packSizes: '1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      desc: 'Promotes bulb expansion, compactness, neck closure, tight glossy red skin, and extended storage quality.',
+      packSizes: '1 Litre & 5 Litre',
+      image: 'assets/nchem_onion_special_2_1l.jpg',
+      gallery: [
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_onion_special_2_1l.jpg' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_onion_special_2_5l.jpg' }
+      ]
     },
 
     // 3.9 Additional Crop Specials
@@ -976,7 +1152,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II), Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Biostimulant specially formulated for mango flowering synchronization, fruitlet retention, and fruit enlargement.',
       packSizes: '1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      image: 'assets/nchem_rhizo_boost.png'
     },
 
     // ======================================================================
@@ -1929,6 +2105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'I',
           name: 'Pomegranate Flowering Special-I',
+          productId: 'pomegranate-special-1',
           timing: 'Day 1 – 30 (Post-Pruning / Defoliation)',
           kit: 'PSB, KSB, ZSB, CSB, BSB + Flowering Enhanced Ingredients',
           dosage: '2 Litres / acre via drip + 3 ml / L foliar',
@@ -1939,6 +2116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'II',
           name: 'Pomegranate Fruit Setting Special-II',
+          productId: 'pomegranate-special-2',
           timing: 'Day 31 – 60 (Flower Bud to Setting)',
           kit: 'PSB, ZSB, CSB, BSB + Fruit Setting Enhancers',
           dosage: '2.5 Litres / acre via drip + 2 ml / L foliar',
@@ -1949,6 +2127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'III',
           name: 'Pomegranate Fruit Development Special-III',
+          productId: 'pomegranate-special-3',
           timing: 'Day 61 – 120 (Fruit Growth Stage)',
           kit: 'PSB, ZSB, CSB, MSB, SSB + Development Enhancers',
           dosage: '3 Litres / acre via drip every 15 days',
@@ -1959,6 +2138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'IV',
           name: 'Pomegranate Fruit Colour & Size Special-IV',
+          productId: 'pomegranate-special-4',
           timing: 'Day 121 – 180 (Maturity & Pre-Harvest)',
           kit: 'CSB, MSB, SSB, PSB + Fruit Size Enhancers',
           dosage: '2 Litres / acre via drip + 2 ml / L foliar',
@@ -1969,6 +2149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'Gen',
           name: 'Pomo General — All-Season Soil Vitality',
+          productId: 'pomo-general',
           timing: 'Post-Harvest & Resting Phase',
           kit: 'PSB, KSB, ZSB (2x10^8 CFU/ml) + VAM (50 ip/ml)',
           dosage: '2–3 Litres / acre soil application',
@@ -1986,6 +2167,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'I',
           name: 'Guava Growth Special-I',
+          productId: 'guava-special-1',
           timing: 'Day 1 – 30 (Post-Pruning / Bending)',
           kit: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
           dosage: '2 Litres / acre drip',
@@ -1996,6 +2178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'II',
           name: 'Guava Flowering Special-II',
+          productId: 'guava-special-2',
           timing: 'Day 31 – 60 (Bud Initiation)',
           kit: 'Bio Organic Azotobacter, P, K, Zn + Flowering Enhancers',
           dosage: '2.5 ml / L foliar spray / 2 L drip',
@@ -2006,6 +2189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'III',
           name: 'Guava Fruit Setting Special-III',
+          productId: 'guava-special-3',
           timing: 'Day 61 – 110 (Fruit Setting)',
           kit: 'Bio Organic Azotobacter, P, K, Zn + Fruit Setting Enhancers',
           dosage: '2.5 Litres / acre drip',
@@ -2016,6 +2200,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'IV',
           name: 'Guava Fruit Development Special-IV',
+          productId: 'guava-special-4',
           timing: 'Day 111 – 140 (Harvest Stage)',
           kit: 'Bio Organic Azotobacter, P, K, Ca + Fruit Development Enhancers',
           dosage: '3 Litres / acre drip + 2 ml / L foliar',
@@ -2033,6 +2218,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'I',
           name: 'Citrus Growth Special-I',
+          productId: 'citrus-special-1',
           timing: 'Day 1 – 30',
           kit: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
           dosage: '2 Litres / acre drip',
@@ -2043,6 +2229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'II',
           name: 'Citrus Flowering Special-II',
+          productId: 'citrus-special-2',
           timing: 'Day 31 – 60',
           kit: 'Bio Organic Azotobacter, P, K, Boron + Flowering Enhancers',
           dosage: '2.5 ml / L foliar',
@@ -2053,6 +2240,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'III',
           name: 'Citrus Fruit Setting Special-III',
+          productId: 'citrus-special-3',
           timing: 'Day 61 – 130',
           kit: 'Bio Organic Azotobacter, P, K, Calcium + Fruit Setting Enhancers',
           dosage: '2.5 Litres / acre drip',
@@ -2063,6 +2251,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'IV',
           name: 'Citrus Fruit Development Special-IV',
+          productId: 'citrus-special-4',
           timing: 'Day 131 – 180',
           kit: 'Bio Organic Azotobacter, P, Zn, Magnesium + Fruit Development Enhancers',
           dosage: '3 Litres / acre drip + 2 ml / L foliar',
@@ -2080,6 +2269,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'I',
           name: 'Papaya Growth Special-I',
+          productId: 'papaya-special-1',
           timing: 'Day 1 – 45',
           kit: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
           dosage: '1.5–2 Litres / acre drip',
@@ -2090,6 +2280,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'II',
           name: 'Papaya Flowering Special-II',
+          productId: 'papaya-special-2',
           timing: 'Day 46 – 90',
           kit: 'Bio Organic Azotobacter, P, K, Boron + Flowering Enhancers',
           dosage: '2 Litres / acre drip + 2 ml / L foliar',
@@ -2100,6 +2291,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'III',
           name: 'Papaya Fruit Setting Special-III',
+          productId: 'papaya-special-3',
           timing: 'Day 91 – 160',
           kit: 'Bio Organic Azotobacter, P, K, Calcium + Fruit Setting Enhancers',
           dosage: '2.5 Litres / acre drip',
@@ -2110,6 +2302,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'IV',
           name: 'Papaya Fruit Development Special-IV',
+          productId: 'papaya-special-4',
           timing: 'Day 161+ (Harvest & Ongoing)',
           kit: 'Bio Organic Azotobacter, P, Zn, Magnesium + Fruit Development Enhancers',
           dosage: '2 Litres / acre drip weekly',
@@ -2127,6 +2320,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'I',
           name: 'Banana Growth Special-I',
+          productId: 'banana-special-1',
           timing: 'Day 1 – 60',
           kit: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
           dosage: '2.5 Litres / acre drip',
@@ -2137,6 +2331,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'II',
           name: 'Banana Flowering Special-II',
+          productId: 'banana-special-2',
           timing: 'Day 61 – 150',
           kit: 'Bio Organic Azotobacter, P, K, Boron + Flowering Enhancers',
           dosage: '3 Litres / acre drip',
@@ -2147,6 +2342,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'III',
           name: 'Banana Fruit Setting Special-III',
+          productId: 'banana-special-3',
           timing: 'Day 151 – 210',
           kit: 'Bio Organic Azotobacter, P, K, Calcium + Fruit Setting Enhancers',
           dosage: '3.5 Litres / acre drip + 2 ml / L bunch spray',
@@ -2157,6 +2353,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'IV',
           name: 'Banana Fruit Development Special-IV',
+          productId: 'banana-special-4',
           timing: 'Day 211 – 290',
           kit: 'Bio Organic Azotobacter, P, Zn, Magnesium + Fruit Development Enhancers',
           dosage: '4 Litres / acre drip',
@@ -2174,6 +2371,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'I',
           name: 'Chilli Growth Special-I',
+          productId: 'chilli-special-1',
           timing: 'Day 1 – 25',
           kit: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
           dosage: '1.5 Litres / acre drip + 2 ml / L foliar',
@@ -2184,6 +2382,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'II',
           name: 'Chilli Flowering Special-II',
+          productId: 'chilli-special-2',
           timing: 'Day 26 – 50',
           kit: 'Bio Organic Azotobacter, P, K, Boron + Flowering Enhancers',
           dosage: '2 ml / L foliar spray weekly',
@@ -2193,7 +2392,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
           stageNum: 'III',
-          name: 'Chilli Fruit Setting Special-III',
+          name: 'Chilli Fruit Development Special-III',
+          productId: 'chilli-special-3',
           timing: 'Day 51 – 90',
           kit: 'Bio Organic Azotobacter, P, K, Calcium + Fruit Setting Enhancers',
           dosage: '2 Litres / acre drip + 2 ml / L foliar',
@@ -2204,6 +2404,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'IV',
           name: 'Chilli Colour Special-IV',
+          productId: 'chilli-special-4',
           timing: 'Day 91 – 150',
           kit: 'Bio Organic Calcium, Magnesium, Sulphur + Colour Enhancers',
           dosage: '2.5 ml / L foliar spray',
@@ -2221,6 +2422,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'I',
           name: 'Tomato Growth Special-I',
+          productId: 'tomato-special-1',
           timing: 'Day 1 – 20',
           kit: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
           dosage: '1.5 Litres / acre drip',
@@ -2231,6 +2433,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'II',
           name: 'Tomato Flowering Special-II',
+          productId: 'tomato-special-2',
           timing: 'Day 21 – 45',
           kit: 'Bio Organic Azotobacter, P, K, Boron + Flowering Enhancers',
           dosage: '2 ml / L foliar spray',
@@ -2241,6 +2444,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'III',
           name: 'Tomato Fruit Setting Special-III',
+          productId: 'tomato-special-3',
           timing: 'Day 46 – 80',
           kit: 'Bio Organic Azotobacter, P, K, Calcium + Fruit Setting Enhancers',
           dosage: '2.5 Litres / acre drip',
@@ -2251,6 +2455,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'IV',
           name: 'Tomato Fruit Development Special-IV',
+          productId: 'tomato-special-4',
           timing: 'Day 81 – 120',
           kit: 'Bio Organic Phosphorus, Potash, Zinc, Calcium + Development Enhancers',
           dosage: '2 ml / L foliar spray / 2.5 L drip',
@@ -2268,6 +2473,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'I',
           name: 'Onion Growth Special-I',
+          productId: 'onion-special-1',
           timing: 'Day 1 – 45',
           kit: 'Bio Organic Azotobacter, P, K, Zn + Growth Enhancers',
           dosage: '2 Litres / acre drip or broadcast',
@@ -2278,6 +2484,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'II',
           name: 'Onion Size Development Special-II',
+          productId: 'onion-special-2',
           timing: 'Day 46 – 90',
           kit: 'Bio Organic Azotobacter, P, K, Calcium + Size Enhancers',
           dosage: '3 Litres / acre drip + 2.5 ml / L foliar',
@@ -2295,6 +2502,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'I',
           name: 'PADDY Special — Tillering & Rooting',
+          productId: 'paddy-special',
           timing: 'Day 15 – 45 (Transplanting / Tillering)',
           kit: 'Microbial Bio Consortium (Liquid) Bio-Fertilizer',
           dosage: '1 Litre / acre soil run or 5 ml / L spray',
@@ -2305,6 +2513,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'II',
           name: 'PADDY Special — Panicle & Grain Filling',
+          productId: 'paddy-special',
           timing: 'Day 60 – 90 (Booting & Grain Fill)',
           kit: 'Microbial Bio Consortium + Soluble Silicate Matrix',
           dosage: '1 Litre / acre via water run',
@@ -2322,6 +2531,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'I',
           name: 'MANGO Special — Floral Induction',
+          productId: 'mango-special',
           timing: 'Pre-Bloom (Nov – Dec)',
           kit: 'Biostimulant / Plant Growth Promoter Complex',
           dosage: '2.5–3 ml / L foliar spray',
@@ -2332,6 +2542,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           stageNum: 'II',
           name: 'MANGO Special — Fruitlet Retention & Sizing',
+          productId: 'mango-special',
           timing: 'Pea to Marble Stage (Jan – Mar)',
           kit: 'Biostimulant Fortified with Amino-Boron & Zinc',
           dosage: '2.5 ml / L foliar spray',
@@ -2471,6 +2682,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Some pillars (Plant Protection, Micronutrients, Adjuvants) sell only one
+  // broad "Product Type" bucket, but individual products spell it out with
+  // extra technical detail (e.g. "100% Organic Bio-Bactericide..."), so a
+  // plain substring check misses most of them — fall back to the pillar.
+  const productTypeCategoryFallback = {
+    'Bio-Pesticide': 'Plant Protection & Bio-Pesticides',
+    'Micronutrient / Chelate': 'Micronutrients & Chelates',
+    'Adjuvant / Silicon': 'Specialty Adjuvants & Silicon Formulations'
+  };
+
+  // Application methods are written inconsistently ("Fertigation / Drip" vs
+  // "Drip / Fertigation", "Foliar Spray & Fertigation", etc.), so match by
+  // keyword rather than requiring the facet's exact word order as a substring.
+  const appModeKeywords = {
+    'Foliar Spray': ['foliar'],
+    'Drip / Fertigation': ['drip', 'fertigation'],
+    'Soil Broadcasting': ['soil'],
+    'Pheromone Trap': ['pheromone']
+  };
+
   /* ========================================================================
      PRODUCT CATALOG RENDERER (Dual View Mode: Cards vs Data Matrix Table)
      ======================================================================== */
@@ -2483,9 +2714,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // 2. Subcategory
       const matchSubcat = (activeSubcategory === 'All' || p.subcategory === activeSubcategory);
       // 3. Facet Product Type
-      const matchType = (activeProductType === 'All' || p.productType === activeProductType);
+      const matchType = (activeProductType === 'All' ||
+        p.productType.toLowerCase().includes(activeProductType.toLowerCase()) ||
+        productTypeCategoryFallback[activeProductType] === p.category);
       // 4. Facet Application Mode
-      const matchApp = (activeAppMode === 'All' || p.applicationMethod.toLowerCase().includes(activeAppMode.toLowerCase()));
+      const matchApp = (activeAppMode === 'All' ||
+        (appModeKeywords[activeAppMode] || [activeAppMode.toLowerCase()]).some(k => p.applicationMethod.toLowerCase().includes(k)));
       // 5. Facet Crop
       const matchCrop = (activeCropFacet === 'All' || p.targetCrops.toLowerCase().includes(activeCropFacet.toLowerCase()) || p.targetCrops.includes('All Crops'));
       // 6. Facet Growth Stage
@@ -3026,8 +3260,15 @@ document.addEventListener('DOMContentLoaded', () => {
       { el: fpCropStageShowcase, btnId: 'btnFpToggleFullMatrix', matrixId: 'fpCropMatrixTableWrapper' }
     ];
 
+    // Resolve the stage's catalog product so the spotlight shows its real pack shots
+    const stageProduct = formulationsV3.find(p => p.id === currentStage.productId);
+    const stagePacks = stageProduct && stageProduct.gallery && stageProduct.gallery.length
+      ? stageProduct.gallery
+      : [{ label: 'Pack', short: '', image: (stageProduct && stageProduct.image) || 'assets/nchem_rhizo_boost.png' }];
+
     showcases.forEach(({ el, btnId, matrixId }) => {
       if (!el || !currentStage) return;
+      const stageImgId = `${btnId}-stage-img`;
       el.innerHTML = `
         <div>
           <div class="stage-badge-tag">&#127807; Stage Milestone ${currentStage.stageNum} &bull; ${crop.name} Lifecycle</div>
@@ -3064,7 +3305,16 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <div class="stage-visual-card">
-          <img src="assets/nchem_rhizo_boost.png" alt="${currentStage.kit}" class="stage-product-img">
+          <img id="${stageImgId}" src="${stagePacks[0].image}" alt="${stageProduct ? stageProduct.title : currentStage.name}" class="stage-product-img" style="transition: opacity 0.2s ease;">
+          ${stagePacks.length > 1 ? `
+            <div class="stage-pack-switcher" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; margin-bottom: 14px;">
+              ${stagePacks.map((g, idx) => `
+                <button type="button" class="btn-stage-pack-switch ${idx === 0 ? 'active' : ''}" data-target="${stageImgId}" data-img="${g.image}" title="${g.label}" style="border: 1px solid rgba(27,56,43,0.3); background: ${idx === 0 ? 'var(--color-primary, #1B382B)' : '#FFFFFF'}; color: ${idx === 0 ? '#FFF' : 'var(--color-primary, #1B382B)'}; font-size: 11px; font-weight: 700; border-radius: 4px; padding: 3px 10px; cursor: pointer; transition: all 0.2s ease;">
+                  ${g.short || g.label}
+                </button>
+              `).join('')}
+            </div>
+          ` : ''}
           <div style="font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--color-primary); margin-bottom: 4px;">${currentStage.kit}</div>
           <div style="font-size: 12px; color: var(--color-text-muted);">Specialized Bio-Formula Kit</div>
           <div style="margin-top: 14px; font-size: 11px; font-weight: 700; color: var(--color-terracotta); text-transform: uppercase;">100% Residue-Free Formulations</div>
@@ -3084,6 +3334,24 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       }
+
+      el.querySelectorAll('.btn-stage-pack-switch').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetImg = document.getElementById(btn.getAttribute('data-target'));
+          if (!targetImg) return;
+          targetImg.style.opacity = '0.4';
+          setTimeout(() => {
+            targetImg.src = btn.getAttribute('data-img');
+            targetImg.style.opacity = '1';
+          }, 150);
+          el.querySelectorAll('.btn-stage-pack-switch').forEach(b => {
+            const isActive = b === btn;
+            b.classList.toggle('active', isActive);
+            b.style.background = isActive ? 'var(--color-primary, #1B382B)' : '#FFFFFF';
+            b.style.color = isActive ? '#FFF' : 'var(--color-primary, #1B382B)';
+          });
+        });
+      });
     });
 
     renderCropMatrixTable();
@@ -3418,13 +3686,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnFpGridView      = document.getElementById('btnFpGridView');
   const btnFpListView      = document.getElementById('btnFpListView');
 
+  // "special-i" is a substring of "special-ii"/"special-iii"/"special-iv" (and
+  // "special-ii" of "special-iii"), so a plain .includes() on these roman-numeral
+  // stage tags matched every stage at once. stageTagMatches() requires the tag to
+  // end there (not be followed by another numeral character).
+  function stageTagMatches(text, tag) {
+    return new RegExp(tag + '(?![ivx])', 'i').test(text);
+  }
+
   const goalKeywordMap = {
-    root: ['root', 'humic', 'rhizo', 'soil', 'nodule', 'microbe', 'cec', 'compost', 'dap', 'bone'],
-    flower: ['flower', 'bahar', 'fruit set', 'blossom', 'boron', 'retention', 'special-i', 'special-ii', 'mango'],
-    pest: ['pest', 'insect', 'focus', 'raksha', 'mite', 'thrips', 'caterpillar', 'fly trap', 'sucking'],
-    fungal: ['fung', 'killer', 'blight', 'mildew', 'rot', 'anthracnose', 'bacterial', 'wilt', 'rust', 'canker'],
-    nematode: ['nematode', 'nem roots', 'paecilomyces', 'gall', 'cyst', 'mycorrhizal'],
-    size: ['sizing', 'bulking', 'potash', 'brix', 'color', 'special-iii', 'special-iv', 'zinc', 'weight', 'lycopene', 'sugar']
+    root: { text: ['root', 'humic', 'rhizo', 'soil', 'nodule', 'microbe', 'cec', 'compost', 'dap', 'bone'] },
+    flower: { text: ['flower', 'bahar', 'fruit set', 'blossom', 'boron', 'retention', 'mango'], stageTags: ['special-i', 'special-ii'] },
+    pest: { text: ['pest', 'insect', 'focus', 'raksha', 'mite', 'thrips', 'caterpillar', 'fly trap', 'sucking'] },
+    fungal: { text: ['fung', 'killer', 'blight', 'mildew', 'rot', 'anthracnose', 'bacterial', 'wilt', 'rust', 'canker'] },
+    nematode: { text: ['nematode', 'nem roots', 'paecilomyces', 'gall', 'cyst', 'mycorrhizal'] },
+    size: { text: ['sizing', 'bulking', 'potash', 'brix', 'color', 'zinc', 'weight', 'lycopene', 'sugar'], stageTags: ['special-iii', 'special-iv'] }
   };
 
   function renderFarmerProducts() {
@@ -3452,9 +3728,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let matchGoal = true;
       if (activeFarmerGoal !== 'All') {
-        const keywords = goalKeywordMap[activeFarmerGoal] || [];
+        const goal = goalKeywordMap[activeFarmerGoal] || {};
         const fullText = (p.title + ' ' + p.desc + ' ' + p.composition + ' ' + p.subcategory).toLowerCase();
-        matchGoal = keywords.some(k => fullText.includes(k));
+        matchGoal = (goal.text || []).some(k => fullText.includes(k)) ||
+          (goal.stageTags || []).some(tag => stageTagMatches(fullText, tag));
       }
 
       let matchSearch = true;
@@ -3469,6 +3746,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
       return matchCat && matchSubcat && matchCrop && matchGoal && matchSearch;
     });
+
+    // When a crop is selected, put its named stage kits ahead of generic
+    // "All Crops" products that only matched because they suit everything
+    // (otherwise e.g. Humicid outranks the actual Guava kits).
+    if (activeFarmerCrop !== 'All') {
+      const cropLower = activeFarmerCrop.toLowerCase();
+      const relevance = p => (p.title.toLowerCase().includes(cropLower) || p.subcategory.toLowerCase().includes(cropLower)) ? 0 : 1;
+      filtered = filtered
+        .map((p, idx) => ({ p, idx }))
+        .sort((a, b) => relevance(a.p) - relevance(b.p) || a.idx - b.idx)
+        .map(x => x.p);
+    }
 
     const count = filtered.length;
     if (fpFilterCountBadge) fpFilterCountBadge.textContent = `${count} Formulation${count === 1 ? '' : 's'}`;
@@ -3695,12 +3984,13 @@ document.addEventListener('DOMContentLoaded', () => {
         activeFarmerGoal     = 'All';
 
         const matchedCropKey = subtagCropMap[subName];
-        if (matchedCropKey) {
+        const isLifecyclePillar = (activeFarmerCategory === 'Crop-Specific Stage Nutrition');
+        if (fpCropLifecycleSection) {
+          fpCropLifecycleSection.style.display = isLifecyclePillar ? 'block' : 'none';
+        }
+        if (matchedCropKey && isLifecyclePillar) {
           activeCropKey = matchedCropKey;
           activeStageIndex = 0;
-          if (fpCropLifecycleSection) {
-            fpCropLifecycleSection.style.display = 'block';
-          }
           renderCropLifecycle();
           if (fpCropLifecycleSection) {
             fpCropLifecycleSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -3725,9 +4015,18 @@ document.addEventListener('DOMContentLoaded', () => {
         activeFarmerGoal     = 'All';
 
         if (activeFarmerCategory === 'Crop-Specific Stage Nutrition') {
+          // Show the Stage Navigator only for Pillar 3
+          if (fpCropLifecycleSection) {
+            fpCropLifecycleSection.style.display = 'block';
+          }
           renderCropLifecycle();
           if (fpCropLifecycleSection) {
             fpCropLifecycleSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        } else {
+          // Hide Stage Navigator for all other pillars
+          if (fpCropLifecycleSection) {
+            fpCropLifecycleSection.style.display = 'none';
           }
         }
 
@@ -3757,6 +4056,7 @@ document.addEventListener('DOMContentLoaded', () => {
           activeStageIndex = 0;
           renderCropLifecycle();
           if (fpCropLifecycleSection) {
+            fpCropLifecycleSection.style.display = 'block';
             fpCropLifecycleSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
         }
