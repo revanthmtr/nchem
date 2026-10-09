@@ -21,7 +21,7 @@
   --color-border: rgba(41, 40, 36, 0.12);
   --color-border-subtle: rgba(41, 40, 36, 0.06);
 
-  --font-display: 'Baloo 2', cursive, sans-serif;
+  --font-display: 'Baloo 2', sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   --radius-pill: 9999px;
@@ -934,7 +934,7 @@ button {
   height: 520px;
   background-size: cover;
   background-position: center;
-  background-image: url('assets/v2_family.png');
+  background-image: url('assets/v2_family.webp');
   display: flex;
   align-items: flex-end;
   padding-bottom: 60px;
@@ -1056,7 +1056,7 @@ button {
   height: 420px;
   background-size: cover;
   background-position: center;
-  background-image: url('assets/nchem_hero_field.png');
+  background-image: url('assets/nchem_hero_field.webp');
 }
 
 .initiative-overlay-card-v3 {
@@ -1595,7 +1595,7 @@ button {
   height: 220px;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(41, 40, 36, 0.5), rgba(41, 40, 36, 0.7)), url('assets/nchem_hero_field.png');
+  background-image: linear-gradient(rgba(41, 40, 36, 0.5), rgba(41, 40, 36, 0.7)), url('assets/nchem_hero_field.webp');
   display: flex;
   align-items: center;
   color: #FFFFFF;
@@ -1648,7 +1648,6 @@ button {
   border-radius: 50%;
   background: #27AE60;
   box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.2);
-  animation: pulseDot 2s infinite ease-in-out;
 }
 
 @keyframes pulseDot {
@@ -1707,7 +1706,7 @@ button {
 }
 
 .all-btn-icon {
-  font-size: 10px;
+  display: inline-flex;
   color: var(--color-wheat);
 }
 
@@ -1794,10 +1793,11 @@ button {
 }
 
 .deck-col-icon-wrap {
-  font-size: 15px;
   line-height: 1;
-  margin-bottom: 5px;
-  opacity: 0.85;
+  margin-bottom: 6px;
+  color: var(--pillar-accent, var(--color-primary));
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
 }
 
 .deck-col-title {
@@ -1876,6 +1876,11 @@ button {
   background: var(--color-terracotta) !important;
   color: #FFFFFF !important;
   border-color: var(--color-terracotta) !important;
+}
+
+.enterprise-deck-col.active .deck-col-icon-wrap,
+.enterprise-deck-col.cat-tab-v3.active .deck-col-icon-wrap {
+  opacity: 1 !important;
 }
 
 /* Dynamic Synchronized Pillar Inspection Bar (Minimal Corporate Status Bar) */
@@ -3190,7 +3195,7 @@ button {
 }
 
 .facet-label-icon {
-  font-size: 13px;
+  display: inline-flex;
   color: var(--color-terracotta);
 }
 
@@ -3262,10 +3267,10 @@ button {
   color: var(--color-text-main);
   font-size: 12px;
   font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: all 0.18s ease;
+  transition: all 0.22s ease;
   font-family: var(--font-body);
 }
 
@@ -3276,10 +3281,10 @@ button {
 }
 
 .subcat-chip.active {
-  background: #1C3320;
-  border-color: #1C3320;
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
   color: #FFFFFF;
-  box-shadow: 0 2px 8px rgba(28, 51, 32, 0.18);
+  box-shadow: 0 2px 8px rgba(39, 64, 41, 0.18);
 }
 
 .subcat-chip .subcat-badge {
@@ -3325,7 +3330,7 @@ button {
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 13px;
+  display: inline-flex;
   color: var(--color-text-muted);
   pointer-events: none;
 }
@@ -3437,48 +3442,56 @@ button {
    Corporate catalog: 12–16 products visible per viewport
    ========================================================================== */
 
-/* Grid: 4 columns at desktop, responsive down */
+/* Grid: 3 columns at desktop — more room per card, responsive down */
 #corporateView .product-grid-v3 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   padding: 4px 0 40px;
 }
 
-@media (max-width: 1200px) {
-  #corporateView .product-grid-v3 { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 860px) {
+@media (max-width: 1100px) {
   #corporateView .product-grid-v3 { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 520px) {
+@media (max-width: 640px) {
   #corporateView .product-grid-v3 { grid-template-columns: 1fr; }
 }
 
+/* A quiet 22px gold hairline used under card/modal titles across both
+   portals — the one place the Sun Wheat accent is allowed to appear, so it
+   still reads as special rather than decorative wallpaper. */
+.gold-rule {
+  width: 22px;
+  height: 2px;
+  background: var(--color-wheat);
+  border-radius: 2px;
+  margin: 6px 0 10px;
+}
+
 /* ---- Compact Card Shell ---- */
+/* No border — the card floats on the linen background by shadow alone,
+   which reads calmer and more considered than an outlined box. */
 .nchem-compact-card {
   background: #FFFFFF;
-  border: 1px solid rgba(22, 51, 0, 0.09);
-  border-radius: 10px;
+  border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s ease;
   cursor: pointer;
 }
 
 .nchem-compact-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--pc-color, #3B5C3E);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 /* ---- Visual Zone: tinted bg + product image + top bar ---- */
 .compact-card-visual {
   position: relative;
   background: var(--pc-bg, #EBF2EC);
-  height: 120px;
+  height: 168px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3494,15 +3507,15 @@ button {
 }
 
 .compact-card-img {
-  max-height: 90px;
-  max-width: 100px;
+  max-height: 140px;
+  max-width: 150px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.14));
-  transition: transform 0.28s ease;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.12));
+  transition: transform 0.32s ease;
 }
 
 .nchem-compact-card:hover .compact-card-img {
-  transform: scale(1.08) translateY(-2px);
+  transform: scale(1.05) translateY(-2px);
 }
 
 /* ---- Card Body: all text data ---- */
@@ -3514,68 +3527,50 @@ button {
   gap: 7px;
 }
 
-/* SKU + Product Type row */
+/* SKU row — a quiet tracked label, not a boxed tag */
 .compact-card-head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 6px;
 }
 
 .compact-sku {
   font-family: 'SF Mono', 'Courier New', monospace;
-  font-size: 9.5px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.08em;
   color: var(--pc-color, #3B5C3E);
-  background: var(--pc-bg, #EBF2EC);
-  padding: 2px 6px;
-  border-radius: 3px;
-}
-
-.compact-type {
-  font-size: 9px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #999;
-  border: 1px solid rgba(0,0,0,0.09);
-  padding: 1px 5px;
-  border-radius: 3px;
-  white-space: nowrap;
 }
 
 /* Product name */
 .compact-title {
   font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 16.5px;
+  font-weight: 700;
   color: var(--color-primary);
-  line-height: 1.25;
-  margin: 0;
+  line-height: 1.3;
+  margin: 6px 0 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* Formula line */
+/* Formula line — a colored rule, no filled box, for a lighter touch */
 .compact-formula {
   display: flex;
   align-items: center;
-  gap: 4px;
-  background: rgba(0,0,0,0.03);
+  gap: 5px;
   border-left: 2.5px solid var(--pc-color, #3B5C3E);
-  padding: 4px 8px;
-  border-radius: 0 3px 3px 0;
-  font-size: 10.5px;
-  color: #444;
+  padding: 2px 0 2px 9px;
+  font-size: 11px;
+  color: var(--color-text-muted);
   overflow: hidden;
 }
 
 .compact-formula-text {
   font-family: 'SF Mono', 'Courier New', monospace;
-  font-size: 10px;
+  font-size: 10.5px;
   font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
@@ -3600,7 +3595,7 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #BBBBBB;
+  color: var(--color-text-muted);
 }
 
 .compact-spec-v {
@@ -3612,7 +3607,7 @@ button {
   text-overflow: ellipsis;
 }
 
-/* Crop chips row */
+/* Crop chips row — outline pills read lighter than filled ones */
 .compact-crops {
   display: flex;
   flex-wrap: wrap;
@@ -3624,9 +3619,10 @@ button {
   font-size: 9.5px;
   font-weight: 600;
   padding: 1px 6px;
-  background: rgba(22, 51, 0, 0.06);
+  background: transparent;
+  border: 1px solid var(--color-border);
   border-radius: 3px;
-  color: var(--color-primary);
+  color: var(--color-text-muted);
   white-space: nowrap;
 }
 
@@ -3650,13 +3646,15 @@ button {
 .compact-btn-spec,
 .compact-btn-rfq {
   flex: 1;
-  padding: 9px 6px;
-  font-size: 11px;
+  padding: 10px 6px;
+  font-size: 10.5px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
   cursor: pointer;
   border: none;
   font-family: inherit;
-  transition: all 0.14s ease;
+  transition: all 0.22s ease;
 }
 
 .compact-btn-spec {
@@ -4415,14 +4413,23 @@ button {
 }
 
 .badge-cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   background: rgba(39, 64, 41, 0.88);
   backdrop-filter: blur(6px);
   color: #FFFFFF;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
-  padding: 4px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 5px 11px;
   border-radius: var(--radius-pill);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.badge-cat-pill svg {
+  flex-shrink: 0;
 }
 
 .badge-subcat-pill {
@@ -5700,3 +5707,45 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* ══ Cross-device hardening: iOS Safari, Android Chrome, desktop ══ */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; overflow-x: hidden; }
+body { overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+img, video, svg, canvas { max-width: 100%; height: auto; }
+img { image-rendering: auto; }
+a, button, [role="button"], input, select, textarea, summary { touch-action: manipulation; }
+button, [role="button"] { min-height: 40px; }
+input, select, textarea { font-size: 16px; } /* stops iOS focus-zoom */
+.mega-menu-overlay-v3 { height: 100vh; height: 100dvh; width: 100%; overscroll-behavior: contain; }
+@supports not (backdrop-filter: blur(1px)) { .mega-menu-overlay-v3 { background: rgba(251, 247, 240, 0.99); } }
+@media (hover: none) { * { -webkit-touch-callout: none; } a, button { -webkit-touch-callout: default; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+/* Phones: keep the header (incl. menu button) inside the viewport */
+@media (max-width: 640px) {
+  .header-inner { padding-left: 12px; padding-right: 12px; gap: 6px; }
+  .header-right-group { gap: 6px; }
+  .portal-toggle-switch { gap: 4px; }
+  .toggle-segment { font-size: 0; padding: 0; width: 38px; min-height: 38px; display: inline-flex; align-items: center; justify-content: center; }
+  .toggle-segment .toggle-icon { font-size: 18px; }
+  .header-lang-wrap { min-width: 0; }
+  .utility-select-v3 { max-width: 76px; padding: 6px 6px; }
+  .brand-logo { height: 44px; width: 44px; }
+  .brand-name-v3 { font-size: 20px; }
+  .brand-name-sub { font-size: 11px; }
+  .menu-trigger-circle-btn { width: 40px; height: 40px; flex-shrink: 0; }
+  .matrix-insight-bar { flex-wrap: wrap; }
+  .insight-left, .insight-center { white-space: normal; max-width: 100%; }
+}
+@media (max-width: 380px) { .brand-name-sub { display: none; } }
+
+/* Single-column grids must be allowed to shrink below content width */
+@media (max-width: 991px) {
+  .corp-heritage-grid, .corp-infra-grid, .corp-rfq-wrapper { grid-template-columns: minmax(0, 1fr); }
+  .corp-rfq-wrapper > *, .corp-rfq-card, .corp-rfq-card form { min-width: 0; max-width: 100%; }
+}
+.corp-form-grid > *, .corp-form-input, .corp-form-select { min-width: 0; max-width: 100%; }
+@media (max-width: 640px) { .corp-form-grid { grid-template-columns: minmax(0, 1fr); } }
