@@ -4151,32 +4151,55 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4500);
   }
 
+  // Manual navigation keeps the current position and just restarts the autoplay timer
+  function restartSlideshowTimer() {
+    clearInterval(slideshowTimer);
+    slideshowActive = true;
+    slideshowTimer = setInterval(() => {
+      goToSlide(currentSlide + 1);
+    }, 4500);
+  }
+
   if (fpNext) {
     fpNext.addEventListener('click', () => {
-      clearInterval(slideshowTimer);
-      slideshowActive = false;
       goToSlide(currentSlide + 1);
-      startSlideshow();
+      restartSlideshowTimer();
     });
   }
 
   if (fpPrev) {
     fpPrev.addEventListener('click', () => {
-      clearInterval(slideshowTimer);
-      slideshowActive = false;
       goToSlide(currentSlide - 1);
-      startSlideshow();
+      restartSlideshowTimer();
     });
   }
 
   fpDots.forEach(dot => {
     dot.addEventListener('click', () => {
-      clearInterval(slideshowTimer);
-      slideshowActive = false;
       goToSlide(parseInt(dot.getAttribute('data-slide'), 10));
-      startSlideshow();
+      restartSlideshowTimer();
     });
   });
+
+  // Swipe left/right on touch screens
+  const fpShow = document.querySelector('.fp-slideshow');
+  if (fpShow) {
+    let touchX = null, touchY = null;
+    fpShow.addEventListener('touchstart', e => {
+      touchX = e.touches[0].clientX;
+      touchY = e.touches[0].clientY;
+    }, { passive: true });
+    fpShow.addEventListener('touchend', e => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      const dy = e.changedTouches[0].clientY - touchY;
+      touchX = null;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+        goToSlide(currentSlide + (dx < 0 ? 1 : -1));
+        restartSlideshowTimer();
+      }
+    }, { passive: true });
+  }
 
   /* ========================================================================
      LEAF / SPROUT CHAT WIDGET & VISITOR COUNTER
