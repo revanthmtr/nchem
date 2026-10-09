@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Biologically activated humic acid formulation to enhance soil health and stimulate root systems. Enhances crop productivity, strengthens plant growth, and promotes healthy soil and higher yield.',
       packSizes: '1 kg & 5 kg',
-      image: 'assets/nchem_humicid_1kg.jpg',
+      image: 'assets/nchem_humicid_1kg.webp',
       gallery: [
-        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_humicid_1kg.jpg' },
-        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_humicid_5kg.jpg' }
+        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_humicid_1kg.webp' },
+        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_humicid_5kg.webp' }
       ]
     },
     {
@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
       desc: 'Specialty organic nutrient mobilizer and bio-stimulant. Increases crop productivity, optimizes nutrient utilization, and strengthens plant growth and root vitality.',
       packSizes: '1 kg & 5 kg',
-      image: 'assets/nchem_humicid_plus_1kg.jpg',
+      image: 'assets/nchem_humicid_plus_1kg.webp',
       gallery: [
-        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_humicid_plus_1kg.jpg' },
-        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_humicid_plus_5kg.jpg' }
+        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_humicid_plus_1kg.webp' },
+        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_humicid_plus_5kg.webp' }
       ]
     },
     {
@@ -64,11 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Basal, Vegetative Growth (Stage-I), Root Development',
       desc: 'Specialty 100% organic bio-stimulant & nutrient mobilizer to improve plant growth and soil health. Helps plants develop deeper and stronger root systems, enhances tolerance to biotic & abiotic stress, resists pests and diseases, and maximizes crop yield and quality.',
       packSizes: '1 kg & 5 kg',
-      image: 'assets/nchem_humicid_plus_plus_1kg.jpg',
+      image: 'assets/nchem_humicid_plus_plus_1kg.webp',
       gallery: [
-        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_humicid_plus_plus_1kg.jpg' },
-        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_humicid_plus_plus_5kg.jpg' },
-        { label: 'Technical Brochure', short: 'Dossier', image: 'assets/nchem_humicid_plus_plus_brochure.png' }
+        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_humicid_plus_plus_1kg.webp' },
+        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_humicid_plus_plus_5kg.webp' },
+        { label: 'Technical Brochure', short: 'Dossier', image: 'assets/nchem_humicid_plus_plus_brochure.webp' }
       ]
     },
     {
@@ -84,10 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Basal, Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II), Fruit Sizing (Stage-IV)',
       desc: '100% Organic 4-in-1 nutrient mobilizer and bio-stimulant. Synergistic formulation of humic acid, amino acids, fulvic acid, and seaweed extract designed to increase crop productivity, optimize nutrient utilization, stimulate root vigor, and maximize harvest yield.',
       packSizes: '1 kg & 5 kg',
-      image: 'assets/nchem_or_mix_1kg.jpg',
+      image: 'assets/nchem_or_mix_1kg.webp',
       gallery: [
-        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_or_mix_1kg.jpg' },
-        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_or_mix_5kg.jpg' }
+        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_or_mix_1kg.webp' },
+        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_or_mix_5kg.webp' }
       ]
     },
     {
@@ -103,10 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I), Root Development',
       desc: 'Specialty 100% organic electrolyte nutrient mobilizer. Solubilizes soil nutrients for rapid plant uptake, enhances seed germination rate and root vigor, and improves soil structure and porosity to maximize water and nutrient retention.',
       packSizes: '1 kg & 5 kg',
-      image: 'assets/nchem_fulvicid_1kg.jpg',
+      image: 'assets/nchem_fulvicid_1kg.webp',
       gallery: [
-        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_fulvicid_1kg.jpg' },
-        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_fulvicid_5kg.jpg' }
+        { label: '1 kg Pouch', short: '1kg', image: 'assets/nchem_fulvicid_1kg.webp' },
+        { label: '5 kg Pack', short: '5kg', image: 'assets/nchem_fulvicid_5kg.webp' }
       ]
     },
     {
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
       desc: 'Water-soluble seaweed extract rich in natural growth hormones and vitamins for balanced growth.',
       packSizes: '250 ml, 500 ml, 1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
 
     // 1.2 Microbial Consortia & Soil Inoculants
@@ -139,10 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Solubilizes Nitrogen, Phosphorus, and Potash; promotes root hormone production and biological soil fertility.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_npk_3_in_1_1l.jpg',
+      image: 'assets/nchem_npk_3_in_1_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_npk_3_in_1_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_npk_3_in_1_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_npk_3_in_1_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_npk_3_in_1_5l.webp' }
       ]
     },
     {
@@ -158,10 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Liquid beneficial bacteria consortium for secondary nutrient uptake (Calcium, Magnesium, Sulphur), improving soil structure, root zone vitality, and plant vigor.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_cms_microbes_1l.jpg',
+      image: 'assets/nchem_cms_microbes_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_cms_microbes_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_cms_microbes_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_cms_microbes_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_cms_microbes_5l.webp' }
       ]
     },
     {
@@ -177,10 +177,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
       desc: 'Essential micronutrient mobilizer and beneficial bacterial consortium that enhances soil biological fertility, improves trace mineral absorption, and stimulates rapid crop growth.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_mix_microbes_1l.jpg',
+      image: 'assets/nchem_mix_microbes_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_mix_microbes_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_mix_microbes_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_mix_microbes_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_mix_microbes_5l.webp' }
       ]
     },
 
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Standardized organic manure rich in organic carbon and balanced NPK nutrients for soil conditioning.',
       packSizes: '25 kg, 50 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'or-l',
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Fast-acting liquid fermented manure for root rhizosphere development and carbon enrichment.',
       packSizes: '1 L, 5 L, 20 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
     {
       id: 'city-compost',
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Enriched compost for improving soil structure, water holding capacity, and organic matter content.',
       packSizes: '50 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'organic-rich',
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'High organic matter formulation to rejuvenate degraded soils and enhance microbial ecology.',
       packSizes: '25 kg, 50 kg Bag',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'organic-dap',
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Bio-available phosphate replacement for chemical DAP, enriched with organic carbon.',
       packSizes: '50 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'bone-green',
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Slow-release natural source of phosphorus and calcium for root development and soil enrichment.',
       packSizes: '25 kg, 50 kg Bag',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'bone-food',
@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Natural raw bone meal for long-term soil conditioning and calcium-phosphate mineralization.',
       packSizes: '25 kg, 50 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'orga-potash',
@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Organic bio-potash extracted from red algae for crop quality, fruit size, and weight improvement.',
       packSizes: '5 L, 25 kg Bag',
-      image: 'assets/nchem_bio_gold.png'
+      image: 'assets/nchem_bio_gold.webp'
     },
     {
       id: 'vermi-compost',
@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Earthworm-processed vermicompost packed with beneficial humus, enzymes, and micro-flora.',
       packSizes: '50 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'bio-rich',
@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Premium manure fortified with beneficial microbial strains for vigorous root establishment.',
       packSizes: '50 kg Bag',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
 
     // ======================================================================
@@ -353,10 +353,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
       desc: '100% organic bio-pesticide plant protector consisting of Beauveria bassiana and Verticillium lecanii. Effectively manages sucking pests, thrips, mites, whiteflies, and other harmful pest diseases across all crop varieties.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_focus_1l.jpg',
+      image: 'assets/nchem_focus_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_focus_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_focus_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_focus_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_focus_5l.webp' }
       ]
     },
     {
@@ -372,10 +372,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Fruit Setting (Stage-III)',
       desc: '100% organic enhanced bio-pesticide plant protector with fortified Beauveria bassiana and Verticillium lecanii. Controls persistent pest outbreaks, resistant thrips, mites, and whiteflies for all horticultural and agricultural crops.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_focus_plus_1l.jpg',
+      image: 'assets/nchem_focus_plus_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_focus_plus_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_focus_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_focus_plus_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_focus_5l.webp' }
       ]
     },
     {
@@ -391,10 +391,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
       desc: 'Botanical and bio-protective plant protector formulation delivering powerful broad-spectrum control against mites, thrips, and sucking insect pests.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_raksha_1l.jpg',
+      image: 'assets/nchem_raksha_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_raksha_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_raksha_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_raksha_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_raksha_5l.webp' }
       ]
     },
 
@@ -412,10 +412,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II), Fruit Setting (Stage-III)',
       desc: 'Specialized bio-bactericide formulation engineered for effective prevention and rapid suppression of bacterial blight, oily spot (Telya) in pomegranate, and bacterial leaf spots.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_killer_1l.jpg',
+      image: 'assets/nchem_killer_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_killer_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_killer_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_killer_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_killer_5l.webp' }
       ]
     },
     {
@@ -431,10 +431,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II), Fruit Setting (Stage-III)',
       desc: 'High-potency dual-action bio-bactericide and bio-fungicide offering systemic protective action against severe bacterial blight, fruit cankers, leaf blight, and vascular wilt.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_power_killer_1l.jpg',
+      image: 'assets/nchem_power_killer_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_power_killer_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_power_killer_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_power_killer_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_power_killer_5l.webp' }
       ]
     },
     {
@@ -450,10 +450,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I), Fruit Setting (Stage-III)',
       desc: 'Premium 100% organic broad-spectrum horticulture bio-fungicide. Effectively controls wilt, nematodes, and soil-borne diseases. Increases plant resistance power, boosts immunity with beneficial bacterial strains, and enhances overall crop growth.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_horty_fungal_1l.jpg',
+      image: 'assets/nchem_horty_fungal_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_horty_fungal_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_horty_fungal_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_horty_fungal_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_horty_fungal_5l.webp' }
       ]
     },
 
@@ -471,10 +471,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: '100% organic bio-nematicide and root development inoculant consisting of Paecilomyces lilacinus and VAM. Effectively controls nematodes, promotes vigorous healthy roots, improves soil health, and enhances overall crop growth.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_nem_roots_1l.jpg',
+      image: 'assets/nchem_nem_roots_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_nem_roots_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_nem_roots_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_nem_roots_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_nem_roots_5l.webp' }
       ]
     },
     {
@@ -490,10 +490,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Advanced dual-action root health inoculant consisting of Paecilomyces lilacinus, Trichoderma, and VAM. Controls root-knot nematodes while eliminating harmful soil-borne fungal pathogens and optimizing root development.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_nem_roots_plus_1l.jpg',
+      image: 'assets/nchem_nem_roots_plus_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_nem_roots_plus_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_nem_roots_plus_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_nem_roots_plus_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_nem_roots_plus_5l.webp' }
       ]
     },
 
@@ -511,9 +511,9 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II), Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'High-potency fruit fly attractant and weather-proof field trap system designed to lure and capture male Bactrocera fruit fly species across orchards and vegetable fields. Prevents oviposition, puncture damage, and premature fruit rot.',
       packSizes: '200 ml Bottle with Field Trap & Lure Kit',
-      image: 'assets/nchem_fruit_fly_trap.jpg',
+      image: 'assets/nchem_fruit_fly_trap.webp',
       gallery: [
-        { label: '200 ml Attractant Bottle & Field Trap Kit', short: '200ml Kit', image: 'assets/nchem_fruit_fly_trap.jpg' }
+        { label: '200 ml Attractant Bottle & Field Trap Kit', short: '200ml Kit', image: 'assets/nchem_fruit_fly_trap.webp' }
       ]
     },
 
@@ -534,10 +534,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I), Post-Harvest',
       desc: 'Premium 100% organic special pomegranate product consisting of PSB, KSB, ZSB, VAM, and growth-enhanced ingredients. Develops heavy roots and vigorous plant growth, increases resistance against pests, nematodes, and diseases, and boosts immunity with beneficial bacterial strains.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_pomo_general_1l.jpg',
+      image: 'assets/nchem_pomo_general_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomo_general_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomo_general_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomo_general_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomo_general_5l.webp' }
       ]
     },
     {
@@ -553,10 +553,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II)',
       desc: 'Promotes profuse flowering, strong root development, and pest resistance in pomegranate Bahar treatment.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_pomegranate_special_1_1l.jpg',
+      image: 'assets/nchem_pomegranate_special_1_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomegranate_special_1_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomegranate_special_1_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomegranate_special_1_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomegranate_special_1_5l.webp' }
       ]
     },
     {
@@ -572,10 +572,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III)',
       desc: 'Minimizes flower/fruit drop and boosts setting percentage in pomegranate orchards.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_pomegranate_special_2_1l.jpg',
+      image: 'assets/nchem_pomegranate_special_2_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomegranate_special_2_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomegranate_special_2_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomegranate_special_2_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomegranate_special_2_5l.webp' }
       ]
     },
     {
@@ -591,10 +591,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Promotes heavy root development and rapid fruit sizing. Boosts plant resistance against pests, nematodes, and diseases while increasing natural bacterial immunity.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_pomegranate_special_3_1l.jpg',
+      image: 'assets/nchem_pomegranate_special_3_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomegranate_special_3_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomegranate_special_3_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomegranate_special_3_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomegranate_special_3_5l.webp' }
       ]
     },
     {
@@ -610,10 +610,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Enhances deep natural red rind color, fruit weight, sugar Brix, and export market grade. Strengthens roots and pest/disease resistance.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_pomegranate_special_4_1l.jpg',
+      image: 'assets/nchem_pomegranate_special_4_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomegranate_special_4_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomegranate_special_4_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_pomegranate_special_4_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_pomegranate_special_4_5l.webp' }
       ]
     },
 
@@ -631,10 +631,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Accelerates vegetative canopy development and root expansion in Thai & Taiwan Pink guava orchards.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_guava_special_1_1l.jpg',
+      image: 'assets/nchem_guava_special_1_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_guava_special_1_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_guava_special_1_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_guava_special_1_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_guava_special_1_5l.webp' }
       ]
     },
     {
@@ -650,10 +650,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II)',
       desc: 'Encourages uniform bud initiation and bloom quality with high flower cluster retention.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_guava_special_2_1l.jpg',
+      image: 'assets/nchem_guava_special_2_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_guava_special_2_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_guava_special_2_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_guava_special_2_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_guava_special_2_5l.webp' }
       ]
     },
     {
@@ -669,10 +669,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III)',
       desc: 'Prevents premature fruitlet shedding and promotes uniform setting across all branches.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_guava_special_3_1l.jpg',
+      image: 'assets/nchem_guava_special_3_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_guava_special_3_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_guava_special_3_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_guava_special_3_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_guava_special_3_5l.webp' }
       ]
     },
     {
@@ -688,10 +688,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Improves fruit size, pulp firmness, sweet aroma, and post-harvest shelf life.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_guava_special_4_1l.jpg',
+      image: 'assets/nchem_guava_special_4_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_guava_special_4_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_guava_special_4_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_guava_special_4_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_guava_special_4_5l.webp' }
       ]
     },
 
@@ -709,10 +709,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Promotes vigorous new flushes, lush foliage vigor, and deep feeder root establishment in Sweet Lime, Lemon & Mandarin.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_citrus_special_1_1l.jpg',
+      image: 'assets/nchem_citrus_special_1_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_citrus_special_1_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_citrus_special_1_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_citrus_special_1_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_citrus_special_1_5l.webp' }
       ]
     },
     {
@@ -728,10 +728,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II)',
       desc: 'Optimizes floral bloom, pollen viability, flower retention, and heavy blossom set across orchards.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_citrus_special_2_1l.jpg',
+      image: 'assets/nchem_citrus_special_2_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_citrus_special_2_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_citrus_special_2_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_citrus_special_2_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_citrus_special_2_5l.webp' }
       ]
     },
     {
@@ -747,10 +747,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III)',
       desc: 'Prevents premature fruit drop and strengthens button attachment at pea and marble fruit stages.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_citrus_special_3_1l.jpg',
+      image: 'assets/nchem_citrus_special_3_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_citrus_special_3_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_citrus_special_3_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_citrus_special_3_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_citrus_special_3_5l.webp' }
       ]
     },
     {
@@ -766,10 +766,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Promotes juice vesicle expansion, pulp fullness, sugar accumulation, and lustrous thin rind texture.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_citrus_special_4_1l.jpg',
+      image: 'assets/nchem_citrus_special_4_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_citrus_special_4_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_citrus_special_4_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_citrus_special_4_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_citrus_special_4_5l.webp' }
       ]
     },
 
@@ -787,10 +787,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Stimulates girth development and root anchoring in Red Lady 786 papaya seedlings.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_papaya_special_1_1l.jpg',
+      image: 'assets/nchem_papaya_special_1_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_papaya_special_1_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_papaya_special_1_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_papaya_special_1_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_papaya_special_1_5l.webp' }
       ]
     },
     {
@@ -806,10 +806,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II)',
       desc: 'Enhances flower retention and bisexual blossom vigor for continuous tier fruit bearing.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_papaya_special_2_1l.jpg',
+      image: 'assets/nchem_papaya_special_2_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_papaya_special_2_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_papaya_special_2_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_papaya_special_2_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_papaya_special_2_5l.webp' }
       ]
     },
     {
@@ -825,10 +825,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III)',
       desc: 'Ensures continuous fruit setting along the stem trunk without tier gaps, preventing fruitlet drop.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_papaya_special_3_1l.jpg',
+      image: 'assets/nchem_papaya_special_3_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_papaya_special_3_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_papaya_special_3_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_papaya_special_3_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_papaya_special_3_5l.webp' }
       ]
     },
     {
@@ -844,10 +844,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Enhances fruit sizing, thick pulp firmness, deep red carotene colour, and 13.5+ Brix sugar levels.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_papaya_special_4_1l.jpg',
+      image: 'assets/nchem_papaya_special_4_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_papaya_special_4_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_papaya_special_4_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_papaya_special_4_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_papaya_special_4_5l.webp' }
       ]
     },
 
@@ -865,10 +865,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Enhances pseudostem development, robust root architecture, and rapid leaf emergence rate in Grand Naine G9 & Robusta banana.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_banana_special_1_1l.jpg',
+      image: 'assets/nchem_banana_special_1_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_banana_special_1_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_banana_special_1_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_banana_special_1_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_banana_special_1_5l.webp' }
       ]
     },
     {
@@ -884,10 +884,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II)',
       desc: 'Facilitates smooth bunch shooting, robust floral stalk elongation, and inflorescence emergence with high hand counts.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_banana_special_2_1l.jpg',
+      image: 'assets/nchem_banana_special_2_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_banana_special_2_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_banana_special_2_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_banana_special_2_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_banana_special_2_5l.webp' }
       ]
     },
     {
@@ -903,12 +903,12 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III)',
       desc: 'Promotes finger elongation, hand calibration, and uniform bunch development across top and bottom hands.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_banana_special_3_1l.jpg',
+      image: 'assets/nchem_banana_special_3_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle (Design A)', short: '1L', image: 'assets/nchem_banana_special_3_1l.jpg' },
-        { label: '5 Litre Can (Design A)', short: '5L', image: 'assets/nchem_banana_special_3_5l.jpg' },
-        { label: '1 Litre Bottle (Design B)', short: '1L (V2)', image: 'assets/nchem_banana_special_b_1l.jpg' },
-        { label: '5 Litre Can (Design B)', short: '5L (V2)', image: 'assets/nchem_banana_special_b_5l.jpg' }
+        { label: '1 Litre Bottle (Design A)', short: '1L', image: 'assets/nchem_banana_special_3_1l.webp' },
+        { label: '5 Litre Can (Design A)', short: '5L', image: 'assets/nchem_banana_special_3_5l.webp' },
+        { label: '1 Litre Bottle (Design B)', short: '1L (V2)', image: 'assets/nchem_banana_special_b_1l.webp' },
+        { label: '5 Litre Can (Design B)', short: '5L (V2)', image: 'assets/nchem_banana_special_b_5l.webp' }
       ]
     },
     {
@@ -924,7 +924,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Boosts bunch weight (35kg+ average), finger filling, and uniform packing export grade.',
       packSizes: '1 L, 5 L',
-      image: 'assets/nchem_bio_gold.png'
+      image: 'assets/nchem_bio_gold.webp'
     },
 
     // 3.6 Chilli Range
@@ -941,10 +941,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Accelerates lateral branching, robust root mass expansion, and dense foliage in green & red chilli crops.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_chilli_special_1_1l.jpg',
+      image: 'assets/nchem_chilli_special_1_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_chilli_special_1_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_chilli_special_1_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_chilli_special_1_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_chilli_special_1_5l.webp' }
       ]
     },
     {
@@ -960,10 +960,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II)',
       desc: 'Stimulates heavy star-white flower formation, flower retention, and prevents blossom drop.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_chilli_special_2_1l.jpg',
+      image: 'assets/nchem_chilli_special_2_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_chilli_special_2_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_chilli_special_2_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_chilli_special_2_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_chilli_special_2_5l.webp' }
       ]
     },
     {
@@ -979,10 +979,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III)',
       desc: 'Promotes pod elongation, straight pod development, thick pericarp wall firmness, and prevents blossom end rot.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_chilli_special_3_1l.jpg',
+      image: 'assets/nchem_chilli_special_3_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_chilli_special_3_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_chilli_special_3_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_chilli_special_3_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_chilli_special_3_5l.webp' }
       ]
     },
     {
@@ -998,10 +998,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Enhances deep glossy red colour pigment synthesis (ASTA), capsaicin pungency, and uniform drying recovery weight.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_chilli_special_4_1l.jpg',
+      image: 'assets/nchem_chilli_special_4_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_chilli_special_4_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_chilli_special_4_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_chilli_special_4_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_chilli_special_4_5l.webp' }
       ]
     },
 
@@ -1019,10 +1019,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Fosters strong main stems, vigorous foliage, dense root systems, and resistance against early wilt.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_tomato_special_1_1l.jpg',
+      image: 'assets/nchem_tomato_special_1_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_tomato_special_1_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_tomato_special_1_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_tomato_special_1_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_tomato_special_1_5l.webp' }
       ]
     },
     {
@@ -1038,10 +1038,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II)',
       desc: 'Maximizes floral clusters (trusses), pollen viability, flower retention, and pollination success.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_tomato_special_2_1l.jpg',
+      image: 'assets/nchem_tomato_special_2_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_tomato_special_2_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_tomato_special_2_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_tomato_special_2_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_tomato_special_2_5l.webp' }
       ]
     },
     {
@@ -1057,10 +1057,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III)',
       desc: 'Optimizes truss fruit set, thickens fruit walls, prevents premature fruitlet drop, and prevents blossom end rot.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_tomato_special_3_1l.jpg',
+      image: 'assets/nchem_tomato_special_3_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_tomato_special_3_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_tomato_special_3_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_tomato_special_3_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_tomato_special_3_5l.webp' }
       ]
     },
     {
@@ -1076,10 +1076,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Accelerates uniform sizing, deep lycopene crimson finish, thick pericarp firmness, and long transit shelf life.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_tomato_special_4_1l.jpg',
+      image: 'assets/nchem_tomato_special_4_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_tomato_special_4_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_tomato_special_4_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_tomato_special_4_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_tomato_special_4_5l.webp' }
       ]
     },
 
@@ -1097,10 +1097,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Encourages robust vegetative leaf foliage, deep root anchoring, and early photosynthate storage in bulbs.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_onion_special_1_1l.jpg',
+      image: 'assets/nchem_onion_special_1_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_onion_special_1_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_onion_special_1_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_onion_special_1_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_onion_special_1_5l.webp' }
       ]
     },
     {
@@ -1116,10 +1116,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Promotes bulb expansion, compactness, neck closure, tight glossy red skin, and extended storage quality.',
       packSizes: '1 Litre & 5 Litre',
-      image: 'assets/nchem_onion_special_2_1l.jpg',
+      image: 'assets/nchem_onion_special_2_1l.webp',
       gallery: [
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_onion_special_2_1l.jpg' },
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_onion_special_2_5l.jpg' }
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_onion_special_2_1l.webp' },
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_onion_special_2_5l.webp' }
       ]
     },
 
@@ -1137,7 +1137,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Microbial Bio Consortium Bio-Fertilizer tailored for lowland and upland rice ecosystems to enhance tillering and grain filling.',
       packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
     {
       id: 'mango-special',
@@ -1152,7 +1152,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II), Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Biostimulant specially formulated for mango flowering synchronization, fruitlet retention, and fruit enlargement.',
       packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
 
     // ======================================================================
@@ -1172,7 +1172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
       desc: 'High-concentration liquid suspension of Zinc for rapid correction of zinc deficiencies.',
       packSizes: '250 ml, 500 ml, 1 L',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'zinc-21',
@@ -1187,7 +1187,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Soluble zinc salt for soil application to prevent khaira disease and leaf chlorosis.',
       packSizes: '5 kg, 25 kg Bag',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'zinc-16',
@@ -1202,7 +1202,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Polyphosphate complex providing extended-release Zinc and Phosphorus.',
       packSizes: '10 kg, 25 kg',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'n-chem-tetra-zinc',
@@ -1217,7 +1217,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Concentrated straight zinc fertilizer for rapid vegetative recovery.',
       packSizes: '1 kg, 5 kg, 25 kg',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
     {
       id: 'n-chem-tetra-zinc-g',
@@ -1232,7 +1232,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Granular grade suitable for mechanical spreading and basal broadcasting.',
       packSizes: '5 kg, 25 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'chela-z',
@@ -1247,7 +1247,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
       desc: 'Fully chelated, non-reactive Zinc for quick absorption across diverse soil pH levels.',
       packSizes: '250g, 500g, 1kg',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'chela-z17',
@@ -1262,7 +1262,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'High-potency HEDP-chelated zinc formulation engineered for high pH soils.',
       packSizes: '500g, 1kg',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'gly-co-z',
@@ -1277,7 +1277,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
       desc: 'Amino-acid chelated Zinc offering high systemic bio-availability and soft tissue tolerance.',
       packSizes: '250 ml, 500 ml, 1 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
     {
       id: 'gluco-z',
@@ -1292,7 +1292,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Sugar-complexed organic zinc for fruit development and enzyme activation.',
       packSizes: '250 ml, 500 ml, 1 L',
-      image: 'assets/nchem_bio_gold.png'
+      image: 'assets/nchem_bio_gold.webp'
     },
 
     // 4.2 Boron Formulations
@@ -1309,7 +1309,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II), Fruit Setting (Stage-III)',
       desc: 'Highly soluble boron powder for pollination, pollen tube growth, and fruit set.',
       packSizes: '250g, 500g, 1kg',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'borosil',
@@ -1324,7 +1324,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Boron source for basal dressing and long-term soil availability.',
       packSizes: '1 kg, 5 kg, 25 kg',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'b11',
@@ -1339,7 +1339,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Slow-release calcium-borate mineral for continuous availability without leaching.',
       packSizes: '25 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'boro-plus',
@@ -1354,7 +1354,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Highly concentrated boron fertilizer for soil incorporation.',
       packSizes: '1 kg, 5 kg',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'boric-acid',
@@ -1369,7 +1369,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II)',
       desc: 'Water-soluble formulation for immediate foliar boron correction.',
       packSizes: '500g, 1kg, 25kg',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'n-chem-boromine',
@@ -1384,7 +1384,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II), Fruit Setting (Stage-III)',
       desc: 'Organic amine-complexed liquid boron for maximum mobility inside plant tissues.',
       packSizes: '250 ml, 500 ml, 1 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
     {
       id: 'n-chem-boro-soil',
@@ -1399,7 +1399,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Specialized soil-application borax for basal crop cycles.',
       packSizes: '5 kg, 25 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'n-chem-gly-b',
@@ -1414,7 +1414,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II)',
       desc: 'Glycine-chelated liquid boron designed for delicate blooms without phytotoxicity.',
       packSizes: '250 ml, 500 ml, 1 L',
-      image: 'assets/nchem_bio_gold.png'
+      image: 'assets/nchem_bio_gold.webp'
     },
 
     // 4.3 Magnesium & Calcium Formulations
@@ -1431,7 +1431,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'EDTA chelated Magnesium for chlorophyll formation and photosynthetic energy.',
       packSizes: '500g, 1kg',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'mag-mix',
@@ -1446,7 +1446,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Straight secondary nutrient source to prevent interveinal chlorosis and boost enzymes.',
       packSizes: '1 kg, 5 kg, 25 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'hydro-mag',
@@ -1461,7 +1461,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'High-analysis suspension supplying both Magnesium and Zinc in single pass.',
       packSizes: '500 ml, 1 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
     {
       id: 'calcium-10',
@@ -1476,7 +1476,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Non-clogging chelated Calcium for cell wall strength and fruit firmness.',
       packSizes: '250g, 500g, 1kg',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'n-chem-tetra-cal',
@@ -1491,7 +1491,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Prevents bitter pit, blossom end rot, and fruit cracking under heat.',
       packSizes: '500g, 1kg',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'c11',
@@ -1506,7 +1506,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Liquid calcium concentrate for rapid fruit sizing and skin elasticity.',
       packSizes: '500 ml, 1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
     {
       id: 'gly-ca-21',
@@ -1521,7 +1521,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Flowable suspension providing dense elemental calcium for maximum peel durability.',
       packSizes: '500 ml, 1 L',
-      image: 'assets/nchem_bio_gold.png'
+      image: 'assets/nchem_bio_gold.webp'
     },
     {
       id: 'n-chem-gly-c',
@@ -1536,7 +1536,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III)',
       desc: 'Glycine-complexed liquid calcium for soft tissue penetration without scorching.',
       packSizes: '250 ml, 500 ml, 1 L',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'calboron',
@@ -1551,7 +1551,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II), Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Synergistic combination preventing flower drop and fruit cracking.',
       packSizes: '500g, 1kg',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
 
     // 4.4 Manganese & Iron Formulations
@@ -1568,7 +1568,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Straight manganese salt supporting nitrate assimilation and enzyme activity.',
       packSizes: '1 kg, 5 kg, 25 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'mcs-26',
@@ -1583,7 +1583,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'High-density flowable manganese suspension for foliar correction.',
       packSizes: '500 ml, 1 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
     {
       id: 'chela-mn',
@@ -1598,7 +1598,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Stabilized manganese chelate for alkaline and calcareous soils.',
       packSizes: '500g, 1kg',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'fs-19',
@@ -1613,7 +1613,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Straight iron fertilizer to correct iron chlorosis (yellowing) in young leaves.',
       packSizes: '1 kg, 5 kg, 25 kg Bag',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'n-chem-tetra-ferrous',
@@ -1628,7 +1628,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Chelated iron for rapid leaf greening and electron transport activation.',
       packSizes: '250g, 500g, 1kg',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'n-chem-tetra-iron',
@@ -1643,7 +1643,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'High-stability iron chelate performing across broad alkaline pH ranges.',
       packSizes: '500g, 1kg',
-      image: 'assets/nchem_bio_gold.png'
+      image: 'assets/nchem_bio_gold.webp'
     },
 
     // 4.5 Copper, Molybdenum & Multi-Micronutrient Formulations
@@ -1660,7 +1660,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Soluble copper source for enzyme function, lignification, and die-back prevention.',
       packSizes: '1 kg, 5 kg, 25 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'n-chem-tetra-cop',
@@ -1675,7 +1675,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Chelated copper fertilizer for crop defense and metabolic enzymatic pathways.',
       packSizes: '250g, 500g, 1kg',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'moly-boost',
@@ -1690,7 +1690,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Straight molybdenum fertilizer vital for nitrogenase activity and symbiotic root nodulation.',
       packSizes: '100g, 250g, 500g',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
     {
       id: 'sulphur-90',
@@ -1705,7 +1705,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Elemental sulphur powder for soil acidification and secondary sulphur nutrition.',
       packSizes: '1 kg, 3 kg, 25 kg Bag',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'formula-4',
@@ -1720,7 +1720,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
       desc: 'Standardized multi-micronutrient mixture tailored for balanced foliage nourishment.',
       packSizes: '500g, 1kg, 5kg',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'formula-6',
@@ -1735,7 +1735,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II), Fruit Setting (Stage-III)',
       desc: 'EDTA-chelated multi-micronutrient liquid preventing broad spectrum hidden hunger.',
       packSizes: '250 ml, 500 ml, 1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
     {
       id: 'micro-max',
@@ -1750,7 +1750,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
       desc: 'Superior complete multi-micronutrient formulation for high-yield cultivation.',
       packSizes: '500g, 1kg, 1 L, 5 L',
-      image: 'assets/nchem_bio_gold.png'
+      image: 'assets/nchem_bio_gold.webp'
     },
 
     // ======================================================================
@@ -1770,7 +1770,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'High phosphate fertilizer for early root establishment and profuse flowering.',
       packSizes: '1 kg, 25 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'npk-00-52-34',
@@ -1785,7 +1785,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Flowering & Blooming (Stage-II), Fruit Setting (Stage-III)',
       desc: 'Nitrogen-free PK formulation for fruit development, wood hardening, and fungal suppression.',
       packSizes: '1 kg, 25 kg Bag',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'npk-13-00-45',
@@ -1800,7 +1800,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Nitrate nitrogen and soluble potash for fruit sizing, sugar development, and drought resilience.',
       packSizes: '1 kg, 25 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'npk-13-00-05',
@@ -1815,7 +1815,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Prilled formulation for base and top-dressing soil distribution.',
       packSizes: '25 kg, 50 kg Bag',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'grow-streem',
@@ -1830,7 +1830,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Flowering & Blooming (Stage-II)',
       desc: 'Balanced liquid NPK fortified with zinc and boron for continuous vegetative vigor.',
       packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
     {
       id: 'n-chem-08-08-08',
@@ -1845,7 +1845,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Balanced 1:1:1 liquid ratio designed for tillering and internode elongation in sugarcane.',
       packSizes: '1 L, 5 L, 20 L',
-      image: 'assets/nchem_bio_gold.png'
+      image: 'assets/nchem_bio_gold.webp'
     },
     {
       id: 'np-7-21',
@@ -1860,7 +1860,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'High phosphate liquid starter fertilizer promoting root systems and early shoots.',
       packSizes: '1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'nkmb',
@@ -1875,7 +1875,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Potassium suspension enriched with secondary and micronutrients for late crop stages.',
       packSizes: '1 L, 5 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
 
     // 5.2 Nitrogen, Nitrate & Liquid Fertilizers
@@ -1892,7 +1892,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Triple-nitrogen liquid (amide, ammoniacal, nitrate) providing fast and sustained feeding.',
       packSizes: '5 L, 20 L, 200 L Drum',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
     {
       id: 'n-chem-up',
@@ -1907,7 +1907,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Highly acidic water-soluble fertilizer that prevents drip emitter clogging and mobilizes nutrients.',
       packSizes: '1 kg, 25 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'n-chem-nutin-app',
@@ -1922,7 +1922,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Vegetative Growth (Stage-I)',
       desc: 'Polyphosphate liquid technology that keeps phosphorus soluble in calcium-rich soils.',
       packSizes: '5 L, 20 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'n-chem-calcinit',
@@ -1937,7 +1937,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Fruit Setting (Stage-III)',
       desc: 'Readily available nitrate nitrogen and soluble calcium for strong cell wall structure.',
       packSizes: '1 kg, 25 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'n-chem-call-mg-pro',
@@ -1952,7 +1952,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Dual-action secondary nutrient fertilizer supporting both cell wall density and chlorophyll.',
       packSizes: '25 kg Bag',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
     {
       id: 'n-chem-call-phos',
@@ -1967,7 +1967,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Fruit Setting (Stage-III)',
       desc: 'Liquid calcium phosphate formulation for root branching and early fruit firmness.',
       packSizes: '1 L, 5 L',
-      image: 'assets/nchem_rhizo_boost.png'
+      image: 'assets/nchem_rhizo_boost.webp'
     },
 
     // 5.3 Potassium & Phosphorus Formulations
@@ -1984,7 +1984,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Natural complex providing Potash, Magnesium, and Sulphur without chlorides.',
       packSizes: '25 kg, 50 kg Bag',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'thio-k-s',
@@ -1999,7 +1999,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Fruit Setting (Stage-III), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Liquid potassium and thiosulphate sulphur solution that enhances nitrogen efficiency and fruit bulk.',
       packSizes: '1 L, 5 L, 20 L',
-      image: 'assets/nchem_bio_gold.png'
+      image: 'assets/nchem_bio_gold.webp'
     },
     {
       id: 'n-chem-thio-cal',
@@ -2014,7 +2014,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal, Fruit Setting (Stage-III)',
       desc: 'Liquid soil conditioner that neutralizes sodium, loosens compacted soil, and delivers calcium.',
       packSizes: '5 L, 20 L',
-      image: 'assets/nchem_soil_conditioner.png'
+      image: 'assets/nchem_soil_conditioner.webp'
     },
 
     // ======================================================================
@@ -2034,10 +2034,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'All Crop Stages',
       desc: 'Specialty low molecular weight non-ionic silicon polyether surfactant. Drastically reduces spray surface tension for rapid wetting and spreading on leaves and fruits; enhances the efficacy of broadleaf herbicides, insecticides, fungicides, and plant growth regulators.',
       packSizes: '1 L, 5 L, 250 ml',
-      image: 'assets/nchem_superior_5L.jpg',
+      image: 'assets/nchem_superior_5L.webp',
       gallery: [
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_superior_5L.jpg' },
-        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_superior_1L.jpg' }
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_superior_5L.webp' },
+        { label: '1 Litre Bottle', short: '1L', image: 'assets/nchem_superior_1L.webp' }
       ]
     },
 
@@ -2055,10 +2055,10 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I), Fruit Sizing & Maturation (Stage-IV)',
       desc: 'Specialty bio-available Ortho Silicic Acid (OSA) 2.0% WSL. Improves the response of crops to biotic and abiotic stress, boosts plant immune power, optimizes internal water utilization, and minimizes required doses of synthetic pesticides and fertilizers.',
       packSizes: '5 L, 1 L, 500 ml, 250 ml',
-      image: 'assets/nchem_relief.jpg',
+      image: 'assets/nchem_relief.webp',
       gallery: [
-        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_relief.jpg' },
-        { label: 'Technical Brochure', short: 'Dossier', image: 'assets/nchem_relief_brochure.png' }
+        { label: '5 Litre Can', short: '5L', image: 'assets/nchem_relief.webp' },
+        { label: 'Technical Brochure', short: 'Dossier', image: 'assets/nchem_relief_brochure.webp' }
       ]
     },
     {
@@ -2074,7 +2074,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Vegetative Growth (Stage-I)',
       desc: 'Soluble silicate formulation improving stalk strength and lodging resistance.',
       packSizes: '1 L, 5 L',
-      image: 'assets/v2_bag.png'
+      image: 'assets/v2_bag.webp'
     },
     {
       id: 'n-chem-silica-max',
@@ -2089,7 +2089,7 @@ document.addEventListener('DOMContentLoaded', () => {
       stage: 'Soil Prep & Basal',
       desc: 'Amorphous silica soil conditioner improving aeration, water retention, and root penetration.',
       packSizes: '25 kg Bag',
-      image: 'assets/nchem_bio_gold.png'
+      image: 'assets/nchem_bio_gold.webp'
     }
   ];
 
@@ -3276,7 +3276,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const stageProduct = formulationsV3.find(p => p.id === currentStage.productId);
     const stagePacks = stageProduct && stageProduct.gallery && stageProduct.gallery.length
       ? stageProduct.gallery
-      : [{ label: 'Pack', short: '', image: (stageProduct && stageProduct.image) || 'assets/nchem_rhizo_boost.png' }];
+      : [{ label: 'Pack', short: '', image: (stageProduct && stageProduct.image) || 'assets/nchem_rhizo_boost.webp' }];
 
     showcases.forEach(({ el, btnId, matrixId }) => {
       if (!el || !currentStage) return;
