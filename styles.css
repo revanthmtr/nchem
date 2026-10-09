@@ -5709,8 +5709,8 @@ button {
 }
 
 /* ══ Cross-device hardening: iOS Safari, Android Chrome, desktop ══ */
-html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; overflow-x: hidden; }
-body { overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+body { overflow-x: clip; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
 img, video, svg, canvas { max-width: 100%; height: auto; }
 img { image-rendering: auto; }
 a, button, [role="button"], input, select, textarea, summary { touch-action: manipulation; }
