@@ -5935,3 +5935,23 @@ input, select, textarea { font-size: 16px; } /* stops iOS focus-zoom */
   .fp-slide-headline { font-size: clamp(34px, 5vw, 46px); }
   .fp-slide-overlay { background: linear-gradient(to right, rgba(39, 64, 41, 0.88) 0%, rgba(39, 64, 41, 0.78) 50%, rgba(39, 64, 41, 0.15) 75%); }
 }
+
+/* ══ Translation: hide Google's toolbar/tooltips, keep our layout, use proper Indic fonts ══ */
+#google_translate_element, .goog-te-banner-frame, iframe.skiptranslate, .skiptranslate > iframe,
+.VIpgJd-ZVi9od-ORHb-OEVmcd, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf, #goog-gt-tt, .VIpgJd-yAWNEb-L7lbkb, .goog-te-balloon-frame {
+  display: none !important;
+}
+html, body { top: 0 !important; }
+body { position: static !important; }
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q, font[style] { background: none !important; box-shadow: none !important; }
+
+html[data-lang="te"] body { font-family: 'Noto Sans Telugu', var(--font-body); }
+html[data-lang="kn"] body { font-family: 'Noto Sans Kannada', var(--font-body); }
+html[data-lang="ta"] body { font-family: 'Noto Sans Tamil', var(--font-body); }
+html[data-lang="te"] { --font-display: 'Baloo Tammudu 2', 'Baloo 2', sans-serif; }
+html[data-lang="kn"] { --font-display: 'Baloo Tamma 2', 'Baloo 2', sans-serif; }
+html[data-lang="ta"] { --font-display: 'Baloo Thambi 2', 'Baloo 2', sans-serif; }
+/* Indic scripts need a little more line height and wrap longer words */
+html[data-lang] body { line-height: 1.7; }
+html[data-lang] h1, html[data-lang] h2, html[data-lang] h3 { line-height: 1.35; overflow-wrap: anywhere; }
+html[data-lang] .btn, html[data-lang] .nav-link { line-height: 1.3; }

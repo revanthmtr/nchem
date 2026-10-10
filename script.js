@@ -2810,7 +2810,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="compact-sku">${skuCode}</span>
               </div>
 
-              <h3 class="compact-title">${p.title}</h3>
+              <h3 class="compact-title notranslate" translate="no">${p.title}</h3>
               <div class="gold-rule"></div>
 
               <div class="compact-formula">
@@ -2869,11 +2869,11 @@ document.addEventListener('DOMContentLoaded', () => {
                   <tr data-id="${p.id}">
                     <td><span class="table-col-code">${skuCode}</span></td>
                     <td>
-                      <div class="table-col-title">${p.title}</div>
+                      <div class="table-col-title notranslate" translate="no">${p.title}</div>
                       <div style="font-size: 11px; color: var(--color-text-muted);">${p.subcategory}</div>
                     </td>
                     <td><span class="table-col-tag">${p.productType}</span></td>
-                    <td><div class="table-col-formula" title="${p.composition}">&#9879; ${p.composition}</div></td>
+                    <td><div class="table-col-formula" title="${p.composition}"><span class="notranslate" translate="no">&#9879;</span> ${p.composition}</div></td>
                     <td style="font-size: 12px; color: var(--color-text-muted);">${p.applicationMethod}</td>
                     <td style="font-size: 11.5px; max-width: 180px; overflow: hidden; text-overflow: ellipsis;" title="${p.dosage}">${p.dosage}</td>
                     <td style="font-size: 11.5px; color: var(--color-primary-dark); font-weight: 600;">${p.packSizes}</td>
@@ -3847,7 +3847,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="card-body-v3">
           <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--color-terracotta); margin-bottom: 2px;">${p.productType}</div>
-          <h3 class="card-title-v3" style="font-size: 18.5px; line-height: 1.3; margin-bottom: 4px;">${p.title}</h3>
+          <h3 class="card-title-v3 notranslate" translate="no" style="font-size: 18.5px; line-height: 1.3; margin-bottom: 4px;">${p.title}</h3>
           <div class="gold-rule" style="margin-bottom: 12px;"></div>
           
           <div class="card-spec-highlight">
@@ -4375,3 +4375,117 @@ document.addEventListener('DOMContentLoaded', () => {
   // until the user clicks a pillar button in the 6-pillar taxonomy deck above.
 
 });
+
+/* ==========================================================================
+   SITE LANGUAGE — English (default), Telugu, Kannada, Tamil
+   Uses Google's neural page translation (whole sentences in context, incl.
+   product cards rendered later). Only loaded once a visitor picks a language.
+   ========================================================================== */
+(function () {
+  const SUPPORTED = ['te', 'kn', 'ta'];
+  const FONTS = {
+    te: 'family=Baloo+Tammudu+2:wght@500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600;700',
+    kn: 'family=Baloo+Tamma+2:wght@500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;600;700',
+    ta: 'family=Baloo+Thambi+2:wght@500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700'
+  };
+  const select = document.getElementById('siteLanguage');
+  if (!select) return;
+
+  function readLang() {
+    const m = document.cookie.match(/(?:^|;\s*)googtrans=\/en\/([a-z]{2})/);
+    if (m && SUPPORTED.includes(m[1])) return m[1];
+    try { const s = localStorage.getItem('nchemLang'); if (SUPPORTED.includes(s)) return s; } catch (e) {}
+    return 'en';
+  }
+
+  function setCookie(value) {
+    const host = location.hostname;
+    const expires = value ? '' : '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    const v = value ? '/en/' + value : '';
+    document.cookie = 'googtrans=' + v + '; path=/' + expires;
+    if (host.includes('.')) {
+      document.cookie = 'googtrans=' + v + '; path=/; domain=.' + host.replace(/^www\./, '') + expires;
+    }
+  }
+
+  function loadFont(lang) {
+    if (!FONTS[lang] || document.getElementById('font-' + lang)) return;
+    const link = document.createElement('link');
+    link.id = 'font-' + lang;
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css2?' + FONTS[lang] + '&display=swap';
+    document.head.appendChild(link);
+  }
+
+  function applyCombo(lang, tries) {
+    const combo = document.querySelector('.goog-te-combo');
+    if (combo && combo.options.length > 1) {
+      combo.value = lang;
+      combo.dispatchEvent(new Event('change'));
+      return;
+    }
+    if ((tries || 0) < 60) setTimeout(() => applyCombo(lang, (tries || 0) + 1), 150);
+  }
+
+  function loadEngine(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    loadFont(lang);
+    if (window.google && window.google.translate && window.google.translate.TranslateElement) {
+      applyCombo(lang);
+      return;
+    }
+    window.nchemTranslateInit = function () {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: SUPPORTED.join(','),
+        autoDisplay: false
+      }, 'google_translate_element');
+      applyCombo(lang);
+    };
+    const s = document.createElement('script');
+    s.src = 'https://translate.google.com/translate_a/element.js?cb=nchemTranslateInit';
+    s.async = true;
+    document.body.appendChild(s);
+  }
+
+  // Icons and symbol-only labels (⚗, 🌿, →) must not be "translated" into stray words
+  const SYMBOL_ONLY = /^[^\p{L}\p{N}]+$/u;
+  function protectSymbols(root) {
+    const els = root.querySelectorAll ? root.querySelectorAll('span, div, i, b, em, strong, td') : [];
+    els.forEach(el => {
+      if (el.children.length === 0 && el.textContent.trim() && SYMBOL_ONLY.test(el.textContent.trim())) {
+        el.setAttribute('translate', 'no');
+        el.classList.add('notranslate');
+      }
+    });
+  }
+
+  let protecting = false;
+  function startProtecting() {
+    if (protecting) return;
+    protecting = true;
+    protectSymbols(document.body);
+    new MutationObserver(muts => muts.forEach(m => m.addedNodes.forEach(n => {
+      if (n.nodeType === 1 && !n.closest('.notranslate')) protectSymbols(n);
+    }))).observe(document.body, { childList: true, subtree: true });
+  }
+
+  const current = readLang();
+  select.value = current;
+  if (current !== 'en') startProtecting();
+  if (current !== 'en') loadEngine(current);
+
+  select.addEventListener('change', () => {
+    const lang = select.value;
+    try { localStorage.setItem('nchemLang', lang); } catch (e) {}
+    if (lang === 'en') {
+      // Back to the original English page
+      setCookie('');
+      location.reload();
+      return;
+    }
+    setCookie(lang);
+    startProtecting();
+    loadEngine(lang);
+  });
+})();
