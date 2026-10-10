@@ -4378,24 +4378,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ==========================================================================
    SITE LANGUAGE — English (default), Telugu, Kannada, Tamil
-   Uses Google's neural page translation (whole sentences in context, incl.
-   product cards rendered later). Only loaded once a visitor picks a language.
+   1) Hand-written translations (lang/*.js) are applied first: natural,
+      farmer-friendly wording for every heading, paragraph, button and menu.
+   2) Google's page translation then fills in only what is not covered
+      (e.g. long product descriptions). Brand/product names never change.
    ========================================================================== */
 (function () {
   const SUPPORTED = ['te', 'kn', 'ta'];
+  const I18N_VERSION = '6';
   const FONTS = {
     te: 'family=Baloo+Tammudu+2:wght@500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;600;700',
     kn: 'family=Baloo+Tamma+2:wght@500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;600;700',
     ta: 'family=Baloo+Thambi+2:wght@500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700'
   };
   const select = document.getElementById('siteLanguage');
-  if (!select) return;
+  const root = document.documentElement;
+  if (!select) { root.classList.remove('i18n-pending'); return; }
 
   function readLang() {
+    try { const s = localStorage.getItem('nchemLang'); if (s === 'en' || SUPPORTED.includes(s)) return s; } catch (e) {}
     const m = document.cookie.match(/(?:^|;\s*)googtrans=\/en\/([a-z]{2})/);
-    if (m && SUPPORTED.includes(m[1])) return m[1];
-    try { const s = localStorage.getItem('nchemLang'); if (SUPPORTED.includes(s)) return s; } catch (e) {}
-    return 'en';
+    return m && SUPPORTED.includes(m[1]) ? m[1] : 'en';
   }
 
   function setCookie(value) {
@@ -4417,23 +4420,146 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(link);
   }
 
+  /* ---------- 1. Hand-written dictionary ---------- */
+  const LEAD = /^[^\p{L}\p{N}_(]+/u;
+  const TRAIL = /[^\p{L}\p{N}_.,:;!?)%+*']+$/u;
+  const SKIP = 'script, style, noscript, textarea, [data-i18n], .notranslate, #google_translate_element, #siteLanguage';
+  const INLINE = new Set(['SPAN', 'STRONG', 'B', 'EM', 'I', 'A', 'SMALL', 'BR', 'FONT']);
+  let dict = null;
+  let keep = null;
+  let patterns = [];
+
+  function split(raw) {
+    const t = raw.replace(/\s+/g, ' ').trim();
+    const lead = (t.match(LEAD) || [''])[0];
+    let rest = t.slice(lead.length);
+    const trail = (rest.match(TRAIL) || [''])[0];
+    rest = rest.slice(0, rest.length - trail.length).trim();
+    return [lead, rest, trail];
+  }
+
+  function lookup(key) {
+    if (dict.text[key]) return dict.text[key];
+    for (const [re, out] of patterns) {
+      const m = key.match(re);
+      if (m) return out.replace(/\$T(\d)/g, (_, i) => dict.text[m[i]] || m[i]).replace(/\$(\d)/g, (_, i) => m[i]);
+    }
+    return null;
+  }
+
+  // "All Crops (Paddy, Cotton…)" → each crop name replaced with the local name
+  let cropRe = null;
+  function translateCropList(text) {
+    if (!dict.crops || !dict.crops.length) return null;
+    if (!cropRe) {
+      const esc = dict.crops.map(([en]) => en.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+      cropRe = new RegExp('(^|[\\s,(/])(' + esc.join('|') + ')(?=$|[\\s,)/])', 'g');
+    }
+    const map = new Map(dict.crops);
+    const out = text.replace(cropRe, (_, pre, name) => pre + map.get(name));
+    return out !== text ? out : null;
+  }
+
+  function elementKey(el) {
+    const parts = [];
+    const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    let n;
+    while ((n = w.nextNode())) parts.push(n.nodeValue);
+    return parts.join(' ').replace(/\s+/g, ' ').trim();
+  }
+
+  function isMixedSentence(el) {
+    let text = false, inline = false;
+    for (const c of el.childNodes) {
+      if (c.nodeType === 3 && c.nodeValue.trim()) text = true;
+      else if (c.nodeType === 1) {
+        if (!INLINE.has(c.tagName)) return false;
+        if (c.tagName !== 'BR' && c.textContent.trim()) inline = true;
+      }
+    }
+    return text && inline;
+  }
+
+  function lock(el) {
+    el.setAttribute('data-i18n', '');
+    el.setAttribute('translate', 'no');
+    el.classList.add('notranslate');
+  }
+
+  function translateTextNode(node) {
+    const parent = node.parentElement;
+    if (!parent || parent.closest(SKIP)) return;
+    const [lead, key, trail] = split(node.nodeValue);
+    if (!key) return;
+    const isKeep = keep.has(key);
+    let value = isKeep ? key : lookup(key);
+    if (!value && parent.closest('#modalProdTargetCrops')) value = translateCropList(key);
+    if (!value) return;
+    if (parent.tagName === 'OPTION' || parent.tagName === 'TITLE') {
+      node.nodeValue = lead + value + trail;
+      parent.setAttribute('translate', 'no');
+      return;
+    }
+    const span = document.createElement('span');
+    span.textContent = (isKeep ? node.nodeValue : lead + value + trail);
+    lock(span);
+    node.replaceWith(span);
+  }
+
+  function translateTree(rootNode) {
+    if (rootNode.nodeType === 3) { translateTextNode(rootNode); return; }
+    if (rootNode.nodeType !== 1 || rootNode.closest(SKIP)) return;
+    // Whole sentences that contain bold/linked words are translated as one unit
+    const els = [rootNode, ...rootNode.querySelectorAll('*')];
+    for (const el of els) {
+      if (el.closest(SKIP) || !isMixedSentence(el)) continue;
+      const html = dict.prose[elementKey(el)];
+      if (html) { el.innerHTML = html; lock(el); }
+    }
+    const nodes = [];
+    const w = document.createTreeWalker(rootNode, NodeFilter.SHOW_TEXT);
+    let n;
+    while ((n = w.nextNode())) nodes.push(n);
+    nodes.forEach(translateTextNode);
+    rootNode.querySelectorAll('[placeholder]').forEach(el => {
+      const v = lookup(el.getAttribute('placeholder').trim());
+      if (v) el.setAttribute('placeholder', v);
+    });
+  }
+
+  function applyDictionary(lang, done) {
+    const s = document.createElement('script');
+    s.src = 'lang/' + lang + '.js?v=' + I18N_VERSION;
+    s.onload = () => {
+      const data = window.NCHEM_I18N && window.NCHEM_I18N[lang];
+      if (data) {
+        dict = data;
+        keep = new Set(data.keep);
+        patterns = data.patterns.map(([re, out]) => [new RegExp(re), out]);
+        translateTree(document.body);
+        new MutationObserver(muts => muts.forEach(m => m.addedNodes.forEach(translateTree)))
+          .observe(document.body, { childList: true, subtree: true });
+      }
+      done();
+    };
+    s.onerror = done;
+    document.head.appendChild(s);
+  }
+
+  /* ---------- 2. Google fallback for anything not hand-translated ---------- */
   function applyCombo(lang, tries) {
     const combo = document.querySelector('.goog-te-combo');
     if (combo && combo.options.length > 1) {
-      combo.value = lang;
-      combo.dispatchEvent(new Event('change'));
+      if (combo.value !== lang) {
+        combo.value = lang;
+        combo.dispatchEvent(new Event('change'));
+      }
       return;
     }
     if ((tries || 0) < 60) setTimeout(() => applyCombo(lang, (tries || 0) + 1), 150);
   }
 
   function loadEngine(lang) {
-    document.documentElement.setAttribute('data-lang', lang);
-    loadFont(lang);
-    if (window.google && window.google.translate && window.google.translate.TranslateElement) {
-      applyCombo(lang);
-      return;
-    }
     window.nchemTranslateInit = function () {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
@@ -4448,11 +4574,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(s);
   }
 
-  // Icons and symbol-only labels (⚗, 🌿, →) must not be "translated" into stray words
+  // Icons and symbol-only labels (⚗, 🌿, →) must never be machine-translated into stray words
   const SYMBOL_ONLY = /^[^\p{L}\p{N}]+$/u;
-  function protectSymbols(root) {
-    const els = root.querySelectorAll ? root.querySelectorAll('span, div, i, b, em, strong, td') : [];
-    els.forEach(el => {
+  function protectSymbols(node) {
+    if (node.nodeType !== 1) return;
+    node.querySelectorAll('span, div, i, b, em, strong, td').forEach(el => {
       if (el.children.length === 0 && el.textContent.trim() && SYMBOL_ONLY.test(el.textContent.trim())) {
         el.setAttribute('translate', 'no');
         el.classList.add('notranslate');
@@ -4460,32 +4586,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  let protecting = false;
-  function startProtecting() {
-    if (protecting) return;
-    protecting = true;
-    protectSymbols(document.body);
-    new MutationObserver(muts => muts.forEach(m => m.addedNodes.forEach(n => {
-      if (n.nodeType === 1 && !n.closest('.notranslate')) protectSymbols(n);
-    }))).observe(document.body, { childList: true, subtree: true });
-  }
-
   const current = readLang();
   select.value = current;
-  if (current !== 'en') startProtecting();
-  if (current !== 'en') loadEngine(current);
+
+  if (current !== 'en') {
+    root.setAttribute('data-lang', current);
+    root.setAttribute('lang', current);
+    loadFont(current);
+    setCookie(current);
+    protectSymbols(document.body);
+    new MutationObserver(muts => muts.forEach(m => m.addedNodes.forEach(protectSymbols)))
+      .observe(document.body, { childList: true, subtree: true });
+    applyDictionary(current, () => {
+      root.classList.remove('i18n-pending');
+      loadEngine(current);
+    });
+  } else {
+    root.classList.remove('i18n-pending');
+  }
 
   select.addEventListener('change', () => {
     const lang = select.value;
     try { localStorage.setItem('nchemLang', lang); } catch (e) {}
-    if (lang === 'en') {
-      // Back to the original English page
-      setCookie('');
-      location.reload();
-      return;
-    }
-    setCookie(lang);
-    startProtecting();
-    loadEngine(lang);
+    setCookie(lang === 'en' ? '' : lang);
+    location.reload();
   });
 })();
