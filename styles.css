@@ -5870,3 +5870,55 @@ input, select, textarea { font-size: 16px; } /* stops iOS focus-zoom */
   .filter-mode-switcher { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; border-radius: 16px; padding: 4px; width: 100%; }
   .filter-mode-btn { border-radius: 12px; padding: 8px 6px; font-size: 12px; line-height: 1.25; white-space: normal; text-align: center; justify-content: center; flex-direction: column; gap: 3px; min-height: 52px; }
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   Design-system normalization: one corner scale, one button shape,
+   one section rhythm — consistent across phones, tablets and desktops
+   ══════════════════════════════════════════════════════════════════════ */
+:root {
+  --r-xs: 6px;    /* code tags, tiny badges */
+  --r-sm: 12px;   /* inputs, icon tiles, small chips */
+  --r-lg: 20px;   /* cards and panels */
+  --section-y: clamp(64px, 8vw, 96px);
+}
+
+/* Corners */
+.matrix-code-badge, .deck-col-badge, .pillar-num { border-radius: var(--r-xs); }
+.corp-form-input, .corp-form-select, .corp-form-textarea, .corp-pillar-icon,
+.corp-discipline-icon, .matrix-insight-bar { border-radius: var(--r-sm); }
+.corp-discipline-card, .logistics-kpi-card, .logistics-pillar-card,
+.corp-heritage-card-box, .corp-service-card, .logistics-overview-card,
+.logistics-profile-card, .corp-governance-card, .corp-rfq-card, .corp-cred-item { border-radius: var(--r-lg); }
+.cat-tab-v3, .corridor-tab-btn { border-radius: var(--radius-pill); }
+
+/* Buttons: one pill shape, comfortable touch height */
+.btn { border-radius: var(--radius-pill); min-height: 44px; }
+#grows-section .btn { border-radius: var(--radius-pill); }
+.btn:focus-visible, button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible {
+  outline: 2px solid var(--color-terracotta); outline-offset: 2px;
+}
+
+/* Section rhythm */
+#corpInfrastructure, #corpHeritage, #corpPortfolio, #corpServices,
+#grows-section, #corpGovernance, #corpRFQ {
+  padding-top: var(--section-y); padding-bottom: var(--section-y);
+}
+#contact-us { padding-top: var(--section-y) !important; padding-bottom: var(--section-y) !important; }
+
+/* Images inside cards follow their card's curve */
+.corp-service-card img, .corp-discipline-card img, .logistics-pillar-card img { border-radius: var(--r-sm); }
+
+/* Floating help button: icon only on phones / short screens so it never covers content */
+@media (max-width: 640px), (max-height: 500px) {
+  .sprout-bubble { display: none; }
+  .sprout-chat-widget { right: calc(16px + env(safe-area-inset-right)); bottom: calc(16px + env(safe-area-inset-bottom)); }
+}
+
+/* Landscape phones: slimmer sticky header so content keeps most of the screen */
+@media (max-height: 500px) and (orientation: landscape) {
+  .header-inner { height: 60px; }
+  .brand-logo { height: 42px; width: 42px; }
+  .brand-name-v3 { font-size: 20px; }
+  .brand-tagline-v3 { display: none; }
+  .mega-menu-header { padding-top: 10px; padding-bottom: 10px; }
+}
